@@ -1,0 +1,24 @@
+{
+  "name": "affectation-ui",
+  "description": "Outil d'affectation graphique des enquêteurs aux unités statistiques",
+  "main": "index.js",
+  "authors": [
+    "Christophe ROUSSON"
+  ],
+  "license": "MIT",
+  "moduleType": [
+    "amd"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "leaflet-draw": "^0.3.0",
+    "jquery": "^2.2.1"
+  }
+}
