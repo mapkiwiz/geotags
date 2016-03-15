@@ -1,0 +1,105 @@
+.list-header {
+
+  color: gray;
+  font-weight: bold;
+  padding-left: 12px;
+
+}
+
+ul.list {
+    
+  list-style: inside none none;
+  margin-top: 10px;
+  margin-left: -40px;
+  max-height: 480px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+}
+
+.list li {
+
+  border: 1px solid lightgray;
+  border-top: none;
+  padding: 15px;
+  margin-right: 10px;
+  cursor: pointer;
+
+}
+
+.list li:hover {
+
+  background-color: rgba(150, 150, 150, 0.25);
+
+}
+
+.list li.selected {
+
+  background-color: rgba(160, 230, 160, 0.25);
+
+}
+
+.list li:first-child {
+  border-top: 1px solid lightgray;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.list li:last-child {
+  border-radius: 0px 0px 5px 5px;
+}
+
+div.annotation {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.annotation label {
+  margin-bottom: 0px;
+}
+
+.annotation label > span {
+  font-weight: none;
+  font-size: 0.651em;
+  color: rgba(100, 100, 100, 0.6);
+}
+
+.annotation .detail {
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 10px;
+}
+
+.annotation .detail-name {
+  font-weight: bold;
+}
+
+.feature-marker {
+  font-size: 30px;
+  color: #337ab7;
+  text-shadow:
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff; 
+}
+
+.feature-marker-commented {
+  color: silver;
+}
+
+.feature-marker-valid {
+  color: limegreen;
+}
+
+.feature-marker-for-deletion {
+  color: firebrick;
+}
+
+.feature-marker-selected {
+  color: gold;
+  text-shadow:
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff; 
+}
+
