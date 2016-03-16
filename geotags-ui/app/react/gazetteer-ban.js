@@ -8,7 +8,7 @@ var GazetteerResult = React.createClass({
 
 	render: function() {
 		return (
-			<li onClick={this.handleSelect}>{this.props.value.text}</li>
+			<li onClick={this.handleSelect}>{this.props.value.properties.label}</li>
 		);
 	}
 
@@ -22,16 +22,16 @@ var Gazetteer = React.createClass({
 
 	componentDidMount: function() {
 		this.control = $('input[name="' + this.props.name + '"]')
-		this.control.on('keyup', this.handleKeyup);
+		// this.control.on('keyup', this.handleKeyup);
 	},
 
-	handleKeyup: function(e) {
-        var url, target = $(e.target), val = target.val();
+	handleSearch: function(e) {
+        var url, target = $(e.target), val = this.control.val();
         if (val) {
             // url = '/v1/search/communes?q=' + val + '&bbox=' + map.getBounds().toBBoxString();
             url = this.props.service.replace(/{q}/, val);
             $.getJSON(url, function(data) {
-                this.setState({ text: val, results: data.results });
+                this.setState({ text: val, results: data.features });
             }.bind(this));
         } else {
             this.setState({ selection: null, results: [] });
@@ -39,13 +39,11 @@ var Gazetteer = React.createClass({
     },
 
     handleSelect: function(d) {
-    	this.props.map.fitBounds(
-			L.latLngBounds(
-		        L.latLng(d.south_west.lat, d.south_west.lon),
-		        L.latLng(d.north_east.lat, d.north_east.lon))
-		);
+    	if (this.props.select) {
+    		this.props.select(d);
+    	}
 		this.setState({ selection: d, results: [] });
-		this.control.val(d.text);
+		this.control.val(d.properties.label);
     },
 
     render: function() {
@@ -58,9 +56,16 @@ var Gazetteer = React.createClass({
         	<div>
 	        	<div className="form-group">
 	        		<label className="label">
-						<span>PAR COMMUNE</span>
+						<span>PAR ADRESSE</span>
 					</label>
-	    			<input className="form-control" type="text" name={this.props.name} placeholder={this.props.placeholder} />
+					<div className="input-group">
+		    			<input className="form-control" type="text" name={this.props.name} placeholder={this.props.placeholder} />
+		    			<span className="input-group-btn">
+		    				<button onClick={this.handleSearch} className="btn btn-default">
+			    				<span className="glyphicon glyphicon-search"></span>
+			    			</button>
+			    		</span>
+		    		</div>
 	    		</div>
 	    		<ul className="list" id="search-results">
 					{items}

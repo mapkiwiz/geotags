@@ -53,14 +53,18 @@ div.annotation {
   padding-right: 10px;
 }
 
-.annotation label {
-  margin-bottom: 0px;
+label.label {
+  display: inline-block;
+  padding-top: 10px;
+  padding-left: 0px;
+  font-size: 100%;
 }
 
-.annotation label > span {
-  font-weight: none;
+label.label > span {
+  font-weight: bold;
   font-size: 0.651em;
   color: rgba(100, 100, 100, 0.6);
+  padding: 0 0 0 0;
 }
 
 .annotation .detail {

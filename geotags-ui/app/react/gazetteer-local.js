@@ -23,7 +23,7 @@ var Gazetteer = React.createClass({
 
 	componentDidMount: function() {
 		this.control = $('input[name="' + this.props.name + '"]')
-		this.control.on('keyup', this.handleKeyup);
+		this.control.on('input', this.handleKeyup);
 	},
 
 	lookup: function(query) {
@@ -79,6 +79,9 @@ var Gazetteer = React.createClass({
         return (
         	<div>
 	        	<div className="form-group">
+					<label className="label">
+						<span>PAR COMMUNE</span>
+					</label>
 	    			<input className="form-control" type="text" name={this.props.name} placeholder={this.props.placeholder} />
 	    		</div>
 	    		<ul className="list" id="search-results">

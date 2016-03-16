@@ -73,22 +73,26 @@ gulp.task('runserver', function(cb) {
 
 gulp.task('watch', function (cb) {
 
-    gulp.src(paths.scripts)
+  gulp.src(paths.styles)
+  .pipe($.watch(paths.styles))
+  .pipe($.connect.reload());
+
+  gulp.src(paths.scripts)
+  .pipe($.plumber())
+  .pipe($.watch(paths.scripts))
+  .pipe(reactify());
+
+  $.watch('./.tmp/react/*.js', function() {
+    gulp.src('./.tmp/react/main.js')
     .pipe($.plumber())
-    .pipe($.watch(paths.scripts))
-    .pipe(reactify());
+    .pipe(scripts());
+  });
 
-    $.watch('./.tmp/react/*.js', function() {
-      gulp.src('./.tmp/react/main.js')
-      .pipe($.plumber())
-      .pipe(scripts());
-    });
+  gulp.src('./.tmp/js/*.js')
+  .pipe($.watch('./.tmp/js/*.js'))
+  .pipe($.connect.reload());
 
-    gulp.src('./.tmp/js/*.js')
-    .pipe($.watch('./.tmp/js/*.js'))
-    .pipe($.connect.reload());
-
-    cb();
+  cb();
 
 });
 

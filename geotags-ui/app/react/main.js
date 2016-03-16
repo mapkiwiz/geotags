@@ -1,6 +1,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var Gazetteer = require('./gazetteer-local.js');
+var GazetteerBAN = require('./gazetteer-ban.js');
 var LayerSwitcher = require('./layer-switcher.js');
 // var FeatureList = require('./feature-list.js');
 var AnnotationForm = require('./annotation.js');
@@ -46,6 +47,31 @@ window.gazetteer = ReactDOM.render(
  document.getElementById('locate')
 );
 
+var createNew = function(feature) {
+    var zoom = Math.max(15, map.getZoom());
+    var latLng = L.latLng(feature.geometry.coordinates[1], feature.geometry.coordinates[0]);
+    var marker = dataLayer.options.pointToLayer(feature, latLng);
+    feature.properties.name = 'New Feature #1';
+    feature.properties.tags = {
+        adresse: feature.properties.label,
+        created: 'yes'
+    };
+    // map.setZoomAround(
+    //     latLng,
+    //     zoom,
+    //     { animate: true }
+    // );
+    map.setView(latLng, zoom, { animate: true });
+    marker.addTo(dataLayer);
+    dataLayer.options.onEachFeature(feature, marker);
+    aForm.selectFeature(feature, marker);
+};
+
+window.gazetteerBan = ReactDOM.render(
+ <GazetteerBAN map={map} name="search-ban" service="http://api-adresse.data.gouv.fr/search/?q={q}" placeholder="Rechercher une adresse" select={createNew}  />,
+ document.getElementById('create-new')
+);
+
 $.getJSON('data/communes-d033.json', function(data) {
     window.gazetteer.data = data;
 });
@@ -74,7 +100,7 @@ var aForm = ReactDOM.render(
 //     }).addTo(map);
 
 $.getJSON('data/points-d033.geojson', function(data) {
-    L.geoJson(data, {
+    dataLayer = L.geoJson(data, {
         
         pointToLayer: function(feature, latLng) {
             var icon = L.divIcon({

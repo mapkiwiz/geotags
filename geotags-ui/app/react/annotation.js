@@ -76,18 +76,18 @@ var AnnotationForm = React.createClass({
 		return (
 			<div className="annotation details">
 
-				<label>
+				<label className="label">
 					<span>INSTRUCTIONS</span>
 				</label>
 				<div>Sélectionner un objet en cliquant sur la carte.</div>
 
-				<label>
+				<label className="label">
 					<span>LOCALISATION</span>
 				</label>
 				<div>Pour modifier/préciser la localisation d'un objet,
 				déplacer le sur la carte après l'avoir sélectionné.</div>
 
-				<label>
+				<label className="label">
 					<span>LÉGENDE</span>
 				</label>
 				<table className="table">
@@ -118,18 +118,18 @@ var AnnotationForm = React.createClass({
 		return (
 			<div className="annotation details">
 
-				<label>
+				<label className="label">
 					<span>NOM</span>
 				</label>
 				<div className="detail detail-name">{properties.name}</div>
 
-				<label>
+				<label className="label">
 					<span>ADRESSE</span>
 				</label>
 				<div className="detail detail-address">{properties.tags.adresse}</div>
 			
 				<div className="form-group">
-					<label>
+					<label className="label">
 						<span>COMMENTAIRE</span>
 					</label>
 					<textarea className="form-control" rows="3" name="comment" onChange={this.handleComment}
