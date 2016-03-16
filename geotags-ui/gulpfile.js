@@ -2,26 +2,19 @@
 
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
-$.connect = require('gulp-connect');
-$.autoprefixer = require('gulp-autoprefixer');
-$.filter = require('gulp-filter');
-$.useref = require('gulp-useref');
-$.minifyCss = require('gulp-minify-css');
-$.rev = require('gulp-rev');
-$.revReplace = require('gulp-rev-replace');
-$.insertLines = require('gulp-insert-lines');
 var openURL = require('open');
 var lazypipe = require('lazypipe');
 var rimraf = require('rimraf');
 var wiredep = require('wiredep').stream;
 var runSequence = require('run-sequence');
 // var maven = require('gulp-maven-deploy');
-// var insertLines = require('gulp-insert-lines');
 
 var paths = {
     app: 'app',
     styles: [ 'app/styles/*.css' ],
+    scripts: [ 'app/react/*.js' ],
     dist: 'dist',
+    tmp: '.tmp',
     index: 'app/index.html'
 };
 
@@ -37,6 +30,15 @@ var styles = lazypipe()
   .pipe($.autoprefixer, 'last 1 version')
   .pipe(gulp.dest, '.tmp/styles');
 
+var reactify = lazypipe()
+  .pipe($.babel, { presets: [ 'react' ] })
+  .pipe(gulp.dest, './.tmp/react');
+
+var scripts = lazypipe()
+  .pipe($.browserify)
+  .pipe($.rename, 'geotags.js')
+  .pipe(gulp.dest, './.tmp/js');
+
 ///////////
 // Tasks //
 ///////////
@@ -48,20 +50,46 @@ gulp.task('styles', function () {
 
 gulp.task('start:server', function() {
   $.connect.server({
-    root: [ './app', '.' ],
+    root: [ './app', './.tmp', '.' ],
     livereload: true,
     // Change this to '0.0.0.0' to access the server from outside.
     port: 9000
   });
 });
 
-gulp.task('runserver', [ 'start:server' ], function () {
-  openURL('http://localhost:9000');
+gulp.task('start:client', function () {
+  openURL('http://localhost:9000/index.html');
 });
 
-gulp.task('watch', function () {
-    $.watch('.')
+gulp.task('runserver', function(cb) {
+  runSequence(
+    'clean:tmp',
+    'scripts',
+    'start:server',
+    'start:client',
+    'watch',
+    cb);
+});
+
+gulp.task('watch', function (cb) {
+
+    gulp.src(paths.scripts)
+    .pipe($.plumber())
+    .pipe($.watch(paths.scripts))
+    .pipe(reactify());
+
+    $.watch('./.tmp/react/*.js', function() {
+      gulp.src('./.tmp/react/main.js')
+      .pipe($.plumber())
+      .pipe(scripts());
+    });
+
+    gulp.src('./.tmp/js/*.js')
+    .pipe($.watch('./.tmp/js/*.js'))
     .pipe($.connect.reload());
+
+    cb();
+
 });
 
 ///////////
@@ -76,27 +104,33 @@ gulp.task('clean:tmp', function (cb) {
   rimraf('./.tmp', cb);
 });
 
-gulp.task('client:build', ['styles'], function () {
-  var jsFilter = $.filter('**/*.js');
-  var cssFilter = $.filter('**/*.css');
-  var assets = $.useref.assets({searchPath: [paths.app, '.tmp']});
+gulp.task('clean:all', ['clean:dist', 'clean:tmp']);
+
+gulp.task('scripts:reactify', [ 'clean:tmp' ], function() {
+  return gulp.src(paths.scripts)
+    .pipe(reactify());
+})
+
+gulp.task('scripts', [ 'scripts:reactify' ], function() {
+  return gulp.src('./.tmp/react/main.js')
+    .pipe(scripts());
+});
+
+gulp.task('client:build', ['styles','scripts'], function () {
+  // var jsFilter = $.filter('**/*.js', {restore: true, passthrough: false});
+  // var cssFilter = $.filter('**/*.css', {restore: true, passthrough: false});
 
   return gulp.src(paths.index)
-    .pipe(assets)
-    .pipe(jsFilter)
-    .pipe($.uglify())
-    .pipe(jsFilter.restore())
-    .pipe(cssFilter)
-    .pipe($.minifyCss({cache: true}))
-    .pipe(cssFilter.restore())
-    .pipe($.rev())
-    .pipe(assets.restore())
-    .pipe($.revReplace())
     .pipe($.useref())
-    .pipe($.insertLines({
+    .pipe($.if('*.js', $.uglify()))
+    .pipe($.if('*.css', $.cleanCss()))
+    .pipe($.if('*.js', $.rev()))
+    .pipe($.if('*.css', $.rev()))
+    .pipe($.if('index.html', $.revReplace()))
+    .pipe($.if('index.html', $.insertLines({
       'after': /<!-- forDist : DO NOT REMOVE : insertion point for dist only -->$/,
       'lineAfter': '<script>L.Icon.Default.imagePath = "/scripts/images";</script>'
-    }))
+    })))
     .pipe(gulp.dest(paths.dist));
 });
 
