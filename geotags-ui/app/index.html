@@ -1,105 +1,119 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>GeoTags</title>
+	<title>GeoTags - Crèches de la Gironde</title>
 	<meta charset="utf-8">
 	<meta name="description" content="GeoTags Geotagging application">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
 	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="bower_components/leaflet-dist/leaflet.css">
-	<link rel="stylesheet" type="text/css" href="bower_components/leaflet-draw/dist/leaflet.draw.css">
-	<link rel="stylesheet" type="text/css" href="bower_components/Leaflet.label/dist/leaflet.label.css">
-	<!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-	<link rel="stylesheet" type="text/css" href="styles/Leaflet.VisualClick.css">
 	<link rel="stylesheet" type="text/css" href="styles/index.css">
 	<!-- endbuild -->
 </head>
 <body>
 
-	<div id="map" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
-
-	<div class="container-fluid" style="position: absolute; z-index: 900; top: 10px; left: 0; pointer-events: none; width: 100%; margin-left: 1%">
-		<div class="row" style="width: 100%">
-	    	<div class="col-md-4 col-md-offset-8" style="background-color: white; border: 1px solid lightgray; padding: 15px; pointer-events: all; box-shadow: 4px 4px 5px #aaa;">
-
-	    		<!-- Fiche de détail -->
-	    		<!-- Se localiser -->
-	    		<!-- Liste des objets affichés sur la carte -->
-	    		<!-- Admin : importer/exporter les données -->
-
-	    		<!-- <div style="float: right"><span class="glyphicon glyphicon-star"></span></div> -->
-	    		<ul class="nav nav-tabs">
-	    			<li class="active"><a id="tab-annotate" href="#annotate" data-toggle="tab">Annoter</a></li>
-	    			<li><a href="#create-new" data-toggle="tab">Ajouter un objet</a></li>
-	    			<!-- <li><a href="#lookup" data-toggle="tab">Rechercher</a></li> -->
-	    			<li><a id="tab-locate" href="#locate" data-toggle="tab">Se localiser</a></li>
-	    			<li class="dropdown pull-right">
-	    				<a class="dropdown-toggle" href="#" data-toggle="dropdown">
-	    					&nbsp;<span class="glyphicon glyphicon-menu-hamburger"></span>
-	    				</a>
-	    				<ul class="dropdown-menu pull-right">
-	    					<li><a id="tab-layer-control" href="#layer-control" data-toggle="tab">Fonds de plan</a></li>
-	    					<!-- <li><a href="#a2" data-toggle="tab">A2</a></li> -->
-	    				</ul>
-	    			</li>
-	    		</ul>
-
-	    		<div  class="tab-content" style="padding-top: 20px">
-
-	    			<div id="annotate" class="tab-pane active">
-		    			<p>Annoter ...</p>
-		    		</div>
-
-		    		<div id="lookup" class="tab-pane">
-		    			<p>Rechercher dans la liste ...</p>
-		    		</div>
-
-		    		<div id="create-new" class="tab-pane">
-			    	</div>
-
-	    			<div id="locate" class="tab-pane">
-			    	</div>
-
-			    	<div id="layer-control" class="tab-pane">
-			    		<p>Contrôle des couches ...</p>
-			    	</div>
-
-			    	<div id="a2" class="tab-pane">
-			    		<p>A2 ...</p>
-			    	</div>
-
-		    	</div>
-
-	    	</div>
-	    </div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<h1>GeoTags</h1>
+				<hr/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2 col-md-offset-1">
+				<div style="text-align: center; margin-top: 50px">
+					<img src="images/geotags.png" style="max-width: 100%"/>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div style="display: inline-block; vertical-align: top; text-align: justify">
+					<h2>Crèches de la Gironde</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</div>
+			<div class="col-md-3" style="padding-left: 20px; border-left: 1px dotted lightgray">
+				<h3>Accès à l'application</h3>
+				<form class="form" action="/user/login" method="POST">
+					<input type="hidden" name="next" value="/static/main.html" />
+					<input type="hidden" name="reg_next" value="/static/main.html" />
+					<div class="form-group">
+						<label class="label">
+							<span>IDENTIFIANT</span>
+						</label>
+						<input class="form-control input-lg" name="username" type="text" placeholder="Nom d'utilisateur ou email" />
+						<div class="pull-right" style="margin-top: 6px">
+							<a href="/user/register">Je n'ai pas de compte</a>
+						</div>
+					</div>
+					<br/>
+					<div class="form-group">
+						<label class="label">
+							<span>MOT DE PASSE</span>
+						</label>
+						<input class="form-control input-lg" name="password" type="password" />
+						<div class="pull-right" style="margin-top: 6px">
+							<a href="/user/forgot-password">J'ai oublié mon mot de passe</a>
+						</div>
+					</div>
+					<br/>
+					<br/>
+					<div class="button-toolbar pull-right">
+						<button class="btn btn-lg btn-primary" type="submit" name="login">S'identifier</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<hr/>
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				MAAF - xxxx
+			</div>
+		</div>
 	</div>
 
 	<!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
 	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-	<script type="text/javascript" src="bower_components/leaflet-dist/leaflet.js"></script>
-	<script type="text/javascript" src="bower_components/leaflet-draw/dist/leaflet.draw.js"></script>
-	<script type="text/javascript" src="bower_components/Leaflet.label/dist/leaflet.label.js"></script>
-	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-	<!-- endbower -->
+	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <!-- endbuild -->
 
-    <!-- build:js({.tmp,app}) scripts/scripts.js -->
-    <script type="text/javascript" src="js/Leaflet.WMTS.js"></script>
-	<script type="text/javascript" src="js/l10n/fr/leaflet-draw.js"></script>
-	<script type="text/javascript" src="js/Leaflet.VisualClick.js"></script>
-	<script type="text/javascript" src="js/Leaflet.VecTileLayer.js"></script>
-	<script type="text/javascript" src="js/Leaflet.Html5History.js"></script>
-	<script type="text/javascript" src="js/geotags.js"></script>
-	<!-- endbuild -->
+    <script type="text/javascript">
 
-    <!-- forDist : DO NOT REMOVE : insertion point for dist only -->
-    <!-- endForDist -->
+    	// Fake login for testing purpose
+    	$(document).ready(function() {
+
+    		var fakeLogin = function() {
+    			document.location = '/main.html';
+    		};
+
+    		$('form').on('submit', function(e) {
+
+    			e.preventDefault();
+    			fakeLogin();
+
+    		});
+    		$('form').find('a').click(function(e) {
+
+    			e.preventDefault();
+    			fakeLogin();
+
+    		})
+    	});
+
+    </script>
 
 </body>
 </html>

@@ -1,10 +1,11 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+// var React = require('react');
+// var ReactDOM = require('react-dom');
 var Gazetteer = require('./gazetteer-local.js');
 var GazetteerBAN = require('./gazetteer-ban.js');
 var LayerSwitcher = require('./layer-switcher.js');
 // var FeatureList = require('./feature-list.js');
 var AnnotationForm = require('./annotation.js');
+var ExportFeatureAction = require('./export.js');
 
 // create a map in the "map" div, set the view to a given place and zoom
 var map = L.map('map').setView([44.82763029742812, -0.591888427734375], 10);
@@ -19,6 +20,14 @@ var baseLayers = [
         { key: 'plan-ign',
           title: 'Plan IGN',
           layer: "GEOGRAPHICALGRIDSYSTEMS.PLANIGN",
+          style:  "normal",
+          tilematrixSet: "PM",
+          format: "image/jpeg",
+          attribution: "<a href='http://www.ign.fr'>IGN</a>" }),
+    L.tileLayer.wmts(gpp_url,
+        { key: 'carte-ign',
+          title: 'Carte IGN',
+          layer: "GEOGRAPHICALGRIDSYSTEMS.MAPS",
           style:  "normal",
           tilematrixSet: "PM",
           format: "image/jpeg",
@@ -67,6 +76,11 @@ var createNew = function(feature) {
     aForm.selectFeature(feature, marker);
 };
 
+var saveToBackend = function(feature) {
+    console.log("Saving to backend ...");
+    console.log(feature);
+};
+
 window.gazetteerBan = ReactDOM.render(
  <GazetteerBAN map={map} name="search-ban" service="http://api-adresse.data.gouv.fr/search/?q={q}" placeholder="Rechercher une adresse" select={createNew}  />,
  document.getElementById('create-new')
@@ -82,7 +96,7 @@ ReactDOM.render(
 );
 
 var aForm = ReactDOM.render(
-    <AnnotationForm />,
+    <AnnotationForm save={saveToBackend} />,
     document.getElementById('annotate')
 );
 
@@ -100,7 +114,7 @@ var aForm = ReactDOM.render(
 //     }).addTo(map);
 
 $.getJSON('data/points-d033.geojson', function(data) {
-    dataLayer = L.geoJson(data, {
+    window.dataLayer = dataLayer = L.geoJson(data, {
         
         pointToLayer: function(feature, latLng) {
             var icon = L.divIcon({
@@ -117,6 +131,9 @@ $.getJSON('data/points-d033.geojson', function(data) {
             marker.on("click", function(e) {
                 aForm.selectFeature(feature, marker);
             });
+            marker.on("dragend", function(e) {
+                feature.geometry = marker.toGeoJSON().geometry;
+            });
         }
 
     }).addTo(map);
@@ -125,6 +142,11 @@ $.getJSON('data/points-d033.geojson', function(data) {
 var historyControl = new L.Control.Html5History();
 historyControl.addTo(map);
 
+$('#action-export').click(function(e) {
+    e.preventDefault();
+    var exporter = new ExportFeatureAction();
+    exporter.exportFeatures(dataLayer.toGeoJSON().features, 'creches-d033.json');
+});
+
 window.map = map;
-window.dataLayer = dataLayer;
 window.aForm = aForm;

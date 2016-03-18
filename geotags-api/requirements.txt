@@ -13,3 +13,4 @@ ModestMaps==1.4.6
 Shapely==1.5.13
 TileStache==1.50.1
 psycopg2==2.6.1
+Flask-Babel==0.9

@@ -15,7 +15,7 @@ var paths = {
     scripts: [ 'app/react/*.js' ],
     dist: 'dist',
     tmp: '.tmp',
-    index: 'app/index.html'
+    html: [ 'app/main.html', 'app/index.html']
 };
 
 ////////////////////////
@@ -30,11 +30,15 @@ var styles = lazypipe()
   .pipe($.autoprefixer, 'last 1 version')
   .pipe(gulp.dest, '.tmp/styles');
 
+var scripts = lazypipe()
+  .pipe($.autoprefixer, 'last 1 version')
+  .pipe(gulp.dest, '.tmp/scripts');
+
 var reactify = lazypipe()
   .pipe($.babel, { presets: [ 'react' ] })
   .pipe(gulp.dest, './.tmp/react');
 
-var scripts = lazypipe()
+var browserify = lazypipe()
   .pipe($.browserify)
   .pipe($.rename, 'geotags.js')
   .pipe(gulp.dest, './.tmp/js');
@@ -65,6 +69,7 @@ gulp.task('runserver', function(cb) {
   runSequence(
     'clean:tmp',
     'scripts',
+    'styles',
     'start:server',
     'start:client',
     'watch',
@@ -85,7 +90,7 @@ gulp.task('watch', function (cb) {
   $.watch('./.tmp/react/*.js', function() {
     gulp.src('./.tmp/react/main.js')
     .pipe($.plumber())
-    .pipe(scripts());
+    .pipe(browserify());
   });
 
   gulp.src('./.tmp/js/*.js')
@@ -117,25 +122,52 @@ gulp.task('scripts:reactify', [ 'clean:tmp' ], function() {
 
 gulp.task('scripts', [ 'scripts:reactify' ], function() {
   return gulp.src('./.tmp/react/main.js')
-    .pipe(scripts());
+    .pipe(browserify());
 });
 
-gulp.task('client:build', ['styles','scripts'], function () {
-  // var jsFilter = $.filter('**/*.js', {restore: true, passthrough: false});
-  // var cssFilter = $.filter('**/*.css', {restore: true, passthrough: false});
+// var jsFilter = $.filter('**/*.js', {restore: true, passthrough: false});
+// var cssFilter = $.filter('**/*.css', {restore: true, passthrough: false});
 
-  return gulp.src(paths.index)
-    .pipe($.useref())
-    .pipe($.if('*.js', $.uglify()))
-    .pipe($.if('*.css', $.cleanCss()))
-    .pipe($.if('*.js', $.rev()))
-    .pipe($.if('*.css', $.rev()))
-    .pipe($.if('index.html', $.revReplace()))
-    .pipe($.if('index.html', $.insertLines({
-      'after': /<!-- forDist : DO NOT REMOVE : insertion point for dist only -->$/,
-      'lineAfter': '<script>L.Icon.Default.imagePath = "/scripts/images";</script>'
-    })))
-    .pipe(gulp.dest(paths.dist));
+gulp.task('client:build:main', [ 'scripts', 'styles' ], function () {
+
+  return gulp.src(paths.html[0])
+  .pipe($.useref())
+  .pipe($.if('*.js', $.uglify()))
+  .pipe($.if('*.js', $.rev()))
+  .pipe($.if('*.css', $.cleanCss()))
+  .pipe($.if('*.css', $.rev()))
+  // .pipe($.if('*.js', $.rev()))
+  // .pipe($.if('*.css', $.rev()))
+  .pipe($.revReplace())
+  .pipe($.if('*.html', $.insertLines({
+    'after': /<!-- forDist : DO NOT REMOVE : insertion point for dist only -->$/,
+    'lineAfter': '<script>L.Icon.Default.imagePath = "/scripts/images";</script>'
+  })))
+  .pipe(gulp.dest(paths.dist))
+  .pipe($.rev.manifest())
+  .pipe(gulp.dest(paths.dist));
+
+});
+
+gulp.task('client:build', [ 'client:build:main' ], function () {
+
+  var manifest = gulp.src("./" + paths.dist + "/rev-manifest.json");
+  
+  return gulp.src(paths.html[1])
+  // .pipe($.useref())
+  // .pipe($.if('*.js', $.uglify()))
+  // .pipe($.if('*.js', $.rev()))
+  // .pipe($.if('*.css', $.cleanCss()))
+  // .pipe($.if('*.css', $.rev()))
+  // .pipe($.if('*.js', $.rev()))
+  // .pipe($.if('*.css', $.rev()))
+  .pipe($.revReplace({ manifest: manifest }))
+  // .pipe($.if('*.html', $.insertLines({
+  //   'after': /<!-- forDist : DO NOT REMOVE : insertion point for dist only -->$/,
+  //   'lineAfter': '<script>L.Icon.Default.imagePath = "/scripts/images";</script>'
+  // })))
+  .pipe(gulp.dest(paths.dist));
+
 });
 
 gulp.task('copy:extras', function () {
@@ -153,6 +185,11 @@ gulp.task('copy:leafletImages', function () {
     .pipe(gulp.dest(paths.dist + '/scripts/images'));
 })
 
+gulp.task('copy:images', function() {
+  return gulp.src(paths.app + '/images/**/*')
+    .pipe(gulp.dest(paths.dist + '/images'));
+});
+
 gulp.task('copy:data', function() {
   return gulp.src(paths.app + '/data/**/*')
     .pipe(gulp.dest(paths.dist + '/data'));
@@ -168,6 +205,7 @@ gulp.task('build', ['clean:tmp', 'clean:dist'], function (cb) {
     'copy:leafletImages',
     'copy:template',
     'copy:data',
+    'copy:images',
     // 'copy:extras',
     'copy:fonts',
     'client:build'], cb);

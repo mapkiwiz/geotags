@@ -1,4 +1,4 @@
-var React = require('react');
+// var React = require('react');
 
 var LayerEntry = React.createClass({
 
@@ -51,12 +51,12 @@ var LayerSwitcher = React.createClass({
 		var self = this, items = this.props.layers.map(
 			function(layer) {
 				return (
-					<LayerEntry value={layer} onSelect={self.changeBaseLayerTo} />
+					<LayerEntry key={layer.options.key} value={layer} onSelect={self.changeBaseLayerTo} />
 				);
 			});
 		return (
 			<div>
-				<span className="list-header">{this.props.title}</span>
+				<label className="label"><span>{this.props.title}</span></label>
 				<ul className="list">
 					{items}
 				</ul>

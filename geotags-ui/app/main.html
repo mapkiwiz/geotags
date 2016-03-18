@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GeoTags - Crèche de la Gironde</title>
+	<meta charset="utf-8">
+	<meta name="description" content="GeoTags : Geotagging application">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="bower_components/leaflet-dist/leaflet.css">
+	<link rel="stylesheet" type="text/css" href="bower_components/leaflet-draw/dist/leaflet.draw.css">
+	<link rel="stylesheet" type="text/css" href="bower_components/Leaflet.label/dist/leaflet.label.css">
+	<!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+	<link rel="stylesheet" type="text/css" href="styles/Leaflet.VisualClick.css">
+	<link rel="stylesheet" type="text/css" href="styles/index.css">
+	<!-- endbuild -->
+</head>
+<body>
+
+	<div id="map" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+
+	<div class="container-fluid" style="position: absolute; z-index: 900; top: 10px; left: 0; pointer-events: none; width: 100%; margin-left: 1%">
+		<div class="row" style="width: 100%">
+	    	<div class="col-md-4 col-md-offset-8" style="background-color: white; border: 1px solid lightgray; padding: 15px; pointer-events: all; box-shadow: 4px 4px 5px #aaa;">
+
+	    		<!-- Fiche de détail -->
+	    		<!-- Se localiser -->
+	    		<!-- Liste des objets affichés sur la carte -->
+	    		<!-- Admin : importer/exporter les données -->
+
+	    		<!-- <div style="float: right"><span class="glyphicon glyphicon-star"></span></div> -->
+	    		<ul class="nav nav-tabs">
+	    			<li><a id="tab-annotate" href="#annotate" data-toggle="tab">Annoter</a></li>
+	    			<li><a href="#create-new" data-toggle="tab">Ajouter un objet</a></li>
+	    			<!-- <li><a href="#lookup" data-toggle="tab">Rechercher</a></li> -->
+	    			<li><a id="tab-locate" href="#locate" data-toggle="tab">Se localiser</a></li>
+	    			<li class="active dropdown pull-right">
+	    				<a class="dropdown-toggle" href="#" data-toggle="dropdown">
+	    					&nbsp;<span class="glyphicon glyphicon-menu-hamburger"></span>
+	    				</a>
+	    				<ul class="dropdown-menu pull-right">
+	    					<li><a id="tab-layer-control" href="#layer-control" data-toggle="tab">Fonds de plan</a></li>
+	    					<!-- <li><a href="#a2" data-toggle="tab">A2</a></li> -->
+	    					<li><a id="tab-instructions" href="#instructions" data-toggle="tab">Instructions</a></li>
+	    					<li><a id="action-export" href="#export">Exporter le jeu de données</a></li>
+	    					<li><a id="tab-a-propos" href="#a-propos" data-toggle="tab">À propos</a></li>
+	    					<li><a id="action-logout" href="/user/logout">Se déconnecter</a></li>
+	    				</ul>
+	    			</li>
+	    		</ul>
+
+	    		<div  class="tab-content" style="padding-top: 20px">
+
+	    			<div id="annotate" class="tab-pane">
+		    			<p>Annoter ...</p>
+		    		</div>
+
+		    		<div id="lookup" class="tab-pane">
+		    			<p>Rechercher dans la liste ...</p>
+		    		</div>
+
+		    		<div id="create-new" class="tab-pane">
+			    	</div>
+
+	    			<div id="locate" class="tab-pane">
+			    	</div>
+
+			    	<div id="layer-control" class="tab-pane">
+			    		<p>Contrôle des couches ...</p>
+			    	</div>
+
+			    	<div id="instructions" class="tab-pane active">
+
+			    		<div class="annotation details">
+
+							<label class="label">
+								<span>INSTRUCTIONS</span>
+							</label>
+			 
+							<div>Sélectionner un objet en cliquant sur la carte.</div>
+
+							<label class="label">
+								<span>Localisation</span>
+							</label>
+							<div>Pour modifier/préciser la localisation d'un objet,
+							déplacer le sur la carte après l'avoir sélectionné.</div>
+
+							<label class="label">
+								<span>Légende</span>
+							</label>
+							<table class="table legend">
+								<tbody>
+									<tr>
+										<td><span class="glyphicon glyphicon-map-marker feature-marker feature-marker-valid"></span> Objet validé</td>
+										<td><span class="glyphicon glyphicon-map-marker feature-marker feature-marker-selected"></span> Objet sélectionné</td>
+									</tr>
+									<tr>
+										<td><span class="glyphicon glyphicon-map-marker feature-marker feature-marker-commented"></span> Objet annoté</td>
+										<td><span class="glyphicon glyphicon-map-marker feature-marker"></span> Objet à traiter</td>
+									</tr>
+									<tr>
+										<td><span class="glyphicon glyphicon-map-marker feature-marker feature-marker-for-deletion"></span> Objet à supprimer</td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+
+						</div>
+
+			    	</div>
+
+			    	<div id="a-propos" class="tab-pane">
+			    		<label class="label">
+							<span>À propos</span>
+						</label>
+			    		<p>À propos de GeoTags ...</p>
+			    	</div>
+
+		    	</div>
+
+	    	</div>
+	    </div>
+	</div>
+
+	<!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="bower_components/react/react-with-addons.js"></script>
+	<script type="text/javascript" src="bower_components/react/react-dom.js"></script>
+	<script type="text/javascript" src="bower_components/leaflet-dist/leaflet.js"></script>
+	<script type="text/javascript" src="bower_components/leaflet-draw/dist/leaflet.draw.js"></script>
+	<script type="text/javascript" src="bower_components/Leaflet.label/dist/leaflet.label.js"></script>
+	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/geotags.js -->
+    <script type="text/javascript" src="js/Leaflet.WMTS.js"></script>
+	<script type="text/javascript" src="js/Leaflet.VisualClick.js"></script>
+	<script type="text/javascript" src="js/Leaflet.VecTileLayer.js"></script>
+	<script type="text/javascript" src="js/Leaflet.Html5History.js"></script>
+	<script type="text/javascript" src="js/geotags.js"></script>
+	<!-- endbuild -->
+
+	<!-- build:js({.tmp,app}) scripts/l10n/fr.js -->
+	<script type="text/javascript" src="js/l10n/fr/leaflet-draw.js"></script>
+	<!-- endbuild -->
+
+    <!-- forDist : DO NOT REMOVE : insertion point for dist only -->
+    <!-- endForDist -->
+
+</body>
+</html>

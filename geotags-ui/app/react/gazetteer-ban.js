@@ -1,4 +1,4 @@
-var React = require('react');
+// var React = require('react');
 
 var GazetteerResult = React.createClass({
 
@@ -49,7 +49,7 @@ var Gazetteer = React.createClass({
     render: function() {
     	var self = this, items = this.state.results.map(function(result) {
 			return (
-				<GazetteerResult value={result} onSelect={self.handleSelect} />
+				<GazetteerResult key={result.properties.id} value={result} onSelect={self.handleSelect} />
 			);
 		});
         return (

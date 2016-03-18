@@ -65,6 +65,13 @@ label.label > span {
   font-size: 0.651em;
   color: rgba(100, 100, 100, 0.6);
   padding: 0 0 0 0;
+  text-transform: uppercase;
+}
+
+label.label > a {
+  color: silver;
+  margin-left: 10px;
+  vertical-align: sub;
 }
 
 .annotation .detail {
@@ -105,5 +112,9 @@ label.label > span {
     1px -1px 0 #fff,
     -1px 1px 0 #fff,
     1px 1px 0 #fff; 
+}
+
+.legend span.feature-marker {
+  vertical-align: middle;
 }
 

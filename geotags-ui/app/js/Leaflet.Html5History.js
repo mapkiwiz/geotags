@@ -35,8 +35,10 @@
 		},
 
 		restoreView: function(e) {
-			pendingMoves.push(e.state);
-			this._map.setView(e.state.center, e.state.zoom, { animate: true });
+			if (e.state) {
+				pendingMoves.push(e.state);
+				this._map.setView(e.state.center, e.state.zoom, { animate: true });
+			}
 			return true;
 		},
 
