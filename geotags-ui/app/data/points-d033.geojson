@@ -1,0 +1,7390 @@
+{
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [
+          -1.1073430000000017,
+          44.744866999999935
+        ],
+        "type": "Point"
+      },
+      "id": 3,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che collective \"\"Le Nid d'Anges\"\"",
+        "tags": {
+          "adresse": "41 Boulevard de la Plage 33510 Andernos-les-Bains",
+          "commune": "Andernos-les-Bains",
+          "insee": "33005",
+          "pk": "8385"
+        },
+        "timestamp": "2016-03-11T14:56:08.317107",
+        "version": 3
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -1.0856700000000004,
+          44.744200999999926
+        ],
+        "type": "Point"
+      },
+      "id": 4,
+      "properties": {
+        "label": null,
+        "name": "Multi Accueil  Les Petits Mousses",
+        "tags": {
+          "adresse": "46 Avenue des Colonies 33510 Andernos-les-Bains",
+          "commune": "Andernos-les-Bains",
+          "insee": "33005",
+          "pk": "8386"
+        },
+        "timestamp": "2016-03-11T14:56:08.317471",
+        "version": 4
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -1.1529909999999999,
+          44.65763999999992
+        ],
+        "type": "Point"
+      },
+      "id": 5,
+      "properties": {
+        "label": null,
+        "name": "\"\"Engremy - Les Petits Pirelons\"\"",
+        "tags": {
+          "adresse": "2 Rue des \u00c9coles 33120 Arcachon",
+          "commune": "Arcachon",
+          "insee": "33009",
+          "pk": "8387"
+        },
+        "timestamp": "2016-03-11T14:56:08.317840",
+        "version": 5
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -1.1552870000000002,
+          44.65004099999993
+        ],
+        "type": "Point"
+      },
+      "id": 6,
+      "properties": {
+        "label": null,
+        "name": "Multi accueil \"\"Bout'chou\"\"",
+        "tags": {
+          "adresse": "17 Avenue de la Regue Verte 33120 Arcachon",
+          "commune": "Arcachon",
+          "insee": "33009",
+          "pk": "8388"
+        },
+        "timestamp": "2016-03-11T14:56:08.318203",
+        "version": 6
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -1.1552870000000002,
+          44.65004099999993
+        ],
+        "type": "Point"
+      },
+      "id": 7,
+      "properties": {
+        "label": null,
+        "name": "SAF Arcachon",
+        "tags": {
+          "adresse": "17 Avenue de la Regue Verte 33120 Arcachon",
+          "commune": "Arcachon",
+          "insee": "33009",
+          "pk": "8389"
+        },
+        "timestamp": "2016-03-11T14:56:08.318611",
+        "version": 7
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -1.1273290000000007,
+          44.774103999999916
+        ],
+        "type": "Point"
+      },
+      "id": 8,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che \"\"Les Dauphins Bleus\"\"",
+        "tags": {
+          "adresse": "Rue du Temple 33740 Ar\u00e8s",
+          "commune": "Ar\u00e8s",
+          "insee": "33011",
+          "pk": "8390"
+        },
+        "timestamp": "2016-03-11T14:56:08.318996",
+        "version": 8
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.49246900000000027,
+          44.86350899999993
+        ],
+        "type": "Point"
+      },
+      "id": 9,
+      "properties": {
+        "label": null,
+        "name": "Halte-garderie \"\"Les Petits Bonheurs\"\"",
+        "tags": {
+          "adresse": "All\u00e9e du Parc 33370 Artigues-pr\u00e8s-Bordeaux",
+          "commune": "Artigues-pr\u00e8s-Bordeaux",
+          "insee": "33013",
+          "pk": "8391"
+        },
+        "timestamp": "2016-03-11T14:56:08.319356",
+        "version": 9
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.49145200000000006,
+          44.86026399999992
+        ],
+        "type": "Point"
+      },
+      "id": 10,
+      "properties": {
+        "label": null,
+        "name": "Multi accueil Les R\u00eaves Bleus",
+        "tags": {
+          "adresse": "9 Avenue Desclaux 33370 Artigues-pr\u00e8s-Bordeaux",
+          "commune": "Artigues-pr\u00e8s-Bordeaux",
+          "insee": "33013",
+          "pk": "8392"
+        },
+        "timestamp": "2016-03-11T14:56:08.319713",
+        "version": 10
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.2878639999999997,
+          44.885507999999916
+        ],
+        "type": "Point"
+      },
+      "id": 11,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil  La Farandole",
+        "tags": {
+          "adresse": "31 BIS Rue du 8 Mai 1945 33500 Arveyres",
+          "commune": "Arveyres",
+          "insee": "33015",
+          "pk": "8393"
+        },
+        "timestamp": "2016-03-11T14:56:08.320069",
+        "version": 11
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -1.0010590000000004,
+          44.686158999999925
+        ],
+        "type": "Point"
+      },
+      "id": 12,
+      "properties": {
+        "label": null,
+        "name": "Halte-garderie \"\"Le Cocon\"\"",
+        "tags": {
+          "adresse": "4 Rue Victor Hamm 33980 Audenge",
+          "commune": "Audenge",
+          "insee": "33019",
+          "pk": "8394"
+        },
+        "timestamp": "2016-03-11T14:56:08.320428",
+        "version": 12
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -1.0040170000000006,
+          44.68900899999992
+        ],
+        "type": "Point"
+      },
+      "id": 13,
+      "properties": {
+        "label": null,
+        "name": "Micro cr\u00e8che H\u00e9ron et Patapon",
+        "tags": {
+          "adresse": "12 Rue Mich\u00e8le Perrein 33980 Audenge",
+          "commune": "Audenge",
+          "insee": "33019",
+          "pk": "8395"
+        },
+        "timestamp": "2016-03-11T14:56:08.320779",
+        "version": 13
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.14363300000000034,
+          44.49786699999991
+        ],
+        "type": "Point"
+      },
+      "id": 14,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil \"\"A petits Pas\"\" Auros",
+        "tags": {
+          "adresse": "Route de Castets 33124 Auros",
+          "commune": "Auros",
+          "insee": "33021",
+          "pk": "8396"
+        },
+        "timestamp": "2016-03-11T14:56:08.321128",
+        "version": 14
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.21956800000000046,
+          44.431903999999925
+        ],
+        "type": "Point"
+      },
+      "id": 15,
+      "properties": {
+        "label": null,
+        "name": "Halte-garderie \"\"Lous Pitchouns\"\"",
+        "tags": {
+          "adresse": "22 Avenue du Professeur Paul Lamarque 33430 Bazas",
+          "commune": "Bazas",
+          "insee": "33036",
+          "pk": "8397"
+        },
+        "timestamp": "2016-03-11T14:56:08.321476",
+        "version": 15
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.529433,
+          44.79678799999992
+        ],
+        "type": "Point"
+      },
+      "id": 16,
+      "properties": {
+        "label": null,
+        "name": "1000 Tr\u00e9sors",
+        "tags": {
+          "adresse": "3 Rue Louis Bl\u00e9riot 33130 B\u00e8gles",
+          "commune": "B\u00e8gles",
+          "insee": "33039",
+          "pk": "8398"
+        },
+        "timestamp": "2016-03-11T14:56:08.321824",
+        "version": 16
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5679050000000004,
+          44.80995099999992
+        ],
+        "type": "Point"
+      },
+      "id": 17,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che \"\"Clapotis II\"\"",
+        "tags": {
+          "adresse": "133 Rue de Lauriol 33130 B\u00e8gles",
+          "commune": "B\u00e8gles",
+          "insee": "33039",
+          "pk": "8399"
+        },
+        "timestamp": "2016-03-11T14:56:08.322173",
+        "version": 17
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5616030000000004,
+          44.80225299999993
+        ],
+        "type": "Point"
+      },
+      "id": 18,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che municipale \"\"3 P'tits Tours\"\"",
+        "tags": {
+          "adresse": "Rue Charles Lamoureux 33130 B\u00e8gles",
+          "commune": "B\u00e8gles",
+          "insee": "33039",
+          "pk": "8400"
+        },
+        "timestamp": "2016-03-11T14:56:08.322564",
+        "version": 18
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5406770000000006,
+          44.80101299999991
+        ],
+        "type": "Point"
+      },
+      "id": 19,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che-Halte-garderie \"\"Frimousse\"\"",
+        "tags": {
+          "adresse": "Rue Gaston Monmousseau 33130 B\u00e8gles",
+          "commune": "B\u00e8gles",
+          "insee": "33039",
+          "pk": "8401"
+        },
+        "timestamp": "2016-03-11T14:56:08.322918",
+        "version": 19
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5419010000000003,
+          44.804529999999914
+        ],
+        "type": "Point"
+      },
+      "id": 20,
+      "properties": {
+        "label": null,
+        "name": "Halte-garderie \"\"P'tits C\u009curs\"\"",
+        "tags": {
+          "adresse": "Rue des S\u00e9cheries 33130 B\u00e8gles",
+          "commune": "B\u00e8gles",
+          "insee": "33039",
+          "pk": "8402"
+        },
+        "timestamp": "2016-03-11T14:56:08.323268",
+        "version": 20
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5424760000000006,
+          44.80544699999994
+        ],
+        "type": "Point"
+      },
+      "id": 21,
+      "properties": {
+        "label": null,
+        "name": "Halte-jeux \"\"La Ribambulle\"\"",
+        "tags": {
+          "adresse": "Rue des Droits de l'Enfant 33130 B\u00e8gles",
+          "commune": "B\u00e8gles",
+          "insee": "33039",
+          "pk": "8403"
+        },
+        "timestamp": "2016-03-11T14:56:08.323617",
+        "version": 21
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.785242000000002,
+          44.499504999999914
+        ],
+        "type": "Point"
+      },
+      "id": 22,
+      "properties": {
+        "label": null,
+        "name": "Halte-garderie \"\"Les Pignots\"\"",
+        "tags": {
+          "adresse": "Rue des \u00c9coles 33830 Belin-B\u00e9liet",
+          "commune": "Belin-B\u00e9liet",
+          "insee": "33042",
+          "pk": "8404"
+        },
+        "timestamp": "2016-03-11T14:56:08.323965",
+        "version": 22
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.37032300000000057,
+          44.869276999999926
+        ],
+        "type": "Point"
+      },
+      "id": 23,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil \"\"Galipette\"\"",
+        "tags": {
+          "adresse": "Le Bourg de Caillau 33750 Beychac-et-Caillau",
+          "commune": "Beychac-et-Caillau",
+          "insee": "33049",
+          "pk": "8405"
+        },
+        "timestamp": "2016-03-11T14:56:08.324364",
+        "version": 23
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.9773599999999999,
+          44.63781899999991
+        ],
+        "type": "Point"
+      },
+      "id": 24,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che \"\"Les Petits Lutins\"\"",
+        "tags": {
+          "adresse": "10 Rue de la Verrerie 33380 Biganos",
+          "commune": "Biganos",
+          "insee": "33051",
+          "pk": "8406"
+        },
+        "timestamp": "2016-03-11T14:56:08.324719",
+        "version": 24
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.9790480000000007,
+          44.64336599999992
+        ],
+        "type": "Point"
+      },
+      "id": 25,
+      "properties": {
+        "label": null,
+        "name": "Multi accueil \"\"l'Etoile filante\"\"",
+        "tags": {
+          "adresse": "Impasse de l'\u00c9toile Filante 33380 Biganos",
+          "commune": "Biganos",
+          "insee": "33051",
+          "pk": "8407"
+        },
+        "timestamp": "2016-03-11T14:56:08.325068",
+        "version": 25
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6323320000000004,
+          44.909255999999935
+        ],
+        "type": "Point"
+      },
+      "id": 26,
+      "properties": {
+        "label": null,
+        "name": "Multi accueil St Louis",
+        "tags": {
+          "adresse": "31 Rue de la R\u00e9publique 33290 Blanquefort",
+          "commune": "Blanquefort",
+          "insee": "33056",
+          "pk": "8408"
+        },
+        "timestamp": "2016-03-11T14:56:08.325422",
+        "version": 26
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.633588000000001,
+          44.90944699999992
+        ],
+        "type": "Point"
+      },
+      "id": 27,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil \"\"L'Ile aux Doudous\"\"",
+        "tags": {
+          "adresse": "Rue de la R\u00e9publique 33290 Blanquefort",
+          "commune": "Blanquefort",
+          "insee": "33056",
+          "pk": "8409"
+        },
+        "timestamp": "2016-03-11T14:56:08.325779",
+        "version": 27
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6355500000000006,
+          44.92337999999994
+        ],
+        "type": "Point"
+      },
+      "id": 28,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil r\u00e9gulier \"\"Les Poussins\"\"",
+        "tags": {
+          "adresse": "12 Rue de Saint-Julien 33290 Blanquefort",
+          "commune": "Blanquefort",
+          "insee": "33056",
+          "pk": "8410"
+        },
+        "timestamp": "2016-03-11T14:56:08.326136",
+        "version": 28
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6311790000000008,
+          44.919633999999924
+        ],
+        "type": "Point"
+      },
+      "id": 29,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil r\u00e9gulier \"\"Suce Pouce\"\"",
+        "tags": {
+          "adresse": "63 Rue de Maurian 33290 Blanquefort",
+          "commune": "Blanquefort",
+          "insee": "33056",
+          "pk": "8411"
+        },
+        "timestamp": "2016-03-11T14:56:08.326543",
+        "version": 29
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6570319999999998,
+          45.132211999999925
+        ],
+        "type": "Point"
+      },
+      "id": 30,
+      "properties": {
+        "label": null,
+        "name": "\"\"Les P'tits Mousses de l'Estuaire\"\"",
+        "tags": {
+          "adresse": "32 Rue des Macons 33390 Blaye",
+          "commune": "Blaye",
+          "insee": "33058",
+          "pk": "8412"
+        },
+        "timestamp": "2016-03-11T14:56:08.326900",
+        "version": 30
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5536959999999997,
+          44.824666999999906
+        ],
+        "type": "Point"
+      },
+      "id": 31,
+      "properties": {
+        "label": null,
+        "name": "\"\"Canaillous Laffiteau\"\"",
+        "tags": {
+          "adresse": "13 Rue Laffiteau 33800 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8413"
+        },
+        "timestamp": "2016-03-11T14:56:08.327254",
+        "version": 31
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5843850000000004,
+          44.83083099999992
+        ],
+        "type": "Point"
+      },
+      "id": 32,
+      "properties": {
+        "label": null,
+        "name": "\"\"L'Escale des bambins\"\"",
+        "tags": {
+          "adresse": "95 Rue du Tondu 33000 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8414"
+        },
+        "timestamp": "2016-03-11T14:56:08.327624",
+        "version": 32
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5850460000000004,
+          44.837397999999915
+        ],
+        "type": "Point"
+      },
+      "id": 33,
+      "properties": {
+        "label": null,
+        "name": "\"\"L'Ile Aux Oiseaux\"\"",
+        "tags": {
+          "adresse": "Esplanade Charles de Gaulle 33000 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8415"
+        },
+        "timestamp": "2016-03-11T14:56:08.327982",
+        "version": 33
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5767310000000007,
+          44.83298099999991
+        ],
+        "type": "Point"
+      },
+      "id": 34,
+      "properties": {
+        "label": null,
+        "name": "\"\"Maison des Enfants\"\"",
+        "tags": {
+          "adresse": "64 Rue Magendie 33000 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8416"
+        },
+        "timestamp": "2016-03-11T14:56:08.328392",
+        "version": 34
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5938570000000001,
+          44.82317799999993
+        ],
+        "type": "Point"
+      },
+      "id": 35,
+      "properties": {
+        "label": null,
+        "name": "\"\"Pain d'Epice\"\"",
+        "tags": {
+          "adresse": "11 Cit\u00e9 de Caulet 33000 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8417"
+        },
+        "timestamp": "2016-03-11T14:56:08.328750",
+        "version": 35
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5437480000000005,
+          44.84609899999993
+        ],
+        "type": "Point"
+      },
+      "id": 36,
+      "properties": {
+        "label": null,
+        "name": "Accueil occasionnel de La Benauge",
+        "tags": {
+          "adresse": "7 Rue Raymond Poincar\u00e9 33100 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8418"
+        },
+        "timestamp": "2016-03-11T14:56:08.329101",
+        "version": 36
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5742280000000004,
+          44.84839899999992
+        ],
+        "type": "Point"
+      },
+      "id": 37,
+      "properties": {
+        "label": null,
+        "name": "Brins d'\u00e9veil",
+        "tags": {
+          "adresse": "18 Rue Vauban 33000 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8419"
+        },
+        "timestamp": "2016-03-11T14:56:08.329458",
+        "version": 37
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5868110000000003,
+          44.84433999999992
+        ],
+        "type": "Point"
+      },
+      "id": 38,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che \"\"Albert Barraud\"\"",
+        "tags": {
+          "adresse": "15 Rue du Docteur Albert Barraud 33000 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8420"
+        },
+        "timestamp": "2016-03-11T14:56:08.329806",
+        "version": 38
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5976940000000004,
+          44.83161599999993
+        ],
+        "type": "Point"
+      },
+      "id": 39,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che \"\"Cache Cache\"\"",
+        "tags": {
+          "adresse": "300 Rue d'Ornano 33000 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8421"
+        },
+        "timestamp": "2016-03-11T14:56:08.330153",
+        "version": 39
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.601123,
+          44.83854899999992
+        ],
+        "type": "Point"
+      },
+      "id": 40,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che \"\"Cit\u00e9 Administrative\"\"",
+        "tags": {
+          "adresse": "Rue de la Libert\u00e9 33200 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8422"
+        },
+        "timestamp": "2016-03-11T14:56:08.330552",
+        "version": 40
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5432660000000009,
+          44.87928199999993
+        ],
+        "type": "Point"
+      },
+      "id": 41,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che \"\"Claveau\"\"",
+        "tags": {
+          "adresse": "135 Rue Joseph Brunet 33300 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8423"
+        },
+        "timestamp": "2016-03-11T14:56:08.330908",
+        "version": 41
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5632260000000013,
+          44.82984299999994
+        ],
+        "type": "Point"
+      },
+      "id": 42,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che \"\"des Douves\"\"",
+        "tags": {
+          "adresse": "65 Rue des Douves 33800 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8424"
+        },
+        "timestamp": "2016-03-11T14:56:08.331265",
+        "version": 42
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5836059999999998,
+          44.85947799999994
+        ],
+        "type": "Point"
+      },
+      "id": 43,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che \"\"Grand Parc\"\"",
+        "tags": {
+          "adresse": "33 Rue Louis Gendreau 33300 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8425"
+        },
+        "timestamp": "2016-03-11T14:56:08.331616",
+        "version": 43
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5437480000000005,
+          44.84609899999993
+        ],
+        "type": "Point"
+      },
+      "id": 44,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che \"\"La Benauge\"\"",
+        "tags": {
+          "adresse": "7 Rue Raymond Poincar\u00e9 33100 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8426"
+        },
+        "timestamp": "2016-03-11T14:56:08.331969",
+        "version": 44
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5663090000000008,
+          44.862166999999936
+        ],
+        "type": "Point"
+      },
+      "id": 45,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che \"\"Les Chartrons\"\"",
+        "tags": {
+          "adresse": "64 Rue de Leybardie 33300 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8427"
+        },
+        "timestamp": "2016-03-11T14:56:08.332321",
+        "version": 45
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5758269999999995,
+          44.83318499999991
+        ],
+        "type": "Point"
+      },
+      "id": 46,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che \"\"Magendie\"\"",
+        "tags": {
+          "adresse": "43 Rue Magendie 33000 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8428"
+        },
+        "timestamp": "2016-03-11T14:56:08.332672",
+        "version": 46
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5771840000000004,
+          44.83690999999993
+        ],
+        "type": "Point"
+      },
+      "id": 47,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che \"\"Petits Bouchons\"\"",
+        "tags": {
+          "adresse": "8 Rue des Palanques 33000 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8429"
+        },
+        "timestamp": "2016-03-11T14:56:08.333027",
+        "version": 47
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6078570000000018,
+          44.83270999999993
+        ],
+        "type": "Point"
+      },
+      "id": 48,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che \"\"Saint Augustin\"\"",
+        "tags": {
+          "adresse": "Cit\u00e9 de l'\u00c9glise Saint-Augustin 33000 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8430"
+        },
+        "timestamp": "2016-03-11T14:56:08.333388",
+        "version": 48
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5868699999999998,
+          44.85191699999991
+        ],
+        "type": "Point"
+      },
+      "id": 49,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che des \"\"4 Saisons\"\"",
+        "tags": {
+          "adresse": "8 Rue Jean Odin 33000 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8431"
+        },
+        "timestamp": "2016-03-11T14:56:08.333738",
+        "version": 49
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6136420000000011,
+          44.84682099999991
+        ],
+        "type": "Point"
+      },
+      "id": 50,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che familiale \"\"Armand Faulat\"\"",
+        "tags": {
+          "adresse": "1 Rue Bahr 33200 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8432"
+        },
+        "timestamp": "2016-03-11T14:56:08.334094",
+        "version": 50
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5827610000000006,
+          44.85992499999992
+        ],
+        "type": "Point"
+      },
+      "id": 51,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che familiale Grand Parc",
+        "tags": {
+          "adresse": "Rue Louis Gendreau 33300 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8433"
+        },
+        "timestamp": "2016-03-11T14:56:08.334455",
+        "version": 51
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6018380000000003,
+          44.820904999999925
+        ],
+        "type": "Point"
+      },
+      "id": 52,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che H\u00f4pital Charles-Perrens",
+        "tags": {
+          "adresse": "Rue du Tauzin 33000 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8434"
+        },
+        "timestamp": "2016-03-11T14:56:08.334807",
+        "version": 52
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6020600000000003,
+          44.83353499999991
+        ],
+        "type": "Point"
+      },
+      "id": 53,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che-Halte-garderie \"\"Coucou\"\"",
+        "tags": {
+          "adresse": "4 Rue Fran\u00e7ois Daunes 33000 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8435"
+        },
+        "timestamp": "2016-03-11T14:56:08.335161",
+        "version": 53
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6355210000000004,
+          44.86024599999993
+        ],
+        "type": "Point"
+      },
+      "id": 54,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che-Halte-garderie \"\"La Coccinelle\"\"",
+        "tags": {
+          "adresse": "502 Avenue du Mar\u00e9chal de Lattre de Tassigny 33200 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8436"
+        },
+        "timestamp": "2016-03-11T14:56:08.335512",
+        "version": 54
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5937989999999997,
+          44.8300009999999
+        ],
+        "type": "Point"
+      },
+      "id": 55,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che-Halte-garderie \"\"La Pouponni\u00e8re du Centre\"\"",
+        "tags": {
+          "adresse": "144 Rue Manon Cormier 33000 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8437"
+        },
+        "timestamp": "2016-03-11T14:56:08.335867",
+        "version": 55
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6050370000000009,
+          44.85007899999992
+        ],
+        "type": "Point"
+      },
+      "id": 56,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che-Halte-garderie \"\"Pitchoun\"\", Caud\u00e9ran",
+        "tags": {
+          "adresse": "152 Avenue Charles de Gaulle 33200 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8438"
+        },
+        "timestamp": "2016-03-11T14:56:08.336218",
+        "version": 56
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5894500000000003,
+          44.84639299999992
+        ],
+        "type": "Point"
+      },
+      "id": 57,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che-Halte-garderie \"\"P'tit Bout'Chou\"\"",
+        "tags": {
+          "adresse": "70 Rue Mondenard 33000 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8439"
+        },
+        "timestamp": "2016-03-11T14:56:08.336593",
+        "version": 57
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6136420000000011,
+          44.84682099999991
+        ],
+        "type": "Point"
+      },
+      "id": 58,
+      "properties": {
+        "label": null,
+        "name": "Halte l'Escale \"\"Armand Faulat\"\"",
+        "tags": {
+          "adresse": "1 Rue Bahr 33200 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8440"
+        },
+        "timestamp": "2016-03-11T14:56:08.336950",
+        "version": 58
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5525430000000001,
+          44.841372999999926
+        ],
+        "type": "Point"
+      },
+      "id": 59,
+      "properties": {
+        "label": null,
+        "name": "Halte-garderie \"\"La Maison Soleil\"\"",
+        "tags": {
+          "adresse": "30 Rue de Ch\u00e2teauneuf 33100 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8441"
+        },
+        "timestamp": "2016-03-11T14:56:08.337304",
+        "version": 59
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.574983,
+          44.852648999999914
+        ],
+        "type": "Point"
+      },
+      "id": 60,
+      "properties": {
+        "label": null,
+        "name": "Halte-garderie \"\"La Souris Verte\"\"",
+        "tags": {
+          "adresse": "23 Rue Fr\u00e8re 33000 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8442"
+        },
+        "timestamp": "2016-03-11T14:56:08.337660",
+        "version": 60
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.591066000000001,
+          44.83876199999994
+        ],
+        "type": "Point"
+      },
+      "id": 61,
+      "properties": {
+        "label": null,
+        "name": "Halte-garderie \"\"Union Saint Bruno\"\"",
+        "tags": {
+          "adresse": "49 BIS Rue Brizard 33000 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8443"
+        },
+        "timestamp": "2016-03-11T14:56:08.338010",
+        "version": 61
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5837180000000005,
+          44.859457999999925
+        ],
+        "type": "Point"
+      },
+      "id": 62,
+      "properties": {
+        "label": null,
+        "name": "Halte-garderie du Grand Parc",
+        "tags": {
+          "adresse": "37 Rue Louis Gendreau 33300 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8444"
+        },
+        "timestamp": "2016-03-11T14:56:08.338370",
+        "version": 62
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5704990000000006,
+          44.85633399999993
+        ],
+        "type": "Point"
+      },
+      "id": 63,
+      "properties": {
+        "label": null,
+        "name": "Jardin d'enfants \"\"Barreyre\"\"",
+        "tags": {
+          "adresse": "97 Rue Barreyre 33300 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8445"
+        },
+        "timestamp": "2016-03-11T14:56:08.338725",
+        "version": 63
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5564240000000006,
+          44.84593999999993
+        ],
+        "type": "Point"
+      },
+      "id": 64,
+      "properties": {
+        "label": null,
+        "name": "Le Jardin D 'Hortense",
+        "tags": {
+          "adresse": "140 Rue Hortense 33100 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8446"
+        },
+        "timestamp": "2016-03-11T14:56:08.339075",
+        "version": 64
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5286230000000005,
+          45.00535099999993
+        ],
+        "type": "Point"
+      },
+      "id": 2,
+      "properties": {
+        "label": null,
+        "name": "MULTIACCUEIL AMBES",
+        "tags": {
+          "adresse": "15 Rue L\u00e9on Blum 33810 Amb\u00e8s",
+          "annotation": "toto",
+          "commune": "Amb\u00e8s",
+          "insee": "33004",
+          "pk": "8384"
+        },
+        "timestamp": "2016-03-12T15:51:53.966083",
+        "version": 323
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5943980000000011,
+          44.85034499999994
+        ],
+        "type": "Point"
+      },
+      "id": 65,
+      "properties": {
+        "label": null,
+        "name": "LES CALINS D'ORME",
+        "tags": {
+          "adresse": "212 Rue Naujac 33000 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8447"
+        },
+        "timestamp": "2016-03-11T14:56:08.339433",
+        "version": 65
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5753440000000017,
+          44.835582999999936
+        ],
+        "type": "Point"
+      },
+      "id": 66,
+      "properties": {
+        "label": null,
+        "name": "Micro cr\u00e8che Comme 3 Pommes",
+        "tags": {
+          "adresse": "21 Cours Pasteur 33000 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8448"
+        },
+        "timestamp": "2016-03-11T14:56:08.339784",
+        "version": 66
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6288040000000007,
+          44.86493399999994
+        ],
+        "type": "Point"
+      },
+      "id": 67,
+      "properties": {
+        "label": null,
+        "name": "Micro cr\u00e8che Lucilann",
+        "tags": {
+          "adresse": "7 All\u00e9e Davezac 33200 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8449"
+        },
+        "timestamp": "2016-03-11T14:56:08.340142",
+        "version": 67
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5816700000000005,
+          44.83633499999991
+        ],
+        "type": "Point"
+      },
+      "id": 68,
+      "properties": {
+        "label": null,
+        "name": "Micro cr\u00e8che Ritournelle",
+        "tags": {
+          "adresse": "7 Cours Mar\u00e9chal Juin 33000 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8450"
+        },
+        "timestamp": "2016-03-11T14:56:08.340495",
+        "version": 68
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5876540000000011,
+          44.84301199999993
+        ],
+        "type": "Point"
+      },
+      "id": 69,
+      "properties": {
+        "label": null,
+        "name": "Microcr\u00e8che Alema",
+        "tags": {
+          "adresse": "19 Rue Georges Mandel 33000 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8451"
+        },
+        "timestamp": "2016-03-11T14:56:08.340846",
+        "version": 69
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5816700000000005,
+          44.83633499999991
+        ],
+        "type": "Point"
+      },
+      "id": 70,
+      "properties": {
+        "label": null,
+        "name": "Multi Accueil  M\u00e9lodie",
+        "tags": {
+          "adresse": "7 Cours Mar\u00e9chal Juin 33000 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8452"
+        },
+        "timestamp": "2016-03-11T14:56:08.341196",
+        "version": 70
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5698940000000002,
+          44.83910199999991
+        ],
+        "type": "Point"
+      },
+      "id": 71,
+      "properties": {
+        "label": null,
+        "name": "Multi accueil des Argentiers",
+        "tags": {
+          "adresse": "Rue des Argentiers 33000 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8453"
+        },
+        "timestamp": "2016-03-11T14:56:08.341548",
+        "version": 71
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.592457000000001,
+          44.82729599999992
+        ],
+        "type": "Point"
+      },
+      "id": 72,
+      "properties": {
+        "label": null,
+        "name": "Multi accueil Georges V",
+        "tags": {
+          "adresse": "5 Boulevard George V 33000 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8454"
+        },
+        "timestamp": "2016-03-11T14:56:08.341896",
+        "version": 72
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5750340000000008,
+          44.83662599999992
+        ],
+        "type": "Point"
+      },
+      "id": 73,
+      "properties": {
+        "label": null,
+        "name": "Multi accueil Tralal'Ayres",
+        "tags": {
+          "adresse": "58 Rue des Ayres 33000 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8455"
+        },
+        "timestamp": "2016-03-11T14:56:08.342256",
+        "version": 73
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5812050000000002,
+          44.84127799999993
+        ],
+        "type": "Point"
+      },
+      "id": 74,
+      "properties": {
+        "label": null,
+        "name": "Multiaccueil  \"\"Pitchoun\"\" Gambetta",
+        "tags": {
+          "adresse": "34 Place Gambetta 33000 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8456"
+        },
+        "timestamp": "2016-03-11T14:56:08.342613",
+        "version": 74
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5788320000000008,
+          44.824329999999925
+        ],
+        "type": "Point"
+      },
+      "id": 75,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil \"\"Jean Marquaux\"\"",
+        "tags": {
+          "adresse": "208 Cours de l'Argonne 33000 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8457"
+        },
+        "timestamp": "2016-03-11T14:56:08.342965",
+        "version": 75
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6283120000000002,
+          44.84425899999992
+        ],
+        "type": "Point"
+      },
+      "id": 76,
+      "properties": {
+        "label": null,
+        "name": "Multiaccueil \"\"Quai Des Bambins\"\"",
+        "tags": {
+          "adresse": "28 Rue Maurice Druon 33200 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8458"
+        },
+        "timestamp": "2016-03-11T14:56:08.343314",
+        "version": 76
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5833980000000012,
+          44.825160999999916
+        ],
+        "type": "Point"
+      },
+      "id": 77,
+      "properties": {
+        "label": null,
+        "name": "Multiaccueil COS Villa Pia",
+        "tags": {
+          "adresse": "52 Rue des Treuils 33000 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8459"
+        },
+        "timestamp": "2016-03-11T14:56:08.343664",
+        "version": 77
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5875989999999999,
+          44.832234999999926
+        ],
+        "type": "Point"
+      },
+      "id": 78,
+      "properties": {
+        "label": null,
+        "name": "Service familial BORDEAUX-Centre",
+        "tags": {
+          "adresse": "39 Rue Jean Renaud Dandicolle 33000 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8460"
+        },
+        "timestamp": "2016-03-11T14:56:08.344019",
+        "version": 78
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5698450000000009,
+          44.837471999999934
+        ],
+        "type": "Point"
+      },
+      "id": 79,
+      "properties": {
+        "label": null,
+        "name": "Ste Colombe MAO",
+        "tags": {
+          "adresse": "4 Rue Sainte-Colombe 33000 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8461"
+        },
+        "timestamp": "2016-03-11T14:56:08.344372",
+        "version": 79
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5698450000000009,
+          44.837471999999934
+        ],
+        "type": "Point"
+      },
+      "id": 80,
+      "properties": {
+        "label": null,
+        "name": "Ste Colombe MAR",
+        "tags": {
+          "adresse": "4 Rue Sainte-Colombe 33000 Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8462"
+        },
+        "timestamp": "2016-03-11T14:56:08.344724",
+        "version": 80
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5043990000000007,
+          44.81695099999993
+        ],
+        "type": "Point"
+      },
+      "id": 81,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che-Halte-garderie \"\"Petit Bouchon\"\"",
+        "tags": {
+          "adresse": "Parc de Vialle 33270 Bouliac",
+          "commune": "Bouliac",
+          "insee": "33065",
+          "pk": "8463"
+        },
+        "timestamp": "2016-03-11T14:56:08.345078",
+        "version": 81
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5820319999999998,
+          44.873610999999926
+        ],
+        "type": "Point"
+      },
+      "id": 82,
+      "properties": {
+        "label": null,
+        "name": "MA Arc en ciel",
+        "tags": {
+          "adresse": "Rue Jean Claudeville 33520 Bruges",
+          "commune": "Bruges",
+          "insee": "33075",
+          "pk": "8464"
+        },
+        "timestamp": "2016-03-11T14:56:08.345475",
+        "version": 82
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6061520000000006,
+          44.884773999999936
+        ],
+        "type": "Point"
+      },
+      "id": 83,
+      "properties": {
+        "label": null,
+        "name": "MA Fusion Petits Poucets",
+        "tags": {
+          "adresse": "54 Rue Louis Fleuranceau 33520 Bruges",
+          "commune": "Bruges",
+          "insee": "33075",
+          "pk": "8465"
+        },
+        "timestamp": "2016-03-11T14:56:08.345837",
+        "version": 83
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6122079999999996,
+          44.8845439999999
+        ],
+        "type": "Point"
+      },
+      "id": 84,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil \"\"Le Petit Prince\"\"",
+        "tags": {
+          "adresse": "5 Rue Camille Saint-Sa\u00ebns 33520 Bruges",
+          "commune": "Bruges",
+          "insee": "33075",
+          "pk": "8466"
+        },
+        "timestamp": "2016-03-11T14:56:08.346186",
+        "version": 84
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5854860000000004,
+          44.87891899999992
+        ],
+        "type": "Point"
+      },
+      "id": 85,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil \"\"Les Lutins\"\"",
+        "tags": {
+          "adresse": "3 Rue Aristide de Sousa Mend\u00e8s 33520 Bruges",
+          "commune": "Bruges",
+          "insee": "33075",
+          "pk": "8467"
+        },
+        "timestamp": "2016-03-11T14:56:08.346572",
+        "version": 85
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5286300000000012,
+          44.75383999999993
+        ],
+        "type": "Point"
+      },
+      "id": 86,
+      "properties": {
+        "label": null,
+        "name": "MAR La Souris verte",
+        "tags": {
+          "adresse": "165 Rue du Clauzet 33140 Cadaujac",
+          "commune": "Cadaujac",
+          "insee": "33080",
+          "pk": "8468"
+        },
+        "timestamp": "2016-03-11T14:56:08.346930",
+        "version": 86
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.306929,
+          44.632392999999915
+        ],
+        "type": "Point"
+      },
+      "id": 87,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che \"\"Ocabelou\"\"",
+        "tags": {
+          "adresse": "Chemin des Baries 33410 Cadillac",
+          "commune": "Cadillac",
+          "insee": "33081",
+          "pk": "8469"
+        },
+        "timestamp": "2016-03-11T14:56:08.347281",
+        "version": 87
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.48727300000000007,
+          44.76536399999992
+        ],
+        "type": "Point"
+      },
+      "id": 88,
+      "properties": {
+        "label": null,
+        "name": "Multi Accueil Camblanes et Meynac",
+        "tags": {
+          "adresse": "Chemin des \u00c9coliers 33360 Camblanes-et-Meynac",
+          "commune": "Camblanes-et-Meynac",
+          "insee": "33085",
+          "pk": "8470"
+        },
+        "timestamp": "2016-03-11T14:56:08.347634",
+        "version": 88
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.02958100000000086,
+          45.01411399999993
+        ],
+        "type": "Point"
+      },
+      "id": 89,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil \"\"Mini-Pouss\"\"",
+        "tags": {
+          "adresse": "3 Rue Jean Elien Jambon 33660 Camps-sur-l'Isle",
+          "commune": "Camps-sur-l'Isle",
+          "insee": "33088",
+          "pk": "8471"
+        },
+        "timestamp": "2016-03-11T14:56:08.347984",
+        "version": 89
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6543220000000006,
+          44.76113399999993
+        ],
+        "type": "Point"
+      },
+      "id": 90,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil r\u00e9gulier \"\"La M\u00f4merie\"\"",
+        "tags": {
+          "adresse": "Chemin du Cassiot 33610 Can\u00e9jan",
+          "commune": "Can\u00e9jan",
+          "insee": "33090",
+          "pk": "8472"
+        },
+        "timestamp": "2016-03-11T14:56:08.348340",
+        "version": 90
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6388250000000004,
+          44.751609999999914
+        ],
+        "type": "Point"
+      },
+      "id": 91,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil r\u00e9gulier \"\"L'Ile aux Enfants\"\"",
+        "tags": {
+          "adresse": "15 Boulevard Pey Arnaud 33610 Can\u00e9jan",
+          "commune": "Can\u00e9jan",
+          "insee": "33090",
+          "pk": "8473"
+        },
+        "timestamp": "2016-03-11T14:56:08.348690",
+        "version": 91
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6552910000000011,
+          45.02847599999992
+        ],
+        "type": "Point"
+      },
+      "id": 92,
+      "properties": {
+        "label": null,
+        "name": "micro creche Picoti",
+        "tags": {
+          "adresse": "1 Rue Armand Lalande 33460 Cantenac",
+          "commune": "Cantenac",
+          "insee": "33091",
+          "pk": "8474"
+        },
+        "timestamp": "2016-03-11T14:56:08.349039",
+        "version": 92
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.513565000000001,
+          44.89177999999993
+        ],
+        "type": "Point"
+      },
+      "id": 93,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e9che familiale - Maison de la Petite Enfance -",
+        "tags": {
+          "adresse": "37 Rue Pasteur 33560 Carbon-Blanc",
+          "commune": "Carbon-Blanc",
+          "insee": "33096",
+          "pk": "8475"
+        },
+        "timestamp": "2016-03-11T14:56:08.349393",
+        "version": 93
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5124000000000005,
+          44.89164299999994
+        ],
+        "type": "Point"
+      },
+      "id": 94,
+      "properties": {
+        "label": null,
+        "name": "Maison de la Petite Enfance",
+        "tags": {
+          "adresse": "27 Rue Pasteur 33560 Carbon-Blanc",
+          "commune": "Carbon-Blanc",
+          "insee": "33096",
+          "pk": "8476"
+        },
+        "timestamp": "2016-03-11T14:56:08.349746",
+        "version": 94
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.47178000000000014,
+          44.81259999999993
+        ],
+        "type": "Point"
+      },
+      "id": 95,
+      "properties": {
+        "label": null,
+        "name": "Multiaccueil  \"\"Le Petit Prince\"\"",
+        "tags": {
+          "adresse": "5 Rue de Verdun 33360 Carignan-de-Bordeaux",
+          "commune": "Carignan-de-Bordeaux",
+          "insee": "33099",
+          "pk": "8477"
+        },
+        "timestamp": "2016-03-11T14:56:08.350096",
+        "version": 95
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.8002080000000001,
+          45.02340799999994
+        ],
+        "type": "Point"
+      },
+      "id": 96,
+      "properties": {
+        "label": null,
+        "name": "Accueil occasionnel \"\"L'Ecole des Doudous\"\"",
+        "tags": {
+          "adresse": "Avenue du Stade 33480 Castelnau-de-M\u00e9doc",
+          "commune": "Castelnau-de-M\u00e9doc",
+          "insee": "33104",
+          "pk": "8478"
+        },
+        "timestamp": "2016-03-11T14:56:08.350453",
+        "version": 96
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.7970749999999998,
+          45.02381699999992
+        ],
+        "type": "Point"
+      },
+      "id": 97,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil \"\"Les Petiots\"\"",
+        "tags": {
+          "adresse": "12 Avenue du Stade 33480 Castelnau-de-M\u00e9doc",
+          "commune": "Castelnau-de-M\u00e9doc",
+          "insee": "33104",
+          "pk": "8479"
+        },
+        "timestamp": "2016-03-11T14:56:08.350804",
+        "version": 97
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.1584730000000009,
+          44.56030599999992
+        ],
+        "type": "Point"
+      },
+      "id": 98,
+      "properties": {
+        "label": null,
+        "name": "\"\"Pr\u00e9 en Bulles\"\"",
+        "tags": {
+          "adresse": "2 All\u00e9e des Charmes 33210 Castets-en-Dorthe",
+          "commune": "Castets-en-Dorthe",
+          "insee": "33106",
+          "pk": "8480"
+        },
+        "timestamp": "2016-03-11T14:56:08.351160",
+        "version": 98
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.4454309999999995,
+          44.69088899999992
+        ],
+        "type": "Point"
+      },
+      "id": 99,
+      "properties": {
+        "label": null,
+        "name": "Maison de la Petite Enfance",
+        "tags": {
+          "adresse": "11 Route du Bois de Savis 33640 Castres-Gironde",
+          "commune": "Castres-Gironde",
+          "insee": "33109",
+          "pk": "8481"
+        },
+        "timestamp": "2016-03-11T14:56:08.351511",
+        "version": 99
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.39082300000000125,
+          45.10033199999992
+        ],
+        "type": "Point"
+      },
+      "id": 100,
+      "properties": {
+        "label": null,
+        "name": "Maison de la Petite Enfance",
+        "tags": {
+          "adresse": "Rue de la Paix 33620 Cavignac",
+          "commune": "Cavignac",
+          "insee": "33114",
+          "pk": "8482"
+        },
+        "timestamp": "2016-03-11T14:56:08.351872",
+        "version": 100
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5069880000000007,
+          44.84833699999994
+        ],
+        "type": "Point"
+      },
+      "id": 101,
+      "properties": {
+        "label": null,
+        "name": "Fran\u00e7oise Dolto",
+        "tags": {
+          "adresse": "11 Rue Paul Val\u00e9ry 33150 Cenon",
+          "commune": "Cenon",
+          "insee": "33119",
+          "pk": "8483"
+        },
+        "timestamp": "2016-03-11T14:56:08.352228",
+        "version": 101
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.3334460000000005,
+          44.635347999999915
+        ],
+        "type": "Point"
+      },
+      "id": 102,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che-Halte-garderie \"\"Croque Lune\"\"",
+        "tags": {
+          "adresse": "11 Le Bourg 33720 C\u00e9rons",
+          "commune": "C\u00e9rons",
+          "insee": "33120",
+          "pk": "8484"
+        },
+        "timestamp": "2016-03-11T14:56:08.352579",
+        "version": 102
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6726119999999999,
+          44.73281299999992
+        ],
+        "type": "Point"
+      },
+      "id": 103,
+      "properties": {
+        "label": null,
+        "name": "Halte-garderie \"\"B\u00e9b\u00e9s Copains\"\"",
+        "tags": {
+          "adresse": "2 Avenue du Mar\u00e9chal Juin 33610 Cestas",
+          "commune": "Cestas",
+          "insee": "33122",
+          "pk": "8485"
+        },
+        "timestamp": "2016-03-11T14:56:08.352929",
+        "version": 103
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6827009999999997,
+          44.750282999999925
+        ],
+        "type": "Point"
+      },
+      "id": 104,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil \"\"Les Bons Petits Diables\"\"",
+        "tags": {
+          "adresse": "Chemin du Cassy Mouliney 33610 Cestas",
+          "commune": "Cestas",
+          "insee": "33122",
+          "pk": "8486"
+        },
+        "timestamp": "2016-03-11T14:56:08.353281",
+        "version": 104
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.7126740000000008,
+          44.765966999999925
+        ],
+        "type": "Point"
+      },
+      "id": 105,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil r\u00e9gulier \"\"Les P'tits Fut\u00e9s\"\"",
+        "tags": {
+          "adresse": "Chemin de Chantebois 33610 Cestas",
+          "commune": "Cestas",
+          "insee": "33122",
+          "pk": "8487"
+        },
+        "timestamp": "2016-03-11T14:56:08.353632",
+        "version": 105
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.1258970000000002,
+          45.04120299999993
+        ],
+        "type": "Point"
+      },
+      "id": 106,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che-Halte-garderie \"\"Le Petit Prince\"\"",
+        "tags": {
+          "adresse": "19 All\u00e9e Richelieu 33230 Coutras",
+          "commune": "Coutras",
+          "insee": "33138",
+          "pk": "8488"
+        },
+        "timestamp": "2016-03-11T14:56:08.353986",
+        "version": 106
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.1258970000000002,
+          45.04120299999993
+        ],
+        "type": "Point"
+      },
+      "id": 107,
+      "properties": {
+        "label": null,
+        "name": "Halte-garderie \"\"Les Petits Lutins\"\"",
+        "tags": {
+          "adresse": "19 All\u00e9e Richelieu 33230 Coutras",
+          "commune": "Coutras",
+          "insee": "33138",
+          "pk": "8489"
+        },
+        "timestamp": "2016-03-11T14:56:08.354346",
+        "version": 107
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.3475620000000001,
+          44.771622999999906
+        ],
+        "type": "Point"
+      },
+      "id": 108,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil \"\"Pirouette\"\"",
+        "tags": {
+          "adresse": "1 Rue Georges Brassens 33670 Cr\u00e9on",
+          "commune": "Cr\u00e9on",
+          "insee": "33140",
+          "pk": "8490"
+        },
+        "timestamp": "2016-03-11T14:56:08.354698",
+        "version": 108
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.22117200000000106,
+          44.38924599999992
+        ],
+        "type": "Point"
+      },
+      "id": 109,
+      "properties": {
+        "label": null,
+        "name": "Accueil occasionnel Cudos",
+        "tags": {
+          "adresse": "12 Le Bourg-Ouest 33430 Cudos",
+          "commune": "Cudos",
+          "insee": "33144",
+          "pk": "8491"
+        },
+        "timestamp": "2016-03-11T14:56:08.355053",
+        "version": 109
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.566458,
+          45.22789899999993
+        ],
+        "type": "Point"
+      },
+      "id": 110,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che \"\"Arche Bleue\"\"",
+        "tags": {
+          "adresse": "Route de Reignac, GUIMBERTEAU 33820 \u00c9tauliers",
+          "commune": "\u00c9tauliers",
+          "insee": "33159",
+          "pk": "8492"
+        },
+        "timestamp": "2016-03-11T14:56:08.355404",
+        "version": 110
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6484320000000003,
+          44.88645499999991
+        ],
+        "type": "Point"
+      },
+      "id": 111,
+      "properties": {
+        "label": null,
+        "name": "MA Le Bourg",
+        "tags": {
+          "adresse": "Rue Jean Lahary 33320 Eysines",
+          "commune": "Eysines",
+          "insee": "33162",
+          "pk": "8493"
+        },
+        "timestamp": "2016-03-11T14:56:08.355760",
+        "version": 111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.646787000000001,
+          44.86450399999992
+        ],
+        "type": "Point"
+      },
+      "id": 112,
+      "properties": {
+        "label": null,
+        "name": "Multi accueil \"\"La For\u00eat\"\"",
+        "tags": {
+          "adresse": "Rue Camille Saint-Sa\u00ebns 33320 Eysines",
+          "commune": "Eysines",
+          "insee": "33162",
+          "pk": "8494"
+        },
+        "timestamp": "2016-03-11T14:56:08.356109",
+        "version": 112
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6337120000000007,
+          44.88293599999993
+        ],
+        "type": "Point"
+      },
+      "id": 113,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil du Vigean",
+        "tags": {
+          "adresse": "Rue Gilbert Cauderan 33320 Eysines",
+          "commune": "Eysines",
+          "insee": "33162",
+          "pk": "8495"
+        },
+        "timestamp": "2016-03-11T14:56:08.356464",
+        "version": 113
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.4388900000000003,
+          44.82068499999992
+        ],
+        "type": "Point"
+      },
+      "id": 114,
+      "properties": {
+        "label": null,
+        "name": "\"\"Les Bons Enfants\"\"",
+        "tags": {
+          "adresse": "Route des \u00c9coles 33370 Fargues-Saint-Hilaire",
+          "commune": "Fargues-Saint-Hilaire",
+          "insee": "33165",
+          "pk": "8496"
+        },
+        "timestamp": "2016-03-11T14:56:08.356844",
+        "version": 114
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5200889999999999,
+          44.84080599999993
+        ],
+        "type": "Point"
+      },
+      "id": 115,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che familiale",
+        "tags": {
+          "adresse": "Chemin de Bourbon 33270 Floirac",
+          "commune": "Floirac",
+          "insee": "33167",
+          "pk": "8497"
+        },
+        "timestamp": "2016-03-11T14:56:08.357192",
+        "version": 115
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5200889999999999,
+          44.84080599999993
+        ],
+        "type": "Point"
+      },
+      "id": 116,
+      "properties": {
+        "label": null,
+        "name": "Mini-cr\u00e8che \"\"Le Petit Prince\"\"",
+        "tags": {
+          "adresse": "Chemin de Bourbon 33270 Floirac",
+          "commune": "Floirac",
+          "insee": "33167",
+          "pk": "8498"
+        },
+        "timestamp": "2016-03-11T14:56:08.357546",
+        "version": 116
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.9567650000000005,
+          45.32275399999995
+        ],
+        "type": "Point"
+      },
+      "id": 117,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil \"\"Les P'tits Loups\"\"",
+        "tags": {
+          "adresse": "8 Rue du Bourg 33340 Gaillan-en-M\u00e9doc",
+          "commune": "Gaillan-en-M\u00e9doc",
+          "insee": "33177",
+          "pk": "8499"
+        },
+        "timestamp": "2016-03-11T14:56:08.357895",
+        "version": 117
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5956629999999999,
+          44.76923399999992
+        ],
+        "type": "Point"
+      },
+      "id": 118,
+      "properties": {
+        "label": null,
+        "name": "\"\"Jardin D\u00e9couvertes\"\"",
+        "tags": {
+          "adresse": "31 Boulevard Malartic 33170 Gradignan",
+          "commune": "Gradignan",
+          "insee": "33192",
+          "pk": "8500"
+        },
+        "timestamp": "2016-03-11T14:56:08.358253",
+        "version": 118
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5990860000000012,
+          44.767002999999924
+        ],
+        "type": "Point"
+      },
+      "id": 119,
+      "properties": {
+        "label": null,
+        "name": "\"\"Le Jardin Calin\"\"",
+        "tags": {
+          "adresse": "15 Boulevard Malartic 33170 Gradignan",
+          "commune": "Gradignan",
+          "insee": "33192",
+          "pk": "8501"
+        },
+        "timestamp": "2016-03-11T14:56:08.358611",
+        "version": 119
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6407350000000003,
+          44.76907399999993
+        ],
+        "type": "Point"
+      },
+      "id": 120,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che collective \"\"Graine de Lune\"\"",
+        "tags": {
+          "adresse": "16 Impasse d'Ornon 33170 Gradignan",
+          "commune": "Gradignan",
+          "insee": "33192",
+          "pk": "8502"
+        },
+        "timestamp": "2016-03-11T14:56:08.358960",
+        "version": 120
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6177820000000004,
+          44.77380099999992
+        ],
+        "type": "Point"
+      },
+      "id": 121,
+      "properties": {
+        "label": null,
+        "name": "Halte-garderie \"\"Bout Chou\"\"",
+        "tags": {
+          "adresse": "12 Avenue Jean Larrieu 33170 Gradignan",
+          "commune": "Gradignan",
+          "insee": "33192",
+          "pk": "8503"
+        },
+        "timestamp": "2016-03-11T14:56:08.359311",
+        "version": 121
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6170830000000013,
+          44.77613599999992
+        ],
+        "type": "Point"
+      },
+      "id": 122,
+      "properties": {
+        "label": null,
+        "name": "Les Coquins d'abord",
+        "tags": {
+          "adresse": "6 Avenue Charles et \u00c9mile Lestage 33170 Gradignan",
+          "commune": "Gradignan",
+          "insee": "33192",
+          "pk": "8504"
+        },
+        "timestamp": "2016-03-11T14:56:08.359665",
+        "version": 122
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5990860000000012,
+          44.767002999999924
+        ],
+        "type": "Point"
+      },
+      "id": 123,
+      "properties": {
+        "label": null,
+        "name": "SAF",
+        "tags": {
+          "adresse": "15 Boulevard Malartic 33170 Gradignan",
+          "commune": "Gradignan",
+          "insee": "33192",
+          "pk": "8505"
+        },
+        "timestamp": "2016-03-11T14:56:08.360015",
+        "version": 123
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.041795000000000325,
+          44.394404999999914
+        ],
+        "type": "Point"
+      },
+      "id": 124,
+      "properties": {
+        "label": null,
+        "name": "Multi Accueil  Sim\u00e9on",
+        "tags": {
+          "adresse": "2 Rue du Ch\u00e2teau 33690 Grignols",
+          "commune": "Grignols",
+          "insee": "33195",
+          "pk": "8506"
+        },
+        "timestamp": "2016-03-11T14:56:08.360368",
+        "version": 124
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -1.1098120000000007,
+          44.637683999999915
+        ],
+        "type": "Point"
+      },
+      "id": 125,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che-Halte-garderie \"\"Les P'tits Pouces\"\"",
+        "tags": {
+          "adresse": "64 Avenue du Mar\u00e9chal de Lattre de Tassigny 33470 Gujan-Mestras",
+          "commune": "Gujan-Mestras",
+          "insee": "33199",
+          "pk": "8507"
+        },
+        "timestamp": "2016-03-11T14:56:08.360720",
+        "version": 125
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -1.0746160000000016,
+          44.618980999999934
+        ],
+        "type": "Point"
+      },
+      "id": 126,
+      "properties": {
+        "label": null,
+        "name": "Halte-garderie \"\"Les Clapotis\"\"",
+        "tags": {
+          "adresse": "2 All\u00e9e Mozart 33470 Gujan-Mestras",
+          "commune": "Gujan-Mestras",
+          "insee": "33199",
+          "pk": "8508"
+        },
+        "timestamp": "2016-03-11T14:56:08.361082",
+        "version": 126
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -1.0750880000000016,
+          44.61924899999993
+        ],
+        "type": "Point"
+      },
+      "id": 127,
+      "properties": {
+        "label": null,
+        "name": "Multi-Accueil \"\"Les Coccinelles\"\"",
+        "tags": {
+          "adresse": "All\u00e9e Mozart 33470 Gujan-Mestras",
+          "commune": "Gujan-Mestras",
+          "insee": "33199",
+          "pk": "8509"
+        },
+        "timestamp": "2016-03-11T14:56:08.361479",
+        "version": 127
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -1.0546200000000003,
+          45.19122199999993
+        ],
+        "type": "Point"
+      },
+      "id": 128,
+      "properties": {
+        "label": null,
+        "name": "Les Petits Mousses",
+        "tags": {
+          "adresse": "Rue Fran\u00e7ois Fontanie 33990 Hourtin",
+          "commune": "Hourtin",
+          "insee": "33203",
+          "pk": "8510"
+        },
+        "timestamp": "2016-03-11T14:56:08.361838",
+        "version": 128
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.3613420000000006,
+          44.92035099999993
+        ],
+        "type": "Point"
+      },
+      "id": 129,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil IZON",
+        "tags": {
+          "adresse": "209 Avenue du G\u00e9n\u00e9ral de Gaulle 33450 Izon",
+          "commune": "Izon",
+          "insee": "33207",
+          "pk": "8511"
+        },
+        "timestamp": "2016-03-11T14:56:08.362194",
+        "version": 129
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.37688800000000094,
+          44.983704999999915
+        ],
+        "type": "Point"
+      },
+      "id": 130,
+      "properties": {
+        "label": null,
+        "name": "\"\"Mini Plume\"\"",
+        "tags": {
+          "adresse": "315 Route de Compostelle 33240 La Lande-de-Fronsac",
+          "commune": "La Lande-de-Fronsac",
+          "insee": "33219",
+          "pk": "8512"
+        },
+        "timestamp": "2016-03-11T14:56:08.362554",
+        "version": 130
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.03978800000000052,
+          44.58772099999992
+        ],
+        "type": "Point"
+      },
+      "id": 131,
+      "properties": {
+        "label": null,
+        "name": "Maison De L 'enfance",
+        "tags": {
+          "adresse": "Chemin de Peyreffite 33190 La R\u00e9ole",
+          "commune": "La R\u00e9ole",
+          "insee": "33352",
+          "pk": "8513"
+        },
+        "timestamp": "2016-03-11T14:56:08.362904",
+        "version": 131
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -1.1395660000000016,
+          44.62573599999994
+        ],
+        "type": "Point"
+      },
+      "id": 132,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che collective \"\"Alexis Fleury\"\"",
+        "tags": {
+          "adresse": "4 Avenue de Bisserie 33260 La Teste-de-Buch",
+          "commune": "La Teste-de-Buch",
+          "insee": "33529",
+          "pk": "8514"
+        },
+        "timestamp": "2016-03-11T14:56:08.363258",
+        "version": 132
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -1.074139,
+          44.979950999999936
+        ],
+        "type": "Point"
+      },
+      "id": 133,
+      "properties": {
+        "label": null,
+        "name": "Multi accueil R\u00e9gulier",
+        "tags": {
+          "adresse": "Avenue Albert Fran\u00e7ois 33680 Lacanau",
+          "commune": "Lacanau",
+          "insee": "33214",
+          "pk": "8515"
+        },
+        "timestamp": "2016-03-11T14:56:08.363615",
+        "version": 133
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -1.195719000000001,
+          45.00404299999992
+        ],
+        "type": "Point"
+      },
+      "id": 134,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil r\u00e9gulier \"\"Les Pieds dans l 'Eau\"\"",
+        "tags": {
+          "adresse": "34 Rue Jacquemin Perp\u00e8re 33680 Lacanau",
+          "commune": "Lacanau",
+          "insee": "33214",
+          "pk": "8516"
+        },
+        "timestamp": "2016-03-11T14:56:08.363970",
+        "version": 134
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.7201430000000002,
+          45.09732799999993
+        ],
+        "type": "Point"
+      },
+      "id": 135,
+      "properties": {
+        "label": null,
+        "name": "micro cr\u00e8che Les milous",
+        "tags": {
+          "adresse": "13 Rue du Vieux Ch\u00eane 33460 Lamarque",
+          "commune": "Lamarque",
+          "insee": "33220",
+          "pk": "8517"
+        },
+        "timestamp": "2016-03-11T14:56:08.364319",
+        "version": 135
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.24891600000000041,
+          44.548983999999926
+        ],
+        "type": "Point"
+      },
+      "id": 136,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e9che familiale  \"\"Les Petitous\"\"",
+        "tags": {
+          "adresse": "3 All\u00e9e Garros 33210 Langon",
+          "commune": "Langon",
+          "insee": "33227",
+          "pk": "8518"
+        },
+        "timestamp": "2016-03-11T14:56:08.364668",
+        "version": 136
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.24877599999999986,
+          44.54881899999991
+        ],
+        "type": "Point"
+      },
+      "id": 137,
+      "properties": {
+        "label": null,
+        "name": "Multi accueil \"\"Les Petits Fripons\"\"",
+        "tags": {
+          "adresse": "All\u00e9e Garros 33210 Langon",
+          "commune": "Langon",
+          "insee": "33227",
+          "pk": "8519"
+        },
+        "timestamp": "2016-03-11T14:56:08.365024",
+        "version": 137
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.48597999999999986,
+          44.78676099999993
+        ],
+        "type": "Point"
+      },
+      "id": 138,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che \"\"Petit \u00e0 Petit\"\"",
+        "tags": {
+          "adresse": "1 Rue des Arp\u00e8ges 33360 Latresne",
+          "commune": "Latresne",
+          "insee": "33234",
+          "pk": "8520"
+        },
+        "timestamp": "2016-03-11T14:56:08.365373",
+        "version": 138
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.48597999999999986,
+          44.78676099999993
+        ],
+        "type": "Point"
+      },
+      "id": 139,
+      "properties": {
+        "label": null,
+        "name": "Halte-garderie \"\"Petit \u00e0 Petit\"\"",
+        "tags": {
+          "adresse": "1 Rue des Arp\u00e8ges 33360 Latresne",
+          "commune": "Latresne",
+          "insee": "33234",
+          "pk": "8521"
+        },
+        "timestamp": "2016-03-11T14:56:08.365721",
+        "version": 139
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.7710930000000011,
+          44.608236999999924
+        ],
+        "type": "Point"
+      },
+      "id": 140,
+      "properties": {
+        "label": null,
+        "name": "MA \"\"Les Fripounets\"\"",
+        "tags": {
+          "adresse": "3 Rue du Parc, RESIDENCE AQUITAINE 33114 Le Barp",
+          "commune": "Le Barp",
+          "insee": "33029",
+          "pk": "8522"
+        },
+        "timestamp": "2016-03-11T14:56:08.366077",
+        "version": 140
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6094099999999999,
+          44.86714399999993
+        ],
+        "type": "Point"
+      },
+      "id": 141,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che \"\"La Chenille Verte\"\"",
+        "tags": {
+          "adresse": "74 Rue Pr\u00e9sident Kennedy 33110 Le Bouscat",
+          "commune": "Le Bouscat",
+          "insee": "33069",
+          "pk": "8523"
+        },
+        "timestamp": "2016-03-11T14:56:08.366437",
+        "version": 141
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6003539999999999,
+          44.86595199999991
+        ],
+        "type": "Point"
+      },
+      "id": 142,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che collective \"\"La Providence\"\"",
+        "tags": {
+          "adresse": "4 Rue Coudol 33110 Le Bouscat",
+          "commune": "Le Bouscat",
+          "insee": "33069",
+          "pk": "8524"
+        },
+        "timestamp": "2016-03-11T14:56:08.366817",
+        "version": 142
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6028659999999995,
+          44.86749799999991
+        ],
+        "type": "Point"
+      },
+      "id": 143,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e9che familiale LE BOUSCAT",
+        "tags": {
+          "adresse": "39 Avenue L\u00e9on Blum 33110 Le Bouscat",
+          "commune": "Le Bouscat",
+          "insee": "33069",
+          "pk": "8525"
+        },
+        "timestamp": "2016-03-11T14:56:08.367167",
+        "version": 143
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6028659999999995,
+          44.86749799999991
+        ],
+        "type": "Point"
+      },
+      "id": 144,
+      "properties": {
+        "label": null,
+        "name": "MAR et O \"\"Les Mosaiques\"\"",
+        "tags": {
+          "adresse": "39 Avenue L\u00e9on Blum 33110 Le Bouscat",
+          "commune": "Le Bouscat",
+          "insee": "33069",
+          "pk": "8526"
+        },
+        "timestamp": "2016-03-11T14:56:08.367515",
+        "version": 144
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6203150000000003,
+          44.87516699999992
+        ],
+        "type": "Point"
+      },
+      "id": 145,
+      "properties": {
+        "label": null,
+        "name": "Trotte menu",
+        "tags": {
+          "adresse": "Route du M\u00e9doc 33110 Le Bouscat",
+          "commune": "Le Bouscat",
+          "insee": "33069",
+          "pk": "8527"
+        },
+        "timestamp": "2016-03-11T14:56:08.367870",
+        "version": 145
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6762650000000001,
+          44.87443899999993
+        ],
+        "type": "Point"
+      },
+      "id": 146,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che familiale du HAILLAN",
+        "tags": {
+          "adresse": "30 Rue de Los H\u00e9ros 33185 Le Haillan",
+          "commune": "Le Haillan",
+          "insee": "33200",
+          "pk": "8528"
+        },
+        "timestamp": "2016-03-11T14:56:08.368217",
+        "version": 146
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6890030000000006,
+          44.87219499999992
+        ],
+        "type": "Point"
+      },
+      "id": 147,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che-Halte-garderie \"\"Les Fils d' Ariane\"\"",
+        "tags": {
+          "adresse": "13 Rue Capella 33185 Le Haillan",
+          "commune": "Le Haillan",
+          "insee": "33200",
+          "pk": "8529"
+        },
+        "timestamp": "2016-03-11T14:56:08.368565",
+        "version": 147
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6711880000000006,
+          44.86668299999992
+        ],
+        "type": "Point"
+      },
+      "id": 148,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil occasionnel \"\"La Ribambelle\"\"",
+        "tags": {
+          "adresse": "Rue Bernard de Girard 33185 Le Haillan",
+          "commune": "Le Haillan",
+          "insee": "33200",
+          "pk": "8530"
+        },
+        "timestamp": "2016-03-11T14:56:08.368946",
+        "version": 148
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6748980000000003,
+          44.955104999999925
+        ],
+        "type": "Point"
+      },
+      "id": 149,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil A Petits Pas",
+        "tags": {
+          "adresse": "137 All\u00e9e Grammont 33290 Le Pian-M\u00e9doc",
+          "commune": "Le Pian-M\u00e9doc",
+          "insee": "33322",
+          "pk": "8531"
+        },
+        "timestamp": "2016-03-11T14:56:08.369300",
+        "version": 149
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.698988000000001,
+          44.90373699999992
+        ],
+        "type": "Point"
+      },
+      "id": 150,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil Les P'tits Loriots",
+        "tags": {
+          "adresse": "7 Avenue Bossuet 33320 Le Taillan-M\u00e9doc",
+          "commune": "Le Taillan-M\u00e9doc",
+          "insee": "33519",
+          "pk": "8532"
+        },
+        "timestamp": "2016-03-11T14:56:08.369655",
+        "version": 150
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -1.0194620000000012,
+          44.63705899999993
+        ],
+        "type": "Point"
+      },
+      "id": 151,
+      "properties": {
+        "label": null,
+        "name": "La Pomme de Pin",
+        "tags": {
+          "adresse": "Rue Saint-Andr\u00e9 33470 Le Teich",
+          "commune": "Le Teich",
+          "insee": "33527",
+          "pk": "8533"
+        },
+        "timestamp": "2016-03-11T14:56:08.370006",
+        "version": 151
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.4026330000000007,
+          44.71068799999992
+        ],
+        "type": "Point"
+      },
+      "id": 152,
+      "properties": {
+        "label": null,
+        "name": "Maison de l'Enfance \"\"Vallon d'Artolie\"\"",
+        "tags": {
+          "adresse": "Rue de Mores 33550 Le Tourne",
+          "commune": "Le Tourne",
+          "insee": "33534",
+          "pk": "8534"
+        },
+        "timestamp": "2016-03-11T14:56:08.370371",
+        "version": 152
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -1.1502570000000012,
+          44.79724099999992
+        ],
+        "type": "Point"
+      },
+      "id": 153,
+      "properties": {
+        "label": null,
+        "name": "Multi -Accueil \"\"l'\u00eele aux Bout ' Choux\"\"",
+        "tags": {
+          "adresse": "Chemin du Cassieu 33950 L\u00e8ge-Cap-Ferret",
+          "commune": "L\u00e8ge-Cap-Ferret",
+          "insee": "33236",
+          "pk": "8535"
+        },
+        "timestamp": "2016-03-11T14:56:08.370721",
+        "version": 153
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -1.1828510000000003,
+          44.750777999999926
+        ],
+        "type": "Point"
+      },
+      "id": 154,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil col \"\"La Pin\u00e8de des Enfants\"\"",
+        "tags": {
+          "adresse": "Square \u00c9douard Branly 33950 L\u00e8ge-Cap-Ferret",
+          "commune": "L\u00e8ge-Cap-Ferret",
+          "insee": "33236",
+          "pk": "8536"
+        },
+        "timestamp": "2016-03-11T14:56:08.371070",
+        "version": 154
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -1.146903000000001,
+          44.79419899999992
+        ],
+        "type": "Point"
+      },
+      "id": 155,
+      "properties": {
+        "label": null,
+        "name": "Service d'accueil familial \"\"La Pin\u00e8de des Enfants\"\"",
+        "tags": {
+          "adresse": "70 Avenue de la Mairie 33950 L\u00e8ge-Cap-Ferret",
+          "commune": "L\u00e8ge-Cap-Ferret",
+          "insee": "33236",
+          "pk": "8537"
+        },
+        "timestamp": "2016-03-11T14:56:08.371425",
+        "version": 155
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6020730000000009,
+          44.72757899999991
+        ],
+        "type": "Point"
+      },
+      "id": 156,
+      "properties": {
+        "label": null,
+        "name": "MA \"\"La maison des Pitchouns\"\"",
+        "tags": {
+          "adresse": "13 Cours Gambetta 33850 L\u00e9ognan",
+          "commune": "L\u00e9ognan",
+          "insee": "33238",
+          "pk": "8538"
+        },
+        "timestamp": "2016-03-11T14:56:08.371774",
+        "version": 156
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.24246799999999952,
+          44.93821299999992
+        ],
+        "type": "Point"
+      },
+      "id": 157,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che familiale",
+        "tags": {
+          "adresse": "102 Avenue de la Roudet 33500 Libourne",
+          "commune": "Libourne",
+          "insee": "33243",
+          "pk": "8539"
+        },
+        "timestamp": "2016-03-11T14:56:08.372122",
+        "version": 157
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.24348400000000014,
+          44.91120799999993
+        ],
+        "type": "Point"
+      },
+      "id": 158,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che Municipale",
+        "tags": {
+          "adresse": "84 Cours des Girondins 33500 Libourne",
+          "commune": "Libourne",
+          "insee": "33243",
+          "pk": "8540"
+        },
+        "timestamp": "2016-03-11T14:56:08.372476",
+        "version": 158
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.2320900000000008,
+          44.91760999999994
+        ],
+        "type": "Point"
+      },
+      "id": 159,
+      "properties": {
+        "label": null,
+        "name": "Halte-garderie \"\"Peidenis\"\"",
+        "tags": {
+          "adresse": "36 Rue James Peidenis 33500 Libourne",
+          "commune": "Libourne",
+          "insee": "33243",
+          "pk": "8541"
+        },
+        "timestamp": "2016-03-11T14:56:08.372825",
+        "version": 159
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.24697700000000072,
+          44.91456899999992
+        ],
+        "type": "Point"
+      },
+      "id": 160,
+      "properties": {
+        "label": null,
+        "name": "Halte-garderie Libourne",
+        "tags": {
+          "adresse": "29 Rue Fonneuve 33500 Libourne",
+          "commune": "Libourne",
+          "insee": "33243",
+          "pk": "8542"
+        },
+        "timestamp": "2016-03-11T14:56:08.373181",
+        "version": 160
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.2343760000000005,
+          44.940028999999925
+        ],
+        "type": "Point"
+      },
+      "id": 161,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil \"\"Petits Pas\"\"",
+        "tags": {
+          "adresse": "159 Avenue Georges Pompidou 33500 Libourne",
+          "commune": "Libourne",
+          "insee": "33243",
+          "pk": "8543"
+        },
+        "timestamp": "2016-03-11T14:56:08.373531",
+        "version": 161
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5197950000000007,
+          44.86786199999994
+        ],
+        "type": "Point"
+      },
+      "id": 162,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e9che familiale \"\"Les Renardeaux\"\"",
+        "tags": {
+          "adresse": "64 Rue \u00c9douard Herriot 33310 Lormont",
+          "commune": "Lormont",
+          "insee": "33249",
+          "pk": "8544"
+        },
+        "timestamp": "2016-03-11T14:56:08.373879",
+        "version": 162
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5277770000000009,
+          44.88016899999994
+        ],
+        "type": "Point"
+      },
+      "id": 163,
+      "properties": {
+        "label": null,
+        "name": "P\u00f4le Petite Enfance de LORMONT Carriet",
+        "tags": {
+          "adresse": "Boulevard Odilon Redon 33310 Lormont",
+          "commune": "Lormont",
+          "insee": "33249",
+          "pk": "8545"
+        },
+        "timestamp": "2016-03-11T14:56:08.374233",
+        "version": 163
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6304669999999996,
+          44.9865269999999
+        ],
+        "type": "Point"
+      },
+      "id": 164,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil \"\"Les Petits Bouchons\"\"",
+        "tags": {
+          "adresse": "Rue de la Longua 33290 Ludon-M\u00e9doc",
+          "commune": "Ludon-M\u00e9doc",
+          "insee": "33256",
+          "pk": "8546"
+        },
+        "timestamp": "2016-03-11T14:56:08.374639",
+        "version": 164
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.399678,
+          44.75992999999992
+        ],
+        "type": "Point"
+      },
+      "id": 165,
+      "properties": {
+        "label": null,
+        "name": "\"\"3 Ptits Tours\"\"",
+        "tags": {
+          "adresse": "2 Route de Haux 33670 Madirac",
+          "commune": "Madirac",
+          "insee": "33263",
+          "pk": "8547"
+        },
+        "timestamp": "2016-03-11T14:56:08.374997",
+        "version": 165
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.8479950000000006,
+          44.69984799999993
+        ],
+        "type": "Point"
+      },
+      "id": 166,
+      "properties": {
+        "label": null,
+        "name": "Multi Accueil  Les Tagazous",
+        "tags": {
+          "adresse": "34 Avenue L\u00e9on Delagrange 33380 Marcheprime",
+          "commune": "Marcheprime",
+          "insee": "33555",
+          "pk": "8548"
+        },
+        "timestamp": "2016-03-11T14:56:08.375353",
+        "version": 166
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.777222000000001,
+          44.84333399999991
+        ],
+        "type": "Point"
+      },
+      "id": 167,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil \"\"Fran\u00e7oise Dolto\"\"",
+        "tags": {
+          "adresse": "Rue de la Marne 33127 Martignas-sur-Jalle",
+          "commune": "Martignas-sur-Jalle",
+          "insee": "33273",
+          "pk": "8549"
+        },
+        "timestamp": "2016-03-11T14:56:08.375702",
+        "version": 167
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.7767569999999999,
+          44.842402999999905
+        ],
+        "type": "Point"
+      },
+      "id": 168,
+      "properties": {
+        "label": null,
+        "name": "Service d'accueil familial",
+        "tags": {
+          "adresse": "8 B Avenue de Verdun 33127 Martignas-sur-Jalle",
+          "commune": "Martignas-sur-Jalle",
+          "insee": "33273",
+          "pk": "8550"
+        },
+        "timestamp": "2016-03-11T14:56:08.376056",
+        "version": 168
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.7680430000000005,
+          44.84222199999992
+        ],
+        "type": "Point"
+      },
+      "id": 169,
+      "properties": {
+        "label": null,
+        "name": "La Maison des Lutins",
+        "tags": {
+          "adresse": "15 Avenue Mar\u00e9chal Leclerc 33127 Martignas-sur-Jalle",
+          "commune": "Martignas-sur-Jalle",
+          "insee": "33273",
+          "pk": "8551"
+        },
+        "timestamp": "2016-03-11T14:56:08.376405",
+        "version": 169
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5430910000000008,
+          44.71377299999993
+        ],
+        "type": "Point"
+      },
+      "id": 170,
+      "properties": {
+        "label": null,
+        "name": "MA \"\"EMILE et ZIM\"\"",
+        "tags": {
+          "adresse": "1 Place Marcel Vayssi\u00e8re 33650 Martillac",
+          "commune": "Martillac",
+          "insee": "33274",
+          "pk": "8552"
+        },
+        "timestamp": "2016-03-11T14:56:08.376794",
+        "version": 170
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6517420000000009,
+          44.83831799999992
+        ],
+        "type": "Point"
+      },
+      "id": 171,
+      "properties": {
+        "label": null,
+        "name": "\"\"La Farandole\"\"",
+        "tags": {
+          "adresse": "2 Avenue du Pr\u00e9sident Ren\u00e9 Coty 33700 M\u00e9rignac",
+          "commune": "M\u00e9rignac",
+          "insee": "33281",
+          "pk": "8553"
+        },
+        "timestamp": "2016-03-11T14:56:08.377153",
+        "version": 171
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6376510000000004,
+          44.81773899999993
+        ],
+        "type": "Point"
+      },
+      "id": 172,
+      "properties": {
+        "label": null,
+        "name": "\"\"Les Couleurs de Mon Enfance\"\"",
+        "tags": {
+          "adresse": "Avenue Robert Schumann 33700 M\u00e9rignac",
+          "commune": "M\u00e9rignac",
+          "insee": "33281",
+          "pk": "8554"
+        },
+        "timestamp": "2016-03-11T14:56:08.377502",
+        "version": 172
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6948779999999996,
+          44.818992999999914
+        ],
+        "type": "Point"
+      },
+      "id": 173,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che-Halte-garderie \"\"Pomme d'Api\"\"",
+        "tags": {
+          "adresse": "1 All\u00e9e Digitale 33700 M\u00e9rignac",
+          "commune": "M\u00e9rignac",
+          "insee": "33281",
+          "pk": "8555"
+        },
+        "timestamp": "2016-03-11T14:56:08.377860",
+        "version": 173
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6506710000000019,
+          44.84742499999993
+        ],
+        "type": "Point"
+      },
+      "id": 174,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che-Halte-garderie \"\"Tom Pouce\"\"",
+        "tags": {
+          "adresse": "28 Avenue du Truc 33700 M\u00e9rignac",
+          "commune": "M\u00e9rignac",
+          "insee": "33281",
+          "pk": "8556"
+        },
+        "timestamp": "2016-03-11T14:56:08.378212",
+        "version": 174
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6513189999999998,
+          44.84074399999992
+        ],
+        "type": "Point"
+      },
+      "id": 175,
+      "properties": {
+        "label": null,
+        "name": "Halte-garderie \"\"1-2-3 Copains\"\"",
+        "tags": {
+          "adresse": "2 Rue Camille Pissarro 33700 M\u00e9rignac",
+          "commune": "M\u00e9rignac",
+          "insee": "33281",
+          "pk": "8557"
+        },
+        "timestamp": "2016-03-11T14:56:08.378614",
+        "version": 175
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6905800000000005,
+          44.83805199999991
+        ],
+        "type": "Point"
+      },
+      "id": 176,
+      "properties": {
+        "label": null,
+        "name": "La t\u00eate dans les nuages",
+        "tags": {
+          "adresse": "10 B Avenue Neil Armstrong 33700 M\u00e9rignac",
+          "commune": "M\u00e9rignac",
+          "insee": "33281",
+          "pk": "8558"
+        },
+        "timestamp": "2016-03-11T14:56:08.378967",
+        "version": 176
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6520879999999998,
+          44.83923399999993
+        ],
+        "type": "Point"
+      },
+      "id": 177,
+      "properties": {
+        "label": null,
+        "name": "Multi accueil Croq'ile",
+        "tags": {
+          "adresse": "Avenue du Pr\u00e9sident Ren\u00e9 Coty 33700 M\u00e9rignac",
+          "commune": "M\u00e9rignac",
+          "insee": "33281",
+          "pk": "8559"
+        },
+        "timestamp": "2016-03-11T14:56:08.379316",
+        "version": 177
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6285270000000003,
+          44.823627999999914
+        ],
+        "type": "Point"
+      },
+      "id": 178,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil \"\"Au Fil de l'Eau\"\"",
+        "tags": {
+          "adresse": "14 Avenue du Mar\u00e9chal Joffre 33700 M\u00e9rignac",
+          "commune": "M\u00e9rignac",
+          "insee": "33281",
+          "pk": "8560"
+        },
+        "timestamp": "2016-03-11T14:56:08.379669",
+        "version": 178
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6469169999999999,
+          44.846970999999925
+        ],
+        "type": "Point"
+      },
+      "id": 179,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil \"\"Badaboum\"\"",
+        "tags": {
+          "adresse": "12 Avenue Jean Cocteau 33700 M\u00e9rignac",
+          "commune": "M\u00e9rignac",
+          "insee": "33281",
+          "pk": "8561"
+        },
+        "timestamp": "2016-03-11T14:56:08.380018",
+        "version": 179
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6321810000000005,
+          44.81654499999991
+        ],
+        "type": "Point"
+      },
+      "id": 180,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil \"\"La Maison de Pierre\"\"",
+        "tags": {
+          "adresse": "96 Rue Bremontier 33700 M\u00e9rignac",
+          "commune": "M\u00e9rignac",
+          "insee": "33281",
+          "pk": "8562"
+        },
+        "timestamp": "2016-03-11T14:56:08.380366",
+        "version": 180
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6280400000000005,
+          44.82987399999992
+        ],
+        "type": "Point"
+      },
+      "id": 181,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil \"\"Les Marmoussets\"\"",
+        "tags": {
+          "adresse": "14 Rue des Liserons 33700 M\u00e9rignac",
+          "commune": "M\u00e9rignac",
+          "insee": "33281",
+          "pk": "8563"
+        },
+        "timestamp": "2016-03-11T14:56:08.380721",
+        "version": 181
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.08844399999999993,
+          44.649794999999926
+        ],
+        "type": "Point"
+      },
+      "id": 182,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil MONSEGUR",
+        "tags": {
+          "adresse": "2 4 Avenue Jean Paul Glanet 33580 Mons\u00e9gur",
+          "commune": "Mons\u00e9gur",
+          "insee": "33289",
+          "pk": "8564"
+        },
+        "timestamp": "2016-03-11T14:56:08.381068",
+        "version": 182
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6086030000000007,
+          44.94715999999992
+        ],
+        "type": "Point"
+      },
+      "id": 183,
+      "properties": {
+        "label": null,
+        "name": "Multi accueil \"\"Le Petit Prince\"\"",
+        "tags": {
+          "adresse": "All\u00e9e Jean Metayet 33290 Parempuyre",
+          "commune": "Parempuyre",
+          "insee": "33312",
+          "pk": "8565"
+        },
+        "timestamp": "2016-03-11T14:56:08.381421",
+        "version": 183
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.755884000000001,
+          45.19265099999993
+        ],
+        "type": "Point"
+      },
+      "id": 184,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil \"\"C'est le Coin Calin du M\u00e9doc\"\"",
+        "tags": {
+          "adresse": "5 Rue des Vignerons 33250 Pauillac",
+          "commune": "Pauillac",
+          "insee": "33314",
+          "pk": "8566"
+        },
+        "timestamp": "2016-03-11T14:56:08.381771",
+        "version": 184
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6508449999999997,
+          44.79671399999992
+        ],
+        "type": "Point"
+      },
+      "id": 185,
+      "properties": {
+        "label": null,
+        "name": "Accueil occasionnel \"\"Les Petits Poucets\"\"",
+        "tags": {
+          "adresse": "4 All\u00e9e des Cigales 33600 Pessac",
+          "commune": "Pessac",
+          "insee": "33318",
+          "pk": "8567"
+        },
+        "timestamp": "2016-03-11T14:56:08.382120",
+        "version": 185
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6547360000000012,
+          44.782557999999916
+        ],
+        "type": "Point"
+      },
+      "id": 186,
+      "properties": {
+        "label": null,
+        "name": "Agence Nounou",
+        "tags": {
+          "adresse": "15 Avenue L\u00e9onard de Vinci 33600 Pessac",
+          "commune": "Pessac",
+          "insee": "33318",
+          "pk": "8568"
+        },
+        "timestamp": "2016-03-11T14:56:08.382485",
+        "version": 186
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6114680000000006,
+          44.79488699999993
+        ],
+        "type": "Point"
+      },
+      "id": 187,
+      "properties": {
+        "label": null,
+        "name": "Jardin d'enfants \"\"Graine d'Ecole\"\"",
+        "tags": {
+          "adresse": "Avenue de Bardanac 33600 Pessac",
+          "commune": "Pessac",
+          "insee": "33318",
+          "pk": "8569"
+        },
+        "timestamp": "2016-03-11T14:56:08.382834",
+        "version": 187
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6542670000000002,
+          44.78474699999993
+        ],
+        "type": "Point"
+      },
+      "id": 188,
+      "properties": {
+        "label": null,
+        "name": "LPCR PESSAC",
+        "tags": {
+          "adresse": "8 Rue Gustave Hertz 33600 Pessac",
+          "commune": "Pessac",
+          "insee": "33318",
+          "pk": "8570"
+        },
+        "timestamp": "2016-03-11T14:56:08.383188",
+        "version": 188
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6691650000000007,
+          44.79753799999993
+        ],
+        "type": "Point"
+      },
+      "id": 189,
+      "properties": {
+        "label": null,
+        "name": "Multi accueil Cazalouette",
+        "tags": {
+          "adresse": "20 Avenue Pierre Castaing 33600 Pessac",
+          "commune": "Pessac",
+          "insee": "33318",
+          "pk": "8571"
+        },
+        "timestamp": "2016-03-11T14:56:08.383537",
+        "version": 189
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6402180000000012,
+          44.79124999999992
+        ],
+        "type": "Point"
+      },
+      "id": 190,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil \"\"Coquelicots\"\"",
+        "tags": {
+          "adresse": "1 Rue Paul Eluard 33600 Pessac",
+          "commune": "Pessac",
+          "insee": "33318",
+          "pk": "8572"
+        },
+        "timestamp": "2016-03-11T14:56:08.383887",
+        "version": 190
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.7040450000000011,
+          44.79071499999992
+        ],
+        "type": "Point"
+      },
+      "id": 191,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil \"\"La Dent de Lait\"\"",
+        "tags": {
+          "adresse": "All\u00e9e des Bengalis 33600 Pessac",
+          "commune": "Pessac",
+          "insee": "33318",
+          "pk": "8573"
+        },
+        "timestamp": "2016-03-11T14:56:08.384240",
+        "version": 191
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6453799999999997,
+          44.79583899999993
+        ],
+        "type": "Point"
+      },
+      "id": 192,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil \"\"Les Petits Petons\"\"",
+        "tags": {
+          "adresse": "Rue Ferdinand Antoune 33600 Pessac",
+          "commune": "Pessac",
+          "insee": "33318",
+          "pk": "8574"
+        },
+        "timestamp": "2016-03-11T14:56:08.384591",
+        "version": 192
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6322119999999999,
+          44.81051199999992
+        ],
+        "type": "Point"
+      },
+      "id": 193,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil CALLUNE",
+        "tags": {
+          "adresse": "6 Rue du 19 Mars 1962 33600 Pessac",
+          "commune": "Pessac",
+          "insee": "33318",
+          "pk": "8575"
+        },
+        "timestamp": "2016-03-11T14:56:08.384942",
+        "version": 193
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6292970000000003,
+          44.79513099999991
+        ],
+        "type": "Point"
+      },
+      "id": 194,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil r\u00e9gulier \"\"Serpentine\"\"",
+        "tags": {
+          "adresse": "1 Avenue du Mar\u00e9chal Juin 33600 Pessac",
+          "commune": "Pessac",
+          "insee": "33318",
+          "pk": "8576"
+        },
+        "timestamp": "2016-03-11T14:56:08.385295",
+        "version": 194
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.42187200000000086,
+          44.69645599999992
+        ],
+        "type": "Point"
+      },
+      "id": 195,
+      "properties": {
+        "label": null,
+        "name": "MA Les Bidibulles",
+        "tags": {
+          "adresse": "21 Rue de la Bonneterie 33640 Portets",
+          "commune": "Portets",
+          "insee": "33334",
+          "pk": "8577"
+        },
+        "timestamp": "2016-03-11T14:56:08.385644",
+        "version": 195
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.49731800000000004,
+          45.08131699999993
+        ],
+        "type": "Point"
+      },
+      "id": 196,
+      "properties": {
+        "label": null,
+        "name": "\"\"Les Galopins Des Vignes\"\"",
+        "tags": {
+          "adresse": "Le Bourg 33710 Pugnac",
+          "commune": "Pugnac",
+          "insee": "33341",
+          "pk": "8578"
+        },
+        "timestamp": "2016-03-11T14:56:08.385997",
+        "version": 196
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.3869110000000002,
+          44.79470199999993
+        ],
+        "type": "Point"
+      },
+      "id": 197,
+      "properties": {
+        "label": null,
+        "name": "\"\"La Maison de Lise\"\"",
+        "tags": {
+          "adresse": "7 BIS Chemin des \u00c9coles 33670 Sadirac",
+          "commune": "Sadirac",
+          "insee": "33363",
+          "pk": "8579"
+        },
+        "timestamp": "2016-03-11T14:56:08.386356",
+        "version": 197
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.44514200000000065,
+          44.99396699999992
+        ],
+        "type": "Point"
+      },
+      "id": 198,
+      "properties": {
+        "label": null,
+        "name": "Maison de la Petite Enfance",
+        "tags": {
+          "adresse": "10 Rue des Roses 33240 Saint-Andr\u00e9-de-Cubzac",
+          "commune": "Saint-Andr\u00e9-de-Cubzac",
+          "insee": "33366",
+          "pk": "8580"
+        },
+        "timestamp": "2016-03-11T14:56:08.386707",
+        "version": 198
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.7190480000000009,
+          44.911498999999935
+        ],
+        "type": "Point"
+      },
+      "id": 199,
+      "properties": {
+        "label": null,
+        "name": "\"\"La Cl\u00e9 des Champs\"\"",
+        "tags": {
+          "adresse": "Route de Germignan 33160 Saint-Aubin-de-M\u00e9doc",
+          "commune": "Saint-Aubin-de-M\u00e9doc",
+          "insee": "33376",
+          "pk": "8581"
+        },
+        "timestamp": "2016-03-11T14:56:08.387093",
+        "version": 199
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.7227319999999997,
+          44.91576499999993
+        ],
+        "type": "Point"
+      },
+      "id": 200,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che \"\"Mes premiers pas\"\"",
+        "tags": {
+          "adresse": "Route de Joli Bois 33160 Saint-Aubin-de-M\u00e9doc",
+          "commune": "Saint-Aubin-de-M\u00e9doc",
+          "insee": "33376",
+          "pk": "8582"
+        },
+        "timestamp": "2016-03-11T14:56:08.387444",
+        "version": 200
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.2026520000000008,
+          44.99125599999993
+        ],
+        "type": "Point"
+      },
+      "id": 201,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil  \"\"la souris verte\"\"",
+        "tags": {
+          "adresse": "2 Avenue du G\u00e9n\u00e9ral de Gaulle 33910 Saint-Denis-de-Pile",
+          "commune": "Saint-Denis-de-Pile",
+          "insee": "33393",
+          "pk": "8583"
+        },
+        "timestamp": "2016-03-11T14:56:08.387795",
+        "version": 201
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.15805000000000055,
+          44.89794899999994
+        ],
+        "type": "Point"
+      },
+      "id": 202,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil Les petits lutins",
+        "tags": {
+          "adresse": "Grand Pontet 33330 Saint-\u00c9milion",
+          "commune": "Saint-\u00c9milion",
+          "insee": "33394",
+          "pk": "8584"
+        },
+        "timestamp": "2016-03-11T14:56:08.388144",
+        "version": 202
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.3203790000000001,
+          44.86047799999993
+        ],
+        "type": "Point"
+      },
+      "id": 203,
+      "properties": {
+        "label": null,
+        "name": "Halte-garderie St Germain de Puch",
+        "tags": {
+          "adresse": "Route de Libourne 33750 Saint-Germain-du-Puch",
+          "commune": "Saint-Germain-du-Puch",
+          "insee": "33413",
+          "pk": "8585"
+        },
+        "timestamp": "2016-03-11T14:56:08.388494",
+        "version": 203
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.7720620000000008,
+          44.80918399999993
+        ],
+        "type": "Point"
+      },
+      "id": 204,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil \"\"Relais B\u00e9b\u00e9s\"\"",
+        "tags": {
+          "adresse": "743 Avenue de Bordeaux 33127 Saint-Jean-d'Illac",
+          "commune": "Saint-Jean-d'Illac",
+          "insee": "33422",
+          "pk": "8586"
+        },
+        "timestamp": "2016-03-11T14:56:08.388847",
+        "version": 204
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.7720620000000008,
+          44.80918399999993
+        ],
+        "type": "Point"
+      },
+      "id": 205,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil r\u00e9gulier \"\"Brin d'Malice\"\"",
+        "tags": {
+          "adresse": "743 Avenue de Bordeaux 33127 Saint-Jean-d'Illac",
+          "commune": "Saint-Jean-d'Illac",
+          "insee": "33422",
+          "pk": "8587"
+        },
+        "timestamp": "2016-03-11T14:56:08.389197",
+        "version": 205
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.4248680000000007,
+          44.91398199999992
+        ],
+        "type": "Point"
+      },
+      "id": 206,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che-Halte-garderie \"\"Les Petits Loups\"\"",
+        "tags": {
+          "adresse": "Chemin de Peligon 33450 Saint-Loub\u00e8s",
+          "commune": "Saint-Loub\u00e8s",
+          "insee": "33433",
+          "pk": "8588"
+        },
+        "timestamp": "2016-03-11T14:56:08.389544",
+        "version": 206
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.655627000000001,
+          44.526661999999924
+        ],
+        "type": "Point"
+      },
+      "id": 207,
+      "properties": {
+        "label": null,
+        "name": "Maison de la Petite Enfance \"\"L'Oustaou\"\"",
+        "tags": {
+          "adresse": "Place de la Mairie 33125 Saint-Magne",
+          "commune": "Saint-Magne",
+          "insee": "33436",
+          "pk": "8589"
+        },
+        "timestamp": "2016-03-11T14:56:08.389903",
+        "version": 207
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.05878400000000077,
+          44.85370099999992
+        ],
+        "type": "Point"
+      },
+      "id": 208,
+      "properties": {
+        "label": null,
+        "name": "P\u00f4le Petite Enfance",
+        "tags": {
+          "adresse": "11 Avenue de la Dordogne 33350 Saint-Magne-de-Castillon",
+          "commune": "Saint-Magne-de-Castillon",
+          "insee": "33437",
+          "pk": "8590"
+        },
+        "timestamp": "2016-03-11T14:56:08.390260",
+        "version": 208
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5122289999999998,
+          44.71942999999992
+        ],
+        "type": "Point"
+      },
+      "id": 209,
+      "properties": {
+        "label": null,
+        "name": "Les p'tits lous",
+        "tags": {
+          "adresse": "Avenue du Cordon d'Or 33650 Saint-M\u00e9dard-d'Eyrans",
+          "commune": "Saint-M\u00e9dard-d'Eyrans",
+          "insee": "33448",
+          "pk": "8591"
+        },
+        "timestamp": "2016-03-11T14:56:08.390621",
+        "version": 209
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.7113340000000012,
+          44.89121999999992
+        ],
+        "type": "Point"
+      },
+      "id": 210,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che collective SAINT MEDARD EN JALLES",
+        "tags": {
+          "adresse": "23 Rue Jean Duperier 33160 Saint-M\u00e9dard-en-Jalles",
+          "commune": "Saint-M\u00e9dard-en-Jalles",
+          "insee": "33449",
+          "pk": "8592"
+        },
+        "timestamp": "2016-03-11T14:56:08.390972",
+        "version": 210
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.7113340000000012,
+          44.89121999999992
+        ],
+        "type": "Point"
+      },
+      "id": 211,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che Familiale SAINT MEDARD EN JALLES",
+        "tags": {
+          "adresse": "23 Rue Jean Duperier 33160 Saint-M\u00e9dard-en-Jalles",
+          "commune": "Saint-M\u00e9dard-en-Jalles",
+          "insee": "33449",
+          "pk": "8593"
+        },
+        "timestamp": "2016-03-11T14:56:08.391322",
+        "version": 211
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.724248000000001,
+          44.86416099999993
+        ],
+        "type": "Point"
+      },
+      "id": 212,
+      "properties": {
+        "label": null,
+        "name": "Halte-accueil Magudas",
+        "tags": {
+          "adresse": "Rue du Commandant Charcot 33160 Saint-M\u00e9dard-en-Jalles",
+          "commune": "Saint-M\u00e9dard-en-Jalles",
+          "insee": "33449",
+          "pk": "8594"
+        },
+        "timestamp": "2016-03-11T14:56:08.391676",
+        "version": 212
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.7110160000000002,
+          44.89192999999993
+        ],
+        "type": "Point"
+      },
+      "id": 213,
+      "properties": {
+        "label": null,
+        "name": "Halte-garderie \"\"Maison de la Petite Enfance\"\"",
+        "tags": {
+          "adresse": "Rue Henri Dunant 33160 Saint-M\u00e9dard-en-Jalles",
+          "commune": "Saint-M\u00e9dard-en-Jalles",
+          "insee": "33449",
+          "pk": "8595"
+        },
+        "timestamp": "2016-03-11T14:56:08.392026",
+        "version": 213
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.2846089999999999,
+          44.81976699999991
+        ],
+        "type": "Point"
+      },
+      "id": 214,
+      "properties": {
+        "label": null,
+        "name": "MA Trottine",
+        "tags": {
+          "adresse": "Au Pionney 33750 Saint-Quentin-de-Baron",
+          "commune": "Saint-Quentin-de-Baron",
+          "insee": "33466",
+          "pk": "8596"
+        },
+        "timestamp": "2016-03-11T14:56:08.392380",
+        "version": 214
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.4913310000000003,
+          44.427037999999925
+        ],
+        "type": "Point"
+      },
+      "id": 215,
+      "properties": {
+        "label": null,
+        "name": "Multi accueil Les Galopins",
+        "tags": {
+          "adresse": "Rue Pasteur 33113 Saint-Symphorien",
+          "commune": "Saint-Symphorien",
+          "insee": "33484",
+          "pk": "8597"
+        },
+        "timestamp": "2016-03-11T14:56:08.392730",
+        "version": 215
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.48258399999999996,
+          44.90822799999992
+        ],
+        "type": "Point"
+      },
+      "id": 216,
+      "properties": {
+        "label": null,
+        "name": "Multiaccueil Cadet Roussel",
+        "tags": {
+          "adresse": "81 Rue de Laufach 33560 Sainte-Eulalie",
+          "commune": "Sainte-Eulalie",
+          "insee": "33397",
+          "pk": "8598"
+        },
+        "timestamp": "2016-03-11T14:56:08.393079",
+        "version": 216
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.2181229999999996,
+          44.84060699999991
+        ],
+        "type": "Point"
+      },
+      "id": 217,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil \"\"Tom Pouce\"\"",
+        "tags": {
+          "adresse": "Rue Waldeck Rousseau 33220 Sainte-Foy-la-Grande",
+          "commune": "Sainte-Foy-la-Grande",
+          "insee": "33402",
+          "pk": "8599"
+        },
+        "timestamp": "2016-03-11T14:56:08.393431",
+        "version": 217
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.395093,
+          44.84247299999991
+        ],
+        "type": "Point"
+      },
+      "id": 218,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil \"\"Capucine I\"\"",
+        "tags": {
+          "adresse": "7 Avenue des Vignes 33370 Salleb\u009cuf",
+          "commune": "Salleb\u009cuf",
+          "insee": "33496",
+          "pk": "8600"
+        },
+        "timestamp": "2016-03-11T14:56:08.393779",
+        "version": 218
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.8663180000000007,
+          44.55100499999993
+        ],
+        "type": "Point"
+      },
+      "id": 219,
+      "properties": {
+        "label": null,
+        "name": "T\u00eates en l'Eyre",
+        "tags": {
+          "adresse": "Rue Sylvie Ducourneau 33770 Salles",
+          "commune": "Salles",
+          "insee": "33498",
+          "pk": "8601"
+        },
+        "timestamp": "2016-03-11T14:56:08.394128",
+        "version": 219
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5939439999999998,
+          44.651332999999916
+        ],
+        "type": "Point"
+      },
+      "id": 220,
+      "properties": {
+        "label": null,
+        "name": "MA\"\"Pom de Pin\"\"",
+        "tags": {
+          "adresse": "Chemin de Rejouit 33650 Saucats",
+          "commune": "Saucats",
+          "insee": "33501",
+          "pk": "8602"
+        },
+        "timestamp": "2016-03-11T14:56:08.394519",
+        "version": 220
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5803839999999997,
+          44.80606399999993
+        ],
+        "type": "Point"
+      },
+      "id": 221,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che de Bagatelle",
+        "tags": {
+          "adresse": "Rue Fr\u00e9d\u00e9ric Sevene 33400 Talence",
+          "commune": "Talence",
+          "insee": "33522",
+          "pk": "8603"
+        },
+        "timestamp": "2016-03-11T14:56:08.394903",
+        "version": 221
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6005930000000012,
+          44.81363999999992
+        ],
+        "type": "Point"
+      },
+      "id": 222,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che du  CDEF",
+        "tags": {
+          "adresse": "48 Avenue de la Vieille Tour 33400 Talence",
+          "commune": "Talence",
+          "insee": "33522",
+          "pk": "8604"
+        },
+        "timestamp": "2016-03-11T14:56:08.395257",
+        "version": 222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6005930000000012,
+          44.81363999999992
+        ],
+        "type": "Point"
+      },
+      "id": 223,
+      "properties": {
+        "label": null,
+        "name": "Halte B\u00e9b\u00e9s de la Maison Maternelle",
+        "tags": {
+          "adresse": "48 Avenue de la Vieille Tour 33400 Talence",
+          "commune": "Talence",
+          "insee": "33522",
+          "pk": "8605"
+        },
+        "timestamp": "2016-03-11T14:56:08.395607",
+        "version": 223
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.588033,
+          44.806079999999916
+        ],
+        "type": "Point"
+      },
+      "id": 224,
+      "properties": {
+        "label": null,
+        "name": "MA Cabrioles",
+        "tags": {
+          "adresse": "R\u00e9sidence Crespy 2 33400 Talence",
+          "commune": "Talence",
+          "insee": "33522",
+          "pk": "8606"
+        },
+        "timestamp": "2016-03-11T14:56:08.395956",
+        "version": 224
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5950469999999998,
+          44.81796599999993
+        ],
+        "type": "Point"
+      },
+      "id": 225,
+      "properties": {
+        "label": null,
+        "name": "MAR LIBELLULES",
+        "tags": {
+          "adresse": "2 Rue de la Renaissance 33400 Talence",
+          "commune": "Talence",
+          "insee": "33522",
+          "pk": "8607"
+        },
+        "timestamp": "2016-03-11T14:56:08.396311",
+        "version": 225
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5950469999999998,
+          44.81796599999993
+        ],
+        "type": "Point"
+      },
+      "id": 226,
+      "properties": {
+        "label": null,
+        "name": "MAR PAPILLONS",
+        "tags": {
+          "adresse": "2 Rue de la Renaissance 33400 Talence",
+          "commune": "Talence",
+          "insee": "33522",
+          "pk": "8608"
+        },
+        "timestamp": "2016-03-11T14:56:08.396658",
+        "version": 226
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5922550000000006,
+          44.79595199999992
+        ],
+        "type": "Point"
+      },
+      "id": 227,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil \"\"l'El\u00e9phant Bleu\"\"",
+        "tags": {
+          "adresse": "Avenue de Thouars 33400 Talence",
+          "commune": "Talence",
+          "insee": "33522",
+          "pk": "8609"
+        },
+        "timestamp": "2016-03-11T14:56:08.397034",
+        "version": 227
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5926630000000014,
+          44.788693999999936
+        ],
+        "type": "Point"
+      },
+      "id": 228,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil \"\"Les Bons Petits Diables\"\"",
+        "tags": {
+          "adresse": "27 All\u00e9e des Petits Rois 33400 Talence",
+          "commune": "Talence",
+          "insee": "33522",
+          "pk": "8610"
+        },
+        "timestamp": "2016-03-11T14:56:08.397381",
+        "version": 228
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5894820000000004,
+          44.81491299999991
+        ],
+        "type": "Point"
+      },
+      "id": 229,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil \"\"L'Il\u00f4t des Enfants\"\"",
+        "tags": {
+          "adresse": "84 Rue Pierre Renaudel 33400 Talence",
+          "commune": "Talence",
+          "insee": "33522",
+          "pk": "8611"
+        },
+        "timestamp": "2016-03-11T14:56:08.397730",
+        "version": 229
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.2632960000000014,
+          44.73658599999993
+        ],
+        "type": "Point"
+      },
+      "id": 230,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil TARGON",
+        "tags": {
+          "adresse": "Chemin du Stade 33760 Targon",
+          "commune": "Targon",
+          "insee": "33523",
+          "pk": "8612"
+        },
+        "timestamp": "2016-03-11T14:56:08.398086",
+        "version": 230
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.46514400000000017,
+          44.84622899999994
+        ],
+        "type": "Point"
+      },
+      "id": 231,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che \"\"Vertelune\"\"",
+        "tags": {
+          "adresse": "1 R\u00e9sidence le Bourg 33370 Tresses",
+          "commune": "Tresses",
+          "insee": "33535",
+          "pk": "8613"
+        },
+        "timestamp": "2016-03-11T14:56:08.398445",
+        "version": 231
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.30644600000000016,
+          44.967547999999915
+        ],
+        "type": "Point"
+      },
+      "id": 232,
+      "properties": {
+        "label": null,
+        "name": "\"\"Plume D' Ange\"\"",
+        "tags": {
+          "adresse": "26 Rue Principale 33141 Villegouge",
+          "commune": "Villegouge",
+          "insee": "33548",
+          "pk": "8614"
+        },
+        "timestamp": "2016-03-11T14:56:08.398837",
+        "version": 232
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5672470000000004,
+          44.78157999999993
+        ],
+        "type": "Point"
+      },
+      "id": 233,
+      "properties": {
+        "label": null,
+        "name": "Abricot",
+        "tags": {
+          "adresse": "2 Avenue du Mar\u00e9chal Leclerc 33140 Villenave-d'Ornon",
+          "commune": "Villenave-d'Ornon",
+          "insee": "33550",
+          "pk": "8615"
+        },
+        "timestamp": "2016-03-11T14:56:08.399193",
+        "version": 233
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.543136000000001,
+          44.76992199999994
+        ],
+        "type": "Point"
+      },
+      "id": 234,
+      "properties": {
+        "label": null,
+        "name": "Le jardin  de Lise",
+        "tags": {
+          "adresse": "18 Avenue du Mar\u00e9chal Foch 33140 Villenave-d'Ornon",
+          "commune": "Villenave-d'Ornon",
+          "insee": "33550",
+          "pk": "8616"
+        },
+        "timestamp": "2016-03-11T14:56:08.399543",
+        "version": 234
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.563500000000001,
+          44.76380199999992
+        ],
+        "type": "Point"
+      },
+      "id": 235,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil collectif et famil. \"\"Les Ecureuils\"\"",
+        "tags": {
+          "adresse": "Rue de Chamb\u00e9ry 33140 Villenave-d'Ornon",
+          "commune": "Villenave-d'Ornon",
+          "insee": "33550",
+          "pk": "8617"
+        },
+        "timestamp": "2016-03-11T14:56:08.399897",
+        "version": 235
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5720990000000009,
+          44.78643299999993
+        ],
+        "type": "Point"
+      },
+      "id": 236,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil familial \"\"Doux Guilis\"\"",
+        "tags": {
+          "adresse": "Avenue \u00c9douard Bourlaux 33140 Villenave-d'Ornon",
+          "commune": "Villenave-d'Ornon",
+          "insee": "33550",
+          "pk": "8618"
+        },
+        "timestamp": "2016-03-11T14:56:08.400247",
+        "version": 236
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.4891000000000006,
+          44.92779999999992
+        ],
+        "type": "Point"
+      },
+      "id": 237,
+      "properties": {
+        "label": null,
+        "name": "Halte garderie   Tom Pouce",
+        "tags": {
+          "adresse": "- parc norton-radstock , Ambar\u00e8s-et-Lagrave",
+          "commune": "Ambar\u00e8s-et-Lagrave",
+          "insee": "33003",
+          "pk": "8619"
+        },
+        "timestamp": "2016-03-11T14:56:08.400600",
+        "version": 237
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.3131999999999996,
+          44.82139999999992
+        ],
+        "type": "Point"
+      },
+      "id": 238,
+      "properties": {
+        "label": null,
+        "name": "MULTIACCUEIL    La Toupie",
+        "tags": {
+          "adresse": "- le bourg , Baron",
+          "commune": "Baron",
+          "insee": "33028",
+          "pk": "8620"
+        },
+        "timestamp": "2016-03-11T14:56:08.400949",
+        "version": 238
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5153000000000004,
+          44.90029999999992
+        ],
+        "type": "Point"
+      },
+      "id": 239,
+      "properties": {
+        "label": null,
+        "name": "Arc en Ciel",
+        "tags": {
+          "adresse": "- r paul bert , Bassens",
+          "commune": "Bassens",
+          "insee": "33032",
+          "pk": "8621"
+        },
+        "timestamp": "2016-03-11T14:56:08.401302",
+        "version": 239
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5153000000000004,
+          44.90029999999992
+        ],
+        "type": "Point"
+      },
+      "id": 240,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che familiale",
+        "tags": {
+          "adresse": "- r paul bert , Bassens",
+          "commune": "Bassens",
+          "insee": "33032",
+          "pk": "8622"
+        },
+        "timestamp": "2016-03-11T14:56:08.401657",
+        "version": 240
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5456999999999999,
+          44.81349999999992
+        ],
+        "type": "Point"
+      },
+      "id": 241,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che   La Calinerie I",
+        "tags": {
+          "adresse": "- r roger lejard , B\u00e8gles",
+          "commune": "B\u00e8gles",
+          "insee": "33039",
+          "pk": "8623"
+        },
+        "timestamp": "2016-03-11T14:56:08.402004",
+        "version": 241
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6294000000000013,
+          44.90849999999992
+        ],
+        "type": "Point"
+      },
+      "id": 242,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che familiale BLANQUEFORT",
+        "tags": {
+          "adresse": "12 r dupaty , Blanquefort",
+          "commune": "Blanquefort",
+          "insee": "33056",
+          "pk": "8624"
+        },
+        "timestamp": "2016-03-11T14:56:08.402364",
+        "version": 242
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5734999999999999,
+          44.864099999999915
+        ],
+        "type": "Point"
+      },
+      "id": 243,
+      "properties": {
+        "label": null,
+        "name": "Jardin des Enfants d Haussmann",
+        "tags": {
+          "adresse": "181 crs du medoc , Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8625"
+        },
+        "timestamp": "2016-03-11T14:56:08.402718",
+        "version": 243
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5539000000000001,
+          44.84259999999991
+        ],
+        "type": "Point"
+      },
+      "id": 244,
+      "properties": {
+        "label": null,
+        "name": "Centre Petite Enfance Pitchoun Bastide",
+        "tags": {
+          "adresse": "16 r de nuits , Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8626"
+        },
+        "timestamp": "2016-03-11T14:56:08.403066",
+        "version": 244
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6095000000000012,
+          44.823499999999925
+        ],
+        "type": "Point"
+      },
+      "id": 245,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che   Carreire",
+        "tags": {
+          "adresse": "- r camille saint-saens , Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8627"
+        },
+        "timestamp": "2016-03-11T14:56:08.403419",
+        "version": 245
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5666000000000005,
+          44.83349999999993
+        ],
+        "type": "Point"
+      },
+      "id": 246,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che   Gaspard Philippe",
+        "tags": {
+          "adresse": "11 r gaspard philippe , Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8628"
+        },
+        "timestamp": "2016-03-11T14:56:08.403770",
+        "version": 246
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5702000000000007,
+          44.87439999999993
+        ],
+        "type": "Point"
+      },
+      "id": 247,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che familiale BORDEAUX Nord",
+        "tags": {
+          "adresse": "- av de laroque , Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8629"
+        },
+        "timestamp": "2016-03-11T14:56:08.404118",
+        "version": 247
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5565999999999995,
+          44.81469999999992
+        ],
+        "type": "Point"
+      },
+      "id": 248,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che Halte garderie   Canaillous   Brascassat",
+        "tags": {
+          "adresse": "- res le renard , Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8630"
+        },
+        "timestamp": "2016-03-11T14:56:08.404471",
+        "version": 248
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5633000000000014,
+          44.829899999999945
+        ],
+        "type": "Point"
+      },
+      "id": 249,
+      "properties": {
+        "label": null,
+        "name": "Halte garderie   Capucine",
+        "tags": {
+          "adresse": "61 r des douves , Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8631"
+        },
+        "timestamp": "2016-03-11T14:56:08.404820",
+        "version": 249
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5627000000000004,
+          44.831099999999935
+        ],
+        "type": "Point"
+      },
+      "id": 250,
+      "properties": {
+        "label": null,
+        "name": "Halte garderie   Le Jardin de l Eau Vive",
+        "tags": {
+          "adresse": "5 r du noviciat , Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8632"
+        },
+        "timestamp": "2016-03-11T14:56:08.405174",
+        "version": 250
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5662999999999995,
+          44.86219999999994
+        ],
+        "type": "Point"
+      },
+      "id": 251,
+      "properties": {
+        "label": null,
+        "name": "Halte garderie   Les Chartrons",
+        "tags": {
+          "adresse": "64 r de leybardie , Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8633"
+        },
+        "timestamp": "2016-03-11T14:56:08.405527",
+        "version": 251
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5751000000000003,
+          44.87359999999994
+        ],
+        "type": "Point"
+      },
+      "id": 252,
+      "properties": {
+        "label": null,
+        "name": "Les Petites Pousses du Lac",
+        "tags": {
+          "adresse": "- r du jonc , Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8634"
+        },
+        "timestamp": "2016-03-11T14:56:08.405875",
+        "version": 252
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5632000000000007,
+          44.821599999999904
+        ],
+        "type": "Point"
+      },
+      "id": 253,
+      "properties": {
+        "label": null,
+        "name": "Micro cr\u00e8che  Mimosa",
+        "tags": {
+          "adresse": "26 r lefol , Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8635"
+        },
+        "timestamp": "2016-03-11T14:56:08.406227",
+        "version": 253
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5670999999999996,
+          44.821599999999904
+        ],
+        "type": "Point"
+      },
+      "id": 254,
+      "properties": {
+        "label": null,
+        "name": "Mirassou Occasionnel",
+        "tags": {
+          "adresse": "33/35 r roger mirassou , Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8636"
+        },
+        "timestamp": "2016-03-11T14:56:08.406590",
+        "version": 254
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5670999999999996,
+          44.821599999999904
+        ],
+        "type": "Point"
+      },
+      "id": 255,
+      "properties": {
+        "label": null,
+        "name": "Mirassou R\u00e9gulier",
+        "tags": {
+          "adresse": "33/35 r roger mirassou , Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8637"
+        },
+        "timestamp": "2016-03-11T14:56:08.406963",
+        "version": 255
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6160000000000001,
+          44.84139999999991
+        ],
+        "type": "Point"
+      },
+      "id": 256,
+      "properties": {
+        "label": null,
+        "name": "Multi Accueil Lucilann",
+        "tags": {
+          "adresse": "8 r professeur moreau , Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8638"
+        },
+        "timestamp": "2016-03-11T14:56:08.407322",
+        "version": 256
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5716000000000007,
+          44.82049999999994
+        ],
+        "type": "Point"
+      },
+      "id": 257,
+      "properties": {
+        "label": null,
+        "name": "MULTIACCEUIL MALBEC",
+        "tags": {
+          "adresse": "250 r malbec , Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8639"
+        },
+        "timestamp": "2016-03-11T14:56:08.407671",
+        "version": 257
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5754000000000005,
+          44.82579999999992
+        ],
+        "type": "Point"
+      },
+      "id": 258,
+      "properties": {
+        "label": null,
+        "name": "Multiaccueil   A petit pas  Sabli\u00e8res",
+        "tags": {
+          "adresse": "35 r des sablieres , Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8640"
+        },
+        "timestamp": "2016-03-11T14:56:08.408025",
+        "version": 258
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5704000000000004,
+          44.85629999999993
+        ],
+        "type": "Point"
+      },
+      "id": 259,
+      "properties": {
+        "label": null,
+        "name": "Multi accueil Barreyre",
+        "tags": {
+          "adresse": "97 r barreyre , Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8641"
+        },
+        "timestamp": "2016-03-11T14:56:08.408375",
+        "version": 259
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5512000000000006,
+          44.816699999999926
+        ],
+        "type": "Point"
+      },
+      "id": 260,
+      "properties": {
+        "label": null,
+        "name": "multiaccueil occasionnel Carle Vernet",
+        "tags": {
+          "adresse": "9 r du professeur devaux , Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8642"
+        },
+        "timestamp": "2016-03-11T14:56:08.408726",
+        "version": 260
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5512000000000006,
+          44.816699999999926
+        ],
+        "type": "Point"
+      },
+      "id": 261,
+      "properties": {
+        "label": null,
+        "name": "Multiaccueil r\u00e9gulier Carle Vernet",
+        "tags": {
+          "adresse": "9 r du professeur devaux , Bordeaux",
+          "commune": "Bordeaux",
+          "insee": "33063",
+          "pk": "8643"
+        },
+        "timestamp": "2016-03-11T14:56:08.409078",
+        "version": 261
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6186000000000001,
+          45.12929999999994
+        ],
+        "type": "Point"
+      },
+      "id": 262,
+      "properties": {
+        "label": null,
+        "name": "Les P tits Cr\u00e9acs",
+        "tags": {
+          "adresse": "5B le bourg , Cars",
+          "commune": "Cars",
+          "insee": "33100",
+          "pk": "8644"
+        },
+        "timestamp": "2016-03-11T14:56:08.409431",
+        "version": 262
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -1.1537000000000004,
+          44.63449999999992
+        ],
+        "type": "Point"
+      },
+      "id": 263,
+      "properties": {
+        "label": null,
+        "name": "Multi accueil   Les Farfadets",
+        "tags": {
+          "adresse": "- av de verdun , La Teste-de-Buch",
+          "commune": "La Teste-de-Buch",
+          "insee": "33529",
+          "pk": "8645"
+        },
+        "timestamp": "2016-03-11T14:56:08.409782",
+        "version": 263
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5214000000000001,
+          44.854299999999924
+        ],
+        "type": "Point"
+      },
+      "id": 264,
+      "properties": {
+        "label": null,
+        "name": "Multi accueil   La Colline",
+        "tags": {
+          "adresse": "- r du professeur paul langevin , Cenon",
+          "commune": "Cenon",
+          "insee": "33119",
+          "pk": "8646"
+        },
+        "timestamp": "2016-03-11T14:56:08.410134",
+        "version": 264
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6259000000000008,
+          44.87529999999992
+        ],
+        "type": "Point"
+      },
+      "id": 265,
+      "properties": {
+        "label": null,
+        "name": "Accueil Familial",
+        "tags": {
+          "adresse": "39 av de l'hippodrome , Eysines",
+          "commune": "Eysines",
+          "insee": "33162",
+          "pk": "8647"
+        },
+        "timestamp": "2016-03-11T14:56:08.410499",
+        "version": 265
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6402000000000008,
+          44.86749999999993
+        ],
+        "type": "Point"
+      },
+      "id": 266,
+      "properties": {
+        "label": null,
+        "name": "Espace   Petite Enfance   de Migron",
+        "tags": {
+          "adresse": "15B r francois mauriac , Eysines",
+          "commune": "Eysines",
+          "insee": "33162",
+          "pk": "8648"
+        },
+        "timestamp": "2016-03-11T14:56:08.410853",
+        "version": 266
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5231000000000006,
+          44.83279999999992
+        ],
+        "type": "Point"
+      },
+      "id": 267,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che   Nicolas et Pimprenelle",
+        "tags": {
+          "adresse": "27 av du president francois mitterrand , Floirac",
+          "commune": "Floirac",
+          "insee": "33167",
+          "pk": "8649"
+        },
+        "timestamp": "2016-03-11T14:56:08.411204",
+        "version": 267
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5231000000000006,
+          44.83279999999992
+        ],
+        "type": "Point"
+      },
+      "id": 268,
+      "properties": {
+        "label": null,
+        "name": "Halte garderie Nicolas et Pimprenelle",
+        "tags": {
+          "adresse": "27 av du president francois mitterrand , Floirac",
+          "commune": "Floirac",
+          "insee": "33167",
+          "pk": "8650"
+        },
+        "timestamp": "2016-03-11T14:56:08.411613",
+        "version": 268
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6093,
+          44.77219999999992
+        ],
+        "type": "Point"
+      },
+      "id": 269,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che   Les Petits Loups",
+        "tags": {
+          "adresse": "- all gaston rodrigues , Gradignan",
+          "commune": "Gradignan",
+          "insee": "33192",
+          "pk": "8651"
+        },
+        "timestamp": "2016-03-11T14:56:08.412079",
+        "version": 269
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -1.0652000000000006,
+          44.62219999999992
+        ],
+        "type": "Point"
+      },
+      "id": 270,
+      "properties": {
+        "label": null,
+        "name": "Etablissement multi accueil   Les Barbotins",
+        "tags": {
+          "adresse": "- all moliere , Gujan-Mestras",
+          "commune": "Gujan-Mestras",
+          "insee": "33199",
+          "pk": "8652"
+        },
+        "timestamp": "2016-03-11T14:56:08.412522",
+        "version": 270
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.3694999999999998,
+          44.60119999999992
+        ],
+        "type": "Point"
+      },
+      "id": 271,
+      "properties": {
+        "label": null,
+        "name": "Multi accueil P tits Gribouilles",
+        "tags": {
+          "adresse": "- saint roch est , Illats",
+          "commune": "Illats",
+          "insee": "33205",
+          "pk": "8653"
+        },
+        "timestamp": "2016-03-11T14:56:08.412952",
+        "version": 271
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -1.1396000000000017,
+          44.62489999999991
+        ],
+        "type": "Point"
+      },
+      "id": 272,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che familiale",
+        "tags": {
+          "adresse": "- all camille jullian , La Teste-de-Buch",
+          "commune": "La Teste-de-Buch",
+          "insee": "33529",
+          "pk": "8654"
+        },
+        "timestamp": "2016-03-11T14:56:08.413376",
+        "version": 272
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -1.1396000000000017,
+          44.62489999999991
+        ],
+        "type": "Point"
+      },
+      "id": 273,
+      "properties": {
+        "label": null,
+        "name": "Maison de la Petite Enfance   M Th\u00e9r\u00e8se EYQUEM",
+        "tags": {
+          "adresse": "- all camille jullian , La Teste-de-Buch",
+          "commune": "La Teste-de-Buch",
+          "insee": "33529",
+          "pk": "8655"
+        },
+        "timestamp": "2016-03-11T14:56:08.413824",
+        "version": 273
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5272000000000003,
+          44.68139999999992
+        ],
+        "type": "Point"
+      },
+      "id": 274,
+      "properties": {
+        "label": null,
+        "name": "Multi accueil   Tom Pousse",
+        "tags": {
+          "adresse": "- pl saint jean d'etampes , La Br\u00e8de",
+          "commune": "La Br\u00e8de",
+          "insee": "33213",
+          "pk": "8656"
+        },
+        "timestamp": "2016-03-11T14:56:08.414273",
+        "version": 274
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -1.0494000000000014,
+          44.71449999999992
+        ],
+        "type": "Point"
+      },
+      "id": 275,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che   Le Chat Perch\u00e9",
+        "tags": {
+          "adresse": "- av marc delest , Lanton",
+          "commune": "Lanton",
+          "insee": "33229",
+          "pk": "8657"
+        },
+        "timestamp": "2016-03-11T14:56:08.414704",
+        "version": 275
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6751000000000008,
+          44.86979999999992
+        ],
+        "type": "Point"
+      },
+      "id": 276,
+      "properties": {
+        "label": null,
+        "name": "Mini cr\u00e8che   Les Copains d Abord",
+        "tags": {
+          "adresse": "2 r de tanays , Le Haillan",
+          "commune": "Le Haillan",
+          "insee": "33200",
+          "pk": "8658"
+        },
+        "timestamp": "2016-03-11T14:56:08.415157",
+        "version": 276
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5197000000000004,
+          44.86789999999992
+        ],
+        "type": "Point"
+      },
+      "id": 277,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che collective   La Cigogne",
+        "tags": {
+          "adresse": "64 r edouard herriot , Lormont",
+          "commune": "Lormont",
+          "insee": "33249",
+          "pk": "8659"
+        },
+        "timestamp": "2016-03-11T14:56:08.415603",
+        "version": 277
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6478999999999999,
+          44.85209999999992
+        ],
+        "type": "Point"
+      },
+      "id": 278,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che   Les Ecureuils",
+        "tags": {
+          "adresse": "- r jean giono , M\u00e9rignac",
+          "commune": "M\u00e9rignac",
+          "insee": "33281",
+          "pk": "8660"
+        },
+        "timestamp": "2016-03-11T14:56:08.416054",
+        "version": 278
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6847000000000016,
+          44.829899999999945
+        ],
+        "type": "Point"
+      },
+      "id": 279,
+      "properties": {
+        "label": null,
+        "name": "LPCR MERIGNAC",
+        "tags": {
+          "adresse": "4 av graham bell , M\u00e9rignac",
+          "commune": "M\u00e9rignac",
+          "insee": "33281",
+          "pk": "8661"
+        },
+        "timestamp": "2016-03-11T14:56:08.416492",
+        "version": 279
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.621200000000001,
+          44.83569999999992
+        ],
+        "type": "Point"
+      },
+      "id": 280,
+      "properties": {
+        "label": null,
+        "name": "Multi accueil   Les Petits Lutins",
+        "tags": {
+          "adresse": "12 r georges mandel , M\u00e9rignac",
+          "commune": "M\u00e9rignac",
+          "insee": "33281",
+          "pk": "8662"
+        },
+        "timestamp": "2016-03-11T14:56:08.416917",
+        "version": 280
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.9411000000000007,
+          44.60619999999994
+        ],
+        "type": "Point"
+      },
+      "id": 281,
+      "properties": {
+        "label": null,
+        "name": "Multi accueil   L Ile aux enfants",
+        "tags": {
+          "adresse": "- imp des colibris , Mios",
+          "commune": "Mios",
+          "insee": "33284",
+          "pk": "8663"
+        },
+        "timestamp": "2016-03-11T14:56:08.417980",
+        "version": 281
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.3620000000000002,
+          44.48069999999992
+        ],
+        "type": "Point"
+      },
+      "id": 282,
+      "properties": {
+        "label": null,
+        "name": "La Baleine Bleue",
+        "tags": {
+          "adresse": "- le rey , Noaillan",
+          "commune": "Noaillan",
+          "insee": "33307",
+          "pk": "8664"
+        },
+        "timestamp": "2016-03-11T14:56:08.418549",
+        "version": 282
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.07525999999999963,
+          44.742399999999904
+        ],
+        "type": "Point"
+      },
+      "id": 283,
+      "properties": {
+        "label": null,
+        "name": "MA Lous Pitchouns",
+        "tags": {
+          "adresse": "- r chaix d'estange , Pellegrue",
+          "commune": "Pellegrue",
+          "insee": "33316",
+          "pk": "8665"
+        },
+        "timestamp": "2016-03-11T14:56:08.418976",
+        "version": 283
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6635999999999997,
+          44.78489999999992
+        ],
+        "type": "Point"
+      },
+      "id": 284,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che hospitali\u00e8re du Haut L\u00e9v\u00eaque   Chanterelle",
+        "tags": {
+          "adresse": "- av de magellan , Pessac",
+          "commune": "Pessac",
+          "insee": "33318",
+          "pk": "8666"
+        },
+        "timestamp": "2016-03-11T14:56:08.419396",
+        "version": 284
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6546999999999995,
+          44.7825999999999
+        ],
+        "type": "Point"
+      },
+      "id": 285,
+      "properties": {
+        "label": null,
+        "name": "Les voyages de L\u00e9o",
+        "tags": {
+          "adresse": "15 av leonard de vinci , Pessac",
+          "commune": "Pessac",
+          "insee": "33318",
+          "pk": "8667"
+        },
+        "timestamp": "2016-03-11T14:56:08.419808",
+        "version": 285
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6284000000000007,
+          44.80399999999992
+        ],
+        "type": "Point"
+      },
+      "id": 286,
+      "properties": {
+        "label": null,
+        "name": "Service multi accueil familial PESSAC",
+        "tags": {
+          "adresse": "- bd saint-martin , Pessac",
+          "commune": "Pessac",
+          "insee": "33318",
+          "pk": "8668"
+        },
+        "timestamp": "2016-03-11T14:56:08.420212",
+        "version": 286
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.3211000000000004,
+          44.56629999999992
+        ],
+        "type": "Point"
+      },
+      "id": 287,
+      "properties": {
+        "label": null,
+        "name": "MA  Les Poupins Preignac",
+        "tags": {
+          "adresse": "2B le haire , Preignac",
+          "commune": "Preignac",
+          "insee": "33337",
+          "pk": "8669"
+        },
+        "timestamp": "2016-03-11T14:56:08.420619",
+        "version": 287
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.7446000000000009,
+          44.89999999999992
+        ],
+        "type": "Point"
+      },
+      "id": 288,
+      "properties": {
+        "label": null,
+        "name": "Multi accueil Cap Ouest",
+        "tags": {
+          "adresse": "26 r aurel chazeau , Saint-M\u00e9dard-en-Jalles",
+          "commune": "Saint-M\u00e9dard-en-Jalles",
+          "insee": "33449",
+          "pk": "8670"
+        },
+        "timestamp": "2016-03-11T14:56:08.421018",
+        "version": 288
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.18960000000000005,
+          44.57469999999992
+        ],
+        "type": "Point"
+      },
+      "id": 289,
+      "properties": {
+        "label": null,
+        "name": "Multi accueil SAINT PIERRE D AURILLAC",
+        "tags": {
+          "adresse": "- r des cooperatives , Saint-Pierre-d'Aurillac",
+          "commune": "Saint-Pierre-d'Aurillac",
+          "insee": "33463",
+          "pk": "8671"
+        },
+        "timestamp": "2016-03-11T14:56:08.421424",
+        "version": 289
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.22120000000000084,
+          44.55169999999992
+        ],
+        "type": "Point"
+      },
+      "id": 290,
+      "properties": {
+        "label": null,
+        "name": "MA St Pierre de Mons",
+        "tags": {
+          "adresse": "- le peage , Saint-Pierre-de-Mons",
+          "commune": "Saint-Pierre-de-Mons",
+          "insee": "33465",
+          "pk": "8672"
+        },
+        "timestamp": "2016-03-11T14:56:08.421825",
+        "version": 290
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6024,
+          44.80559999999991
+        ],
+        "type": "Point"
+      },
+      "id": 291,
+      "properties": {
+        "label": null,
+        "name": "Le p tit Campus  Pitchoun",
+        "tags": {
+          "adresse": "- all rene laroumagne , Talence",
+          "commune": "Talence",
+          "insee": "33522",
+          "pk": "8673"
+        },
+        "timestamp": "2016-03-11T14:56:08.422224",
+        "version": 291
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.585300000000002,
+          44.802199999999935
+        ],
+        "type": "Point"
+      },
+      "id": 292,
+      "properties": {
+        "label": null,
+        "name": "Mimosa Talence",
+        "tags": {
+          "adresse": "1 pl peydavant , Talence",
+          "commune": "Talence",
+          "insee": "33522",
+          "pk": "8674"
+        },
+        "timestamp": "2016-03-11T14:56:08.422649",
+        "version": 292
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5907000000000002,
+          44.78939999999992
+        ],
+        "type": "Point"
+      },
+      "id": 293,
+      "properties": {
+        "label": null,
+        "name": "Plume de Pan",
+        "tags": {
+          "adresse": "- av de thouars , Talence",
+          "commune": "Talence",
+          "insee": "33522",
+          "pk": "8675"
+        },
+        "timestamp": "2016-03-11T14:56:08.423059",
+        "version": 293
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5886999999999999,
+          44.81529999999992
+        ],
+        "type": "Point"
+      },
+      "id": 294,
+      "properties": {
+        "label": null,
+        "name": "Service d Accueil Familial TALENCE",
+        "tags": {
+          "adresse": "- r pierre renaudel , Talence",
+          "commune": "Talence",
+          "insee": "33522",
+          "pk": "8676"
+        },
+        "timestamp": "2016-03-11T14:56:08.423465",
+        "version": 294
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.2648000000000006,
+          44.556699999999914
+        ],
+        "type": "Point"
+      },
+      "id": 295,
+      "properties": {
+        "label": null,
+        "name": "La Ribambelle",
+        "tags": {
+          "adresse": "- all du peuplier , Toulenne",
+          "commune": "Toulenne",
+          "insee": "33533",
+          "pk": "8677"
+        },
+        "timestamp": "2016-03-11T14:56:08.423866",
+        "version": 295
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5771000000000006,
+          44.77059999999993
+        ],
+        "type": "Point"
+      },
+      "id": 296,
+      "properties": {
+        "label": null,
+        "name": "Multi accueil   Les Petits Moussaillons",
+        "tags": {
+          "adresse": "5 r condorcet , Villenave-d'Ornon",
+          "commune": "Villenave-d'Ornon",
+          "insee": "33550",
+          "pk": "8678"
+        },
+        "timestamp": "2016-03-11T14:56:08.424264",
+        "version": 296
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.45520000000000116,
+          44.888499999999915
+        ],
+        "type": "Point"
+      },
+      "id": 297,
+      "properties": {
+        "label": null,
+        "name": "Micro cr\u00e8che B\u00e9b\u00e9 Sens",
+        "tags": {
+          "adresse": "- av de gourreges , Yvrac",
+          "commune": "Yvrac",
+          "insee": "33554",
+          "pk": "8679"
+        },
+        "timestamp": "2016-03-11T14:56:08.424673",
+        "version": 297
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.7585290000000001,
+          45.03459299999993
+        ],
+        "type": "Point"
+      },
+      "id": 298,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil \"\"Les Galipettes\"\"",
+        "tags": {
+          "adresse": "5 Impasse du Bouilleur de Cru 33480 Avensan",
+          "commune": "Avensan",
+          "insee": "33022",
+          "pk": "8680"
+        },
+        "timestamp": "2016-03-11T14:56:08.425093",
+        "version": 298
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.3999823999999995,
+          45.01576389999992
+        ],
+        "type": "Point"
+      },
+      "id": 299,
+      "properties": {
+        "label": null,
+        "name": "Micro creche Aubie Espessas",
+        "tags": {
+          "adresse": "9 Rue de Cros, 33240 Aubie-et-Espessas, France",
+          "commune": "AUBIE-ET-ESPESSAS",
+          "insee": "33018",
+          "pk": "8681"
+        },
+        "timestamp": "2016-03-11T14:56:08.425498",
+        "version": 299
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5934265999999297,
+          44.882568399999926
+        ],
+        "type": "Point"
+      },
+      "id": 300,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che familiale BRUGES",
+        "tags": {
+          "adresse": "21 Avenue Jean Jaur\u00e8s, 33520 Bruges, France",
+          "commune": "BRUGES",
+          "insee": "33075",
+          "pk": "8682"
+        },
+        "timestamp": "2016-03-11T14:56:08.425903",
+        "version": 300
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5810033000000212,
+          44.87748979999991
+        ],
+        "type": "Point"
+      },
+      "id": 301,
+      "properties": {
+        "label": null,
+        "name": "LPCR BRUGES",
+        "tags": {
+          "adresse": "7 Boulevard du Parc des Expositions, 33520 Bruges, France",
+          "commune": "BRUGES",
+          "insee": "33075",
+          "pk": "8683"
+        },
+        "timestamp": "2016-03-11T14:56:08.426315",
+        "version": 301
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6408905000000689,
+          44.75410519999992
+        ],
+        "type": "Point"
+      },
+      "id": 302,
+      "properties": {
+        "label": null,
+        "name": "MA \"\"La p'tite R\u00e9cr\u00e9e\"\"",
+        "tags": {
+          "adresse": "11 Avenue du Barricot, 33610 Can\u00e9jan, France",
+          "commune": "CANEJAN",
+          "insee": "33090",
+          "pk": "8684"
+        },
+        "timestamp": "2016-03-11T14:56:08.426735",
+        "version": 302
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6679885999999458,
+          44.74214729999992
+        ],
+        "type": "Point"
+      },
+      "id": 303,
+      "properties": {
+        "label": null,
+        "name": "Creche familiale CESTAS",
+        "tags": {
+          "adresse": "Avenue du Baron Haussmann, 33610 Cestas, France",
+          "commune": "CESTAS",
+          "insee": "33122",
+          "pk": "8685"
+        },
+        "timestamp": "2016-03-11T14:56:08.427161",
+        "version": 303
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.3959161000000222,
+          44.707738299999924
+        ],
+        "type": "Point"
+      },
+      "id": 304,
+      "properties": {
+        "label": null,
+        "name": "Les Petites Marmottes",
+        "tags": {
+          "adresse": "Rue de la Ruasse, 33550 Langoiran, France",
+          "commune": "LANGOIRAN",
+          "insee": "33226",
+          "pk": "8686"
+        },
+        "timestamp": "2016-03-11T14:56:08.427596",
+        "version": 304
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.22805700000003618,
+          44.91930819999994
+        ],
+        "type": "Point"
+      },
+      "id": 305,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che-Halte-garderie du centre Hospitalier",
+        "tags": {
+          "adresse": "112 Rue de la Marne, 33500 Libourne, France",
+          "commune": "LIBOURNE",
+          "insee": "33243",
+          "pk": "8687"
+        },
+        "timestamp": "2016-03-11T14:56:08.428037",
+        "version": 305
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5179520000000005,
+          44.87291299999991
+        ],
+        "type": "Point"
+      },
+      "id": 306,
+      "properties": {
+        "label": null,
+        "name": "Halte-garderie \"\"Genicaramels\"\"",
+        "tags": {
+          "adresse": "4 Place R\u00e9volution Fran\u00e7aise, 33310 Lormont, France",
+          "commune": "LORMONT",
+          "insee": "33249",
+          "pk": "8688"
+        },
+        "timestamp": "2016-03-11T14:56:08.428397",
+        "version": 306
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6556599000000469,
+          44.78843259999992
+        ],
+        "type": "Point"
+      },
+      "id": 307,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che hospitali\u00e8re Xavier-Arnozan \"\"A petits pas\"\"",
+        "tags": {
+          "adresse": "Avenue du Haut L\u00e9v\u00eaque, 33600 Pessac, France",
+          "commune": "PESSAC",
+          "insee": "33318",
+          "pk": "8689"
+        },
+        "timestamp": "2016-03-11T14:56:08.428754",
+        "version": 307
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.4263882999999855,
+          45.044894799999916
+        ],
+        "type": "Point"
+      },
+      "id": 308,
+      "properties": {
+        "label": null,
+        "name": "Micro cr\u00e8che Peujard",
+        "tags": {
+          "adresse": "46 Moulin de la Sicarderie, 33240 Peujard, France",
+          "commune": "PEUJARD",
+          "insee": "33321",
+          "pk": "8690"
+        },
+        "timestamp": "2016-03-11T14:56:08.429103",
+        "version": 308
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.7208109000000602,
+          44.89876149999992
+        ],
+        "type": "Point"
+      },
+      "id": 309,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil \"\"Pierre Mend\u00e8s-France\"\"",
+        "tags": {
+          "adresse": "33 Route de Saint-Aubin, 33160 Saint-M\u00e9dard-en-Jalles, France",
+          "commune": "SAINT-MEDARD-EN-JALLES",
+          "insee": "33449",
+          "pk": "8691"
+        },
+        "timestamp": "2016-03-11T14:56:08.429450",
+        "version": 309
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.4420936000000213,
+          45.139626699999944
+        ],
+        "type": "Point"
+      },
+      "id": 310,
+      "properties": {
+        "label": null,
+        "name": "Halte-garderie \"\"La Coccinelle\"\"",
+        "tags": {
+          "adresse": "2 Rue de la Ganne, 33920 Saint-Savin, France",
+          "commune": "SAINT-SAVIN",
+          "insee": "33473",
+          "pk": "8692"
+        },
+        "timestamp": "2016-03-11T14:56:08.429803",
+        "version": 310
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.08293660000003931,
+          44.69411659999993
+        ],
+        "type": "Point"
+      },
+      "id": 311,
+      "properties": {
+        "label": null,
+        "name": "MA Sauveterre de Guyenne",
+        "tags": {
+          "adresse": "4 Rue des Martyrs de la R\u00e9sistance et de la D\u00e9portation, 33540 Sauveterre-de-Guyenne, France",
+          "commune": "SAUVETERRE-DE-GUYENNE",
+          "insee": "33506",
+          "pk": "8693"
+        },
+        "timestamp": "2016-03-11T14:56:08.430156",
+        "version": 311
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5779328999999505,
+          44.777084699999904
+        ],
+        "type": "Point"
+      },
+      "id": 312,
+      "properties": {
+        "label": null,
+        "name": "Multi-accueil r\u00e9gulier \"\"Les Lutins\"\"",
+        "tags": {
+          "adresse": "1 R\u00e9sidence Sarcignan, 33140 Villenave-d'Ornon, France",
+          "commune": "VILLENAVE-D'ORNON",
+          "insee": "33550",
+          "pk": "8694"
+        },
+        "timestamp": "2016-03-11T14:56:08.430523",
+        "version": 312
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.9552119999999611,
+          44.639325299999925
+        ],
+        "type": "Point"
+      },
+      "id": 313,
+      "properties": {
+        "label": null,
+        "name": "Micro cr\u00e8che Les Petits Gribouillis",
+        "tags": {
+          "adresse": "Rue Gutemberg, 33380 Biganos, France",
+          "commune": "BIGANOS",
+          "insee": "33051",
+          "pk": "8695"
+        },
+        "timestamp": "2016-03-11T14:56:08.430873",
+        "version": 313
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5505120000000266,
+          44.821619099999914
+        ],
+        "type": "Point"
+      },
+      "id": 314,
+      "properties": {
+        "label": null,
+        "name": "Canaillous Armagnac",
+        "tags": {
+          "adresse": "23 Rue Beck, 33800 Bordeaux, France",
+          "commune": "BORDEAUX",
+          "insee": "33063",
+          "pk": "8696"
+        },
+        "timestamp": "2016-03-11T14:56:08.431221",
+        "version": 314
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5728814000000291,
+          44.87520439999993
+        ],
+        "type": "Point"
+      },
+      "id": 315,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che \"\"Arc en Ciel II\"\"",
+        "tags": {
+          "adresse": "Rue des Gen\u00eats, 33300 Bordeaux, France",
+          "commune": "BORDEAUX",
+          "insee": "33063",
+          "pk": "8697"
+        },
+        "timestamp": "2016-03-11T14:56:08.431577",
+        "version": 315
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.6136424000000045,
+          44.84682099999991
+        ],
+        "type": "Point"
+      },
+      "id": 316,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che collective \"\"Armand Faulat\"\"",
+        "tags": {
+          "adresse": "1 Rue Bahr, 33200 Bordeaux, France",
+          "commune": "BORDEAUX",
+          "insee": "33063",
+          "pk": "8698"
+        },
+        "timestamp": "2016-03-11T14:56:08.432002",
+        "version": 316
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.602811699999961,
+          44.83034529999993
+        ],
+        "type": "Point"
+      },
+      "id": 317,
+      "properties": {
+        "label": null,
+        "name": "Cr\u00e8che de l'H\u00f4pital Pellegrin",
+        "tags": {
+          "adresse": "Place Am\u00e9lie Raba L\u00e9on, 33000 Bordeaux, France",
+          "commune": "BORDEAUX",
+          "insee": "33063",
+          "pk": "8699"
+        },
+        "timestamp": "2016-03-11T14:56:08.432410",
+        "version": 317
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5756840000000237,
+          44.86701199999994
+        ],
+        "type": "Point"
+      },
+      "id": 318,
+      "properties": {
+        "label": null,
+        "name": "Graine De Malices",
+        "tags": {
+          "adresse": "Place Ravezies, 33300 Bordeaux, France",
+          "commune": "BORDEAUX",
+          "insee": "33063",
+          "pk": "8700"
+        },
+        "timestamp": "2016-03-11T14:56:08.432769",
+        "version": 318
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5729046000000166,
+          44.88082589999992
+        ],
+        "type": "Point"
+      },
+      "id": 319,
+      "properties": {
+        "label": null,
+        "name": "La Berge du Lac Occasionnel",
+        "tags": {
+          "adresse": "2 Rue Xavier Ars\u00e8ne-Henry, 33300 Bordeaux, France",
+          "commune": "BORDEAUX",
+          "insee": "33063",
+          "pk": "8701"
+        },
+        "timestamp": "2016-03-11T14:56:08.433119",
+        "version": 319
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5729046000000166,
+          44.88082589999992
+        ],
+        "type": "Point"
+      },
+      "id": 320,
+      "properties": {
+        "label": null,
+        "name": "La Berge du Lac R\u00e9gulier",
+        "tags": {
+          "adresse": "2 Rue Xavier Ars\u00e8ne-Henry, 33300 Bordeaux, France",
+          "commune": "BORDEAUX",
+          "insee": "33063",
+          "pk": "8702"
+        },
+        "timestamp": "2016-03-11T14:56:08.433524",
+        "version": 320
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.5697098000000554,
+          44.86384019999992
+        ],
+        "type": "Point"
+      },
+      "id": 321,
+      "properties": {
+        "label": null,
+        "name": "Multi Accueil Nuage Bleu",
+        "tags": {
+          "adresse": "3 Rue Samuel Kirsz, 33300 Bordeaux, France",
+          "commune": "BORDEAUX",
+          "insee": "33063",
+          "pk": "8703"
+        },
+        "timestamp": "2016-03-11T14:56:08.433951",
+        "version": 321
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.4903229999999999,
+          44.927204999999915
+        ],
+        "type": "Point"
+      },
+      "id": 1,
+      "properties": {
+        "label": null,
+        "name": "Service familial",
+        "tags": {
+          "adresse": "3 Rue du Parc des Sports 33440 Ambar\u00e8s-et-Lagrave",
+          "annotation": "toto",
+          "commune": "Ambar\u00e8s-et-Lagrave",
+          "insee": "33003",
+          "pk": "8383"
+        },
+        "timestamp": "2016-03-12T15:46:33.156681",
+        "version": 322
+      },
+      "type": "Feature"
+    }
+  ],
+  "type": "FeatureCollection"
+}

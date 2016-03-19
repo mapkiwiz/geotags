@@ -1,0 +1,30 @@
+{
+  "name": "geotags",
+  "description": "Outil collaboratif d'annotation de données géographiques",
+  "main": "index.js",
+  "authors": [
+    "Christophe ROUSSON"
+  ],
+  "license": "MIT",
+  "moduleType": [
+    "amd"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "leaflet-draw": "^0.3.0",
+    "jquery": "^2.2.1",
+    "d3": "^3.5.16",
+    "topojson": "^1.6.24",
+    "bootstrap": "~3.3.5",
+    "lodash": "^4.6.1",
+    "Leaflet.label": "^0.2.1",
+    "react": "^0.14.7"
+  }
+}
