@@ -39,38 +39,3 @@ def tile(x, y, z):
     serialize_time = time() - start - data_time
     # print (x,y,z), "Data:", data_time, "Serialize:", serialize_time
     return response
-
-def flatten(props, keys, tags):
-    flat_props = dict()
-    other_tags = dict()
-    for k,v in props.get('tags').items():
-        if k in tags:
-            flat_props[k] = v
-        else:
-            other_tags[k] = v
-    for k,v in props.items():
-        if k in keys:
-            flat_props[k] = v
-    flat_props['tags'] = other_tags
-    return flat_props
-
-
-@app.route(API_PREFIX + '/dataset.geojson')
-def export_all_features():
-    keys = [ 'name', 'version' ]
-    tags = [ 'insee', 'commune', 'pk', 'adresse', 'annotation' ]
-    query = Feature.query.all()
-    features = []
-    for f in query:
-        feature = {
-            'type': 'Feature',
-            'id': f.id,
-            'properties': flatten(f.properties, keys, tags),
-            'geometry': f.shape.__geo_interface__
-        }
-        features.append(feature)
-    response = jsonify({
-            'type': 'FeatureCollection',
-            'features': features
-        })
-    return response

@@ -1,4 +1,4 @@
-from flask import Response, jsonify, request, abort
+from flask import Response, jsonify, request, abort, redirect, url_for
 from flask_cors import cross_origin
 from flask_user import current_user
 from functools import wraps
@@ -24,41 +24,100 @@ def auth_required(func):
         return func(*args, **kwargs)
     return decorated_view
 
-@app.route(API_PREFIX + "/")
-def index():
-    return "Hello World"
+def flatten(props, keys, tags):
+    flat_props = dict()
+    other_tags = dict()
+    for k,v in props.get('tags').items():
+        if k in tags:
+            flat_props[k] = v
+        else:
+            other_tags[k] = v
+    for k,v in props.items():
+        if k in keys:
+            flat_props[k] = v
+    flat_props['tags'] = other_tags
+    return flat_props
 
-@app.route(API_PREFIX + "/config")
-def config():
-    return jsonify({
-        "version": "1"
-    })
 
-@app.route(API_PREFIX + "/feature/<int:id>", methods=[ 'GET' ])
+@app.route(API_PREFIX + '/export/points.geojson')
+def export_all_features():
+    keys = [ 'name', 'version' ]
+    tags = [ 'insee', 'commune', 'pk', 'adresse', 'annotation' ]
+    query = Feature.query.all()
+    features = []
+    for f in query:
+        feature = {
+            'type': 'Feature',
+            'id': f.id,
+            'properties': flatten(f.properties, keys, tags),
+            'geometry': f.shape.__geo_interface__
+        }
+        features.append(feature)
+    response = jsonify({
+            'type': 'FeatureCollection',
+            'features': features
+        })
+    return response
+
+@app.route(API_PREFIX + '/features.geojson')
+def features():
+    query = Feature.query.all()
+    features = []
+    for f in query:
+        feature = {
+            'type': 'Feature',
+            'id': f.id,
+            'properties': f.properties,
+            'geometry': f.shape.__geo_interface__
+        }
+        features.append(feature)
+    response = jsonify({
+            'type': 'FeatureCollection',
+            'features': features
+        })
+    return response
+
+@app.route(API_PREFIX + '/features', methods=[ 'PUT' ])
+@auth_required
+def feature_create():
+    json = request.get_json()
+    submitted = geojson.feature.Feature.to_instance(json)
+    new_feature = Feature()
+    new_feature.name = submitted.properties.get('name')
+    new_feature.shape = asShape(submitted.geometry)
+    tags = submitted.properties.get('tags')
+    if tags:
+        for tag, tag_value in tags.items():
+            new_feature.tag(tag, tag_value)
+    db.session.add(new_feature)
+    db.session.commit()
+    return (feature_as_geojson(new_feature), 201)
+
+# @app.route(API_PREFIX + "/feature/<int:id>", methods=[ 'GET' ])
+# def feature(id):
+#     f = Feature.query.get(id)
+#     if f is None:
+#         return abort(404)
+#     if request.method == 'GET':
+#         return feature_get(f)
+#     elif request.method == 'POST':
+#         return feature_update(f)
+
+# def feature_get(feature):
+#     return jsonify(feature.properties)
+
+@app.route(API_PREFIX + "/feature/<int:id>.geojson", methods=[ 'GET', 'POST' ])
+# @cross_origin()
 def feature(id):
     f = Feature.query.get(id)
     if f is None:
         return abort(404)
     if request.method == 'GET':
-        return feature_get(f)
+        return feature_as_geojson(f)
     elif request.method == 'POST':
         return feature_update(f)
 
-def feature_get(feature):
-    return jsonify(feature.properties)
-
-@app.route(API_PREFIX + "/feature/<int:id>.geojson", methods=[ 'GET', 'POST' ])
-@cross_origin()
-def feature_geojson(id):
-    f = Feature.query.get(id)
-    if f is None:
-        return abort(404)
-    if request.method == 'GET':
-        return feature_get_geojson(f)
-    elif request.method == 'POST':
-        return feature_update(f)
-
-def feature_get_geojson(feature):
+def feature_as_geojson(feature):
     if feature is not None:
         data = {
             'id': feature.id,
@@ -72,7 +131,7 @@ def feature_get_geojson(feature):
 
 # UPDATE name, label, geom
 # DELETE feature()
-# @auth_required
+@auth_required
 def feature_update(feature):
     json = request.get_json()
     submitted = geojson.feature.Feature.to_instance(json)
@@ -83,36 +142,40 @@ def feature_update(feature):
         for tag, tag_value in tags.items():
             feature.tag(tag, tag_value)
     db.session.commit()
-    return feature_get_geojson(feature)
+    return feature_as_geojson(feature)
 
-@app.route(API_PREFIX + "/feature/<int:id>/tag", methods=[ 'POST' ])
-@cross_origin()
-@auth_required
-def feature_tag(id):
-    f = Feature.query.get(id)
-    if f is None:
-        return abort(404)
-    # if tag already exit, update tag
-    # otherwise, create tag
-    data = request.get_json()
+# TODO Not yet implemented methods
 
-@app.route(API_PREFIX + "/feature/<int:id>/mark", methods=[ 'POST' ])
-@cross_origin()
-@auth_required
-def feature_mark(id):
-    f = Feature.query.get(id)
-    if f is None:
-        return abort(404)
+# @app.route(API_PREFIX + "/feature/<int:id>/tag", methods=[ 'POST' ])
+# # @cross_origin()
+# @auth_required
+# def feature_tag(id):
+#     f = Feature.query.get(id)
+#     if f is None:
+#         return abort(404)
+#     # if tag already exit, update tag
+#     # otherwise, create tag
+#     data = request.get_json()
 
-@app.route(API_PREFIX + "/feature/<int:id>/geometry", methods=[ 'GET', 'POST' ])
-@cross_origin()
-@auth_required
-def feature_geometry(id):
-    f = Feature.query.get(id)
-    if f is None:
-        return abort(404)
-    if request.method == 'GET':
-        data = geojson.dumps(f.shape)
-        return data, 200, { 'Content-Type': 'application/json' }
+# @app.route(API_PREFIX + "/feature/<int:id>/mark", methods=[ 'POST' ])
+# # @cross_origin()
+# @auth_required
+# def feature_mark(id):
+#     f = Feature.query.get(id)
+#     if f is None:
+#         return abort(404)
+#     # TODO implement mark method
+#     return abort(201)
+
+# @app.route(API_PREFIX + "/feature/<int:id>/geometry", methods=[ 'GET', 'POST' ])
+# # @cross_origin()
+# @auth_required
+# def feature_update_geometry(id):
+#     f = Feature.query.get(id)
+#     if f is None:
+#         return abort(404)
+#     if request.method == 'GET':
+#         data = geojson.dumps(f.shape)
+#         return data, 200, { 'Content-Type': 'application/json' }
 
 
