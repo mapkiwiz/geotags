@@ -1,8 +1,9 @@
 from controllers import *
 from bootstrap import app, db
-from flask import redirect
+from flask import redirect, url_for
 from flask_user import UserManager, SQLAlchemyAdapter, current_user
 from models import User, UserInvitation
+from proxy import ReverseProxied
 
 __all__ = [ 'app', 'db', 'user_manager' ]
 
@@ -10,12 +11,14 @@ app.secret_key = '\xf7_\x8b@+\x94=m\\\xb6\xa0X\xaa\xe7\xbcjH\x05W\x95\x8a\xf4\x8
 user_adapter = SQLAlchemyAdapter(db, User, UserInvitationClass=UserInvitation)
 user_manager = UserManager(user_adapter, app)
 
+app.wsgi_app = ReverseProxied(app.wsgi_app)
+
 @app.route('/')
 def index():
 	if current_user.is_authenticated:
-		return redirect('/static/main.html')
+		return redirect(url_for('static', 'main.html'))
 	else:
-		return redirect('/static/index.html')
+		return redirect(url_for('static', 'index.html'))
 
 # Start development web server
 if __name__== '__main__':
