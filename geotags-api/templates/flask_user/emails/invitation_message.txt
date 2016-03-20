@@ -3,7 +3,7 @@
 {% block message %}
 Vous avez été invité(e) à rejoindre {{ app_name }} !
 
-Pour vous enregistrez, suivez le lien ci-dessous :
+Pour vous enregistrer, suivez le lien ci-dessous :
     {{ accept_invite_link }}
 
 {% endblock %}

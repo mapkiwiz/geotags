@@ -9,10 +9,10 @@ USER_ENABLE_INVITATION = True
 USER_ENABLE_CONFIRM_EMAIL = False
 USER_LOGIN_URL = '/user/login'
 USER_LOGOUT_URL = '/user/logout'
+USER_APP_NAME = "GeoTags"
 
 WTF_CSRF_ENABLED = False
 
 MAIL_DEFAULT_SENDER = "no-reply@geotags.mapkiwiz.fr"
-APP_NAME = "GeoTags"
 
 # SERVER_NAME = 'localhost'
