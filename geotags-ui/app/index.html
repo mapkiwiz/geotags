@@ -47,16 +47,16 @@
 			</div>
 			<div class="col-md-3" style="padding-left: 20px; border-left: 1px dotted lightgray">
 				<h3>Accès à l'application</h3>
-				<form class="form" action="/user/login" method="POST">
-					<input type="hidden" name="next" value="/static/main.html" />
-					<input type="hidden" name="reg_next" value="/static/main.html" />
+				<form class="form" action="../user/login" method="POST">
+					<input type="hidden" name="next" value="/" />
+					<input type="hidden" name="reg_next" value="/" />
 					<div class="form-group">
 						<label class="label">
 							<span>Identifiant</span>
 						</label>
 						<input class="form-control input-lg" name="username" type="text" placeholder="Nom d'utilisateur ou email" />
 						<div class="pull-right" style="margin-top: 6px">
-							<a href="/user/register">Je n'ai pas de compte</a>
+							<a href="../user/register">Je n'ai pas de compte</a>
 						</div>
 					</div>
 					<br/>
@@ -66,7 +66,7 @@
 						</label>
 						<input class="form-control input-lg" name="password" type="password" />
 						<div class="pull-right" style="margin-top: 6px">
-							<a href="/user/forgot-password">J'ai oublié mon mot de passe</a>
+							<a href="../user/forgot-password">J'ai oublié mon mot de passe</a>
 						</div>
 					</div>
 					<br/>
