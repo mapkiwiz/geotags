@@ -24,7 +24,7 @@ module.exports = {
               tilematrixSet: "PM",
               format: "image/jpeg",
               attribution: "<a href='http://www.ign.fr'>IGN</a>" }),
-        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        L.tileLayer('//{s}.tile.osm.org/{z}/{x}/{y}.png', {
                     key: 'osm',
                     title: "Open Street Map",
                     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -37,7 +37,7 @@ module.exports = {
     ],
     services: {
         ban: {
-            url: 'http://api-adresse.data.gouv.fr/search/?q={q}'
+            url: '//api-adresse.data.gouv.fr/search/?q={q}'
         },
         gazetteer: {
             url: API_PREFIX + '/search/communes?q={q}'

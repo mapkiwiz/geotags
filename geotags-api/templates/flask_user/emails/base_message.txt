@@ -1,0 +1,8 @@
+<p>Bonjour {{ user.email }},</p>
+
+{% block message %}
+{% endblock %}
+
+<p>Cordialement,<br/>
+{{ app_name }}
+</p>

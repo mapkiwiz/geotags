@@ -1,0 +1,10 @@
+{% extends 'flask_user/emails/base_message.html' %}
+
+{% block message %}
+
+<p>Vous avez été invité(e) à rejoindre {{ app_name }} !</p>
+
+<p>Pour vous enregistrez, suivez le lien ci-dessous :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{ accept_invite_link }}">Accéder à {{ app_name }}</a>.</p>
+
+{% endblock %}

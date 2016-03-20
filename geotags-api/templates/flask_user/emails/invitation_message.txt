@@ -1,0 +1,9 @@
+{% extends 'flask_user/emails/base_message.txt' %}
+
+{% block message %}
+Vous avez été invité(e) à rejoindre {{ app_name }} !
+
+Pour vous enregistrez, suivez le lien ci-dessous :
+    {{ accept_invite_link }}
+
+{% endblock %}

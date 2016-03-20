@@ -51,14 +51,14 @@ var Gazetteer = React.createClass({
     render: function() {
     	var self = this, items = this.state.results.map(function(result) {
 			return (
-				<GazetteerResult key={result.properties.code} value={result} onSelect={self.handleSelect} />
+				<GazetteerResult key={result.code} value={result} onSelect={self.handleSelect} />
 			);
 		});
         return (
         	<div>
 	        	<div className="form-group">
 	        		<label className="label">
-						<span>PAR COMMUNE</span>
+						<span>Par commune</span>
 					</label>
 	    			<input className="form-control" type="text" name={this.props.name} placeholder={this.props.placeholder} />
 	    		</div>

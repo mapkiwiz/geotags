@@ -12,4 +12,7 @@ USER_LOGOUT_URL = '/user/logout'
 
 WTF_CSRF_ENABLED = False
 
+MAIL_DEFAULT_SENDER = "no-reply@geotags.mapkiwiz.fr"
+APP_NAME = "GeoTags"
+
 # SERVER_NAME = 'localhost'
