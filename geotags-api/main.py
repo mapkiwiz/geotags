@@ -16,9 +16,9 @@ app.wsgi_app = ReverseProxied(app.wsgi_app)
 @app.route('/')
 def index():
 	if current_user.is_authenticated:
-		return redirect(url_for('static', 'main.html'))
+		return redirect(url_for('static', filename='main.html'))
 	else:
-		return redirect(url_for('static', 'index.html'))
+		return redirect(url_for('static', filename='index.html'))
 
 # Start development web server
 if __name__== '__main__':
