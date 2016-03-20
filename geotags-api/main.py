@@ -20,6 +20,14 @@ def index():
 	else:
 		return redirect(url_for('static', filename='index.html'))
 
+# @app.route('/')
+# def index():
+# 	if current_user.is_authenticated:
+# 		return render_template('main.html')
+# 	else:
+# 		form = user_manager.login_form()
+# 		return render_template('login.html', form=form)
+
 # Start development web server
 if __name__== '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)

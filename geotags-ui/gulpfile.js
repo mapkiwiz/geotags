@@ -16,7 +16,7 @@ var paths = {
     dist: 'dist',
     tmp: '.tmp',
     main: 'app/main.html',
-    templates: [ 'app/index.html']
+    templates: [ 'app/index.html', 'app/login.html' ]
 };
 
 ////////////////////////
@@ -86,6 +86,7 @@ gulp.task('watch', function (cb) {
   gulp.src(paths.scripts)
   .pipe($.plumber())
   .pipe($.watch(paths.scripts))
+  .pipe($.if('config.js', $.replace(/{GPP_API_KEY}/, process.env.GPP_API_KEY || 'SECRET')))
   .pipe(reactify());
 
   $.watch('./.tmp/react/**/*.js', function() {
@@ -136,7 +137,7 @@ gulp.task('client:build:main', [ 'scripts', 'styles' ], function () {
   .pipe($.if('*.css', $.cleanCss()))
   .pipe($.if('*.css', $.rev()))
   .pipe($.if('*.html', $.replace(/<\!-- remove -->(.|\s)*?<\!-- endremove -->/g, '<!-- (snip) -->')))
-  .pipe($.if('*.html', $.replace(/<\!--\+\+ (.*) \+\+-->/g, '$1')))
+  .pipe($.if('*.html', $.replace(/<\!--\+\+ ((.|\s)*?) \+\+-->/g, '$1')))
   .pipe($.revReplace())
   .pipe(gulp.dest(paths.dist))
   .pipe($.rev.manifest())
@@ -149,8 +150,8 @@ gulp.task('client:build', [ 'client:build:main' ], function () {
   var manifest = gulp.src("./" + paths.dist + "/rev-manifest.json");
   
   return gulp.src(paths.templates)
-  .pipe($.if('*.html', $.replace(/<\!-- remove -->(.|\s)*?<\!-- endremove -->/g, '<!-- (snip) -->')))
-  .pipe($.if('*.html', $.replace(/<\!--\+\+ (.*) \+\+-->/g, '$1')))
+  .pipe($.replace(/<\!-- remove -->(.|\s)*?<\!-- endremove -->/g, '<!-- (snip) -->'))
+  .pipe($.replace(/<\!--\+\+ ((.|\s)*?) \+\+-->/g, '$1'))
   .pipe($.revReplace({ manifest: manifest }))
   .pipe(gulp.dest(paths.dist));
 
