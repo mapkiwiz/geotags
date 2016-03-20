@@ -11,11 +11,12 @@ var runSequence = require('run-sequence');
 
 var paths = {
     app: 'app',
-    styles: [ 'app/styles/*.css' ],
-    scripts: [ 'app/react/*.js' ],
+    styles: [ 'app/styles/**/*.css' ],
+    scripts: [ 'app/react/**/*.js' ],
     dist: 'dist',
     tmp: '.tmp',
-    html: [ 'app/main.html', 'app/index.html']
+    main: 'app/main.html',
+    templates: [ 'app/index.html']
 };
 
 ////////////////////////
@@ -87,14 +88,14 @@ gulp.task('watch', function (cb) {
   .pipe($.watch(paths.scripts))
   .pipe(reactify());
 
-  $.watch('./.tmp/react/*.js', function() {
+  $.watch('./.tmp/react/**/*.js', function() {
     gulp.src('./.tmp/react/main.js')
     .pipe($.plumber())
     .pipe(browserify());
   });
 
-  gulp.src('./.tmp/js/*.js')
-  .pipe($.watch('./.tmp/js/*.js'))
+  gulp.src('./.tmp/js/**/*.js')
+  .pipe($.watch('./.tmp/js/**/*.js'))
   .pipe($.connect.reload());
 
   cb();
@@ -130,19 +131,15 @@ gulp.task('scripts', [ 'scripts:reactify' ], function() {
 
 gulp.task('client:build:main', [ 'scripts', 'styles' ], function () {
 
-  return gulp.src(paths.html[0])
+  return gulp.src(paths.main)
   .pipe($.useref())
   .pipe($.if('*.js', $.uglify()))
   .pipe($.if('*.js', $.rev()))
   .pipe($.if('*.css', $.cleanCss()))
   .pipe($.if('*.css', $.rev()))
-  // .pipe($.if('*.js', $.rev()))
-  // .pipe($.if('*.css', $.rev()))
+  .pipe($.if('*.html', $.replace(/<\!-- remove -->(.|\s)*?<\!-- endremove -->/g, '<!-- (snip) -->')))
+  .pipe($.if('*.html', $.replace(/<\!--\+\+ (.*) \+\+-->/g, '$1')))
   .pipe($.revReplace())
-  .pipe($.if('*.html', $.insertLines({
-    'after': /<!-- forDist : DO NOT REMOVE : insertion point for dist only -->$/,
-    'lineAfter': '<script>L.Icon.Default.imagePath = "/scripts/images";</script>'
-  })))
   .pipe(gulp.dest(paths.dist))
   .pipe($.rev.manifest())
   .pipe(gulp.dest(paths.dist));
@@ -153,19 +150,10 @@ gulp.task('client:build', [ 'client:build:main' ], function () {
 
   var manifest = gulp.src("./" + paths.dist + "/rev-manifest.json");
   
-  return gulp.src(paths.html[1])
-  // .pipe($.useref())
-  // .pipe($.if('*.js', $.uglify()))
-  // .pipe($.if('*.js', $.rev()))
-  // .pipe($.if('*.css', $.cleanCss()))
-  // .pipe($.if('*.css', $.rev()))
-  // .pipe($.if('*.js', $.rev()))
-  // .pipe($.if('*.css', $.rev()))
+  return gulp.src(paths.templates)
+  .pipe($.if('*.html', $.replace(/<\!-- remove -->(.|\s)*?<\!-- endremove -->/g, '<!-- (snip) -->')))
+  .pipe($.if('*.html', $.replace(/<\!--\+\+ (.*) \+\+-->/g, '$1')))
   .pipe($.revReplace({ manifest: manifest }))
-  // .pipe($.if('*.html', $.insertLines({
-  //   'after': /<!-- forDist : DO NOT REMOVE : insertion point for dist only -->$/,
-  //   'lineAfter': '<script>L.Icon.Default.imagePath = "/scripts/images";</script>'
-  // })))
   .pipe(gulp.dest(paths.dist));
 
 });

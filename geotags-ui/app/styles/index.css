@@ -74,12 +74,16 @@ label.label > a {
   vertical-align: sub;
 }
 
-.annotation .detail {
-  border-bottom: 1px solid lightgray;
+.annotation .property {
+  /*border-bottom: 1px solid lightgray;*/
   padding-bottom: 10px;
 }
 
-.annotation .detail-name {
+.annotation div.property {
+  border-bottom: 1px solid lightgray;
+}
+
+.annotation .property-bold {
   font-weight: bold;
 }
 

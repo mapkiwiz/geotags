@@ -6,12 +6,12 @@
 	<meta name="description" content="GeoTags Geotagging application">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->
+    <!-- remove -->
 	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
 	<link rel="stylesheet" type="text/css" href="styles/index.css">
-	<!-- endbuild -->
+	<!-- endremove -->
+	<!--++ <link rel="stylesheet" type="text/css" href="styles/vendor.css"> ++-->
+	<!--++ <link rel="stylesheet" type="text/css" href="styles/main.css"> ++-->
 </head>
 <body>
 
@@ -52,7 +52,7 @@
 					<input type="hidden" name="reg_next" value="/static/main.html" />
 					<div class="form-group">
 						<label class="label">
-							<span>IDENTIFIANT</span>
+							<span>Identifiant</span>
 						</label>
 						<input class="form-control input-lg" name="username" type="text" placeholder="Nom d'utilisateur ou email" />
 						<div class="pull-right" style="margin-top: 6px">
@@ -62,7 +62,7 @@
 					<br/>
 					<div class="form-group">
 						<label class="label">
-							<span>MOT DE PASSE</span>
+							<span>Mot de passe</span>
 						</label>
 						<input class="form-control input-lg" name="password" type="password" />
 						<div class="pull-right" style="margin-top: 6px">
@@ -85,10 +85,10 @@
 		</div>
 	</div>
 
-	<!-- build:js(.) scripts/vendor.js -->
+	<!--++ <script type="text/javascript" src="scripts/vendor.js"></script> ++-->
+	<!-- remove -->
 	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <!-- endbuild -->
 
     <script type="text/javascript">
 
@@ -96,7 +96,7 @@
     	$(document).ready(function() {
 
     		var fakeLogin = function() {
-    			document.location = '/main.html';
+    			document.location = 'main.html';
     		};
 
     		$('form').on('submit', function(e) {
@@ -114,6 +114,7 @@
     	});
 
     </script>
+    <!-- endremove -->
 
 </body>
 </html>

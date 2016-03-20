@@ -1,138 +1,6 @@
-// var React = require('react');
-
-// TagButton
-// TagControl
-// ReadOnlyProperty
-// PropertyControl
-// CommentControl
-
-var CommentControl = React.createClass({
-
-	mixins: [ React.addons.LinkedStateMixin ],
-
-	getInitialState: function() {
-
-		var comment = '';
-		if (this.props.feature) {
-			comment =
-				this.props.feature.properties.tags &&
-				this.props.feature.properties.tags.comment || '';
-		}
-
-		return { comment: comment };
-
-	},
-
-	componentDidMount: function() {
-		this.props.listenTo.on('featurechanged', this.onFeatureChanged);
-		this.props.listenTo.on('beforesave', this.saveToFeature);
-	},
-
-	componentWillUnmount: function() {
-		this.props.listenTo.off('featurechanged', this.onFeatureChanged);
-		this.props.listenTo.off('beforesave', this.saveToFeature);
-	},
-
-	onFeatureChanged: function(e, feature) {
-		var comment = '';
-		if (feature) {
-			comment =
-				this.props.feature.properties.tags &&
-				this.props.feature.properties.tags.comment || '';
-		}
-		this.setState({ comment: comment });
-	},
-
-	saveToFeature: function(e, feature) {
-		// console.log("Save " + this.state.comment);
-		feature.properties.tags.comment = this.state.comment;
-	},
-
-	render: function() {
-		
-		var valueLink = this.linkState('comment');
-
-		var handleChange = function(e) {
-			valueLink.requestChange(e.target.value);
-		}.bind(this);
-
-		return (
-			<div className="form-group">
-				<label className="label">
-					<span>{this.props.label}</span>
-				</label>
-				<textarea className="form-control" rows="3" name="comment" onChange={handleChange}
-					autoComplete="off" value={valueLink.value} >
-				</textarea>
-			</div>
-		);
-	}
-
-});
-
-var MarkValidButton = React.createClass({
-
-	handleClick: function(e) {
-		this.props.onClick('valid', 'yes', 'feature-marker-valid');
-	},
-
-	render: function() {
-		return (
-			<button className="btn btn-success" onClick={this.handleClick} >
-				<span className="glyphicon glyphicon-ok"></span>&nbsp;
-				{this.props.label}
-			</button>
-		);
-	}
-
-});
-
-var AnnotateButton = React.createClass({
-
-	handleClick: function(e) {
-		this.props.onClick('valid', '', 'feature-marker-commented');
-	},
-
-	render: function() {
-		return (
-			<button className="btn btn-default" onClick={this.handleClick} >
-				<span className="glyphicon glyphicon-pencil"></span>&nbsp;
-				{this.props.label}
-			</button>
-		);
-	}
-
-});
-
-var MarkForDeletionButton = React.createClass({
-
-	handleClick: function(e) {
-		this.props.onClick('valid', 'no', 'feature-marker-for-deletion');
-	},
-
-	render: function() {
-		return (
-			<button className="btn btn-danger" onClick={this.handleClick} >
-				<span className="glyphicon glyphicon-trash"></span>&nbsp;
-				{this.props.label}
-			</button>
-		);
-	}
-
-});
-
-var CancelButton = React.createClass({
-
-	render: function() {
-		return (
-			<button className="btn btn-default" onClick={this.props.onClick} >
-				<span className="glyphicon glyphicon-remove"></span>&nbsp;
-				{this.props.label}
-			</button>
-		);
-	}
-
-});
+var CommentControl = require('./annotation-comment.js');
+var controls = require('./annotation-controls.js');
+var buttons = require('./annotation-buttons.js');
 
 var PlaceHolder = React.createClass({
 
@@ -166,7 +34,7 @@ var PlaceHolder = React.createClass({
 var AnnotationForm = React.createClass({
 
 	getInitialState: function() {
-		this.observer = $({});
+		this.dispatcher = $({});
 		return { feature: null, marker: null, comment: '' };
 	},
 
@@ -183,8 +51,14 @@ var AnnotationForm = React.createClass({
 	},
 
 	save: function() {
-		this.observer.trigger('beforesave', this.state.feature);
+		this.dispatcher.trigger('beforesave', this.state.feature);
 		this.props.save(this.state.feature);
+	},
+
+	setGeometry: function(geometry) {
+		if (this.state.feature) {
+			this.state.feature.geometry = geometry;
+		}
 	},
 
 	startEditing: function(marker) {
@@ -223,7 +97,7 @@ var AnnotationForm = React.createClass({
 		var marker = this.state.marker;
 		this.stopEditing(marker);
 
-		this.observer.trigger('featurechanged', undefined);
+		this.dispatcher.trigger('featurechanged', undefined);
 		this.setState({ feature: null, marker: null, comment: '' });
 
 	},
@@ -241,7 +115,7 @@ var AnnotationForm = React.createClass({
         	comment: feature.properties.tags.comment || '' });
         $('#tab-annotate').tab('show');
 
-        this.observer.trigger('featurechanged', feature);
+        this.dispatcher.trigger('featurechanged', feature);
         this.startEditing(marker);
 
 	},
@@ -261,29 +135,29 @@ var AnnotationForm = React.createClass({
 	renderForm: function() {
 
 		var properties = this.state.feature.properties || { tags: {} };
+
 		return (
 			<div className="annotation details">
 
-				<label className="label">
-					<span>NOM</span>
-				</label>
-				<div className="detail detail-name">{properties.name}</div>
+				<controls.EditableProperty
+				    label="Nom" property="name"
+				    className="property property-bold" feature={this.state.feature}
+				    listenTo={this.dispatcher} />
 
-				<label className="label">
-					<span>ADRESSE</span>
-				</label>
-				<div className="detail detail-address">{properties.tags.adresse}</div>
+				<controls.Property label="Adresse" className="property" value={properties.tags.adresse} />
 			
-				<CommentControl label="COMMENTAIRE" listenTo={this.observer} feature={this.state.feature} />
+				<CommentControl
+				    label="Commentaire" feature={this.state.feature}
+				    listenTo={this.dispatcher} />
 			
 				<div className="btn-toolbar">
 					
-					<MarkValidButton label="Valider" onClick={this.markAndSave} />
-					<AnnotateButton label="Annoter" onClick={this.markAndSave} />
+					<buttons.MarkValidButton label="Valider" onClick={this.markAndSave} />
+					<buttons.AnnotateButton label="Annoter" onClick={this.markAndSave} />
 
 					<div className="btn-toolbar pull-right">
-						<CancelButton label="Annuler" onClick={this.cancelEditing} />
-						<MarkForDeletionButton label="" onClick={this.markAndSave} />
+						<buttons.CancelButton label="Annuler" onClick={this.cancelEditing} />
+						<buttons.MarkForDeletionButton label="" onClick={this.markAndSave} />
 					</div>
 
 				</div>
