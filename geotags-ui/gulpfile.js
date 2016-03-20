@@ -118,6 +118,7 @@ gulp.task('clean:all', ['clean:dist', 'clean:tmp']);
 
 gulp.task('scripts:reactify', [ 'clean:tmp' ], function() {
   return gulp.src(paths.scripts)
+    .pipe($.if('config.js', $.replace(/{GPP_API_KEY}/, process.env.GPP_API_KEY || 'SECRET')))
     .pipe(reactify());
 })
 
@@ -125,9 +126,6 @@ gulp.task('scripts', [ 'scripts:reactify' ], function() {
   return gulp.src('./.tmp/react/main.js')
     .pipe(browserify());
 });
-
-// var jsFilter = $.filter('**/*.js', {restore: true, passthrough: false});
-// var cssFilter = $.filter('**/*.css', {restore: true, passthrough: false});
 
 gulp.task('client:build:main', [ 'scripts', 'styles' ], function () {
 

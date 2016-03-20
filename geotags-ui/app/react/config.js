@@ -1,4 +1,4 @@
-var gppApiKey = process.env.GPP_API_KEY || 'secret';
+var gppApiKey = "{GPP_API_KEY}";
 var gpp_url = "https://wxs.ign.fr/" + gppApiKey + "/geoportail/wmts";
 var API_PREFIX = '/api/v1';
 
