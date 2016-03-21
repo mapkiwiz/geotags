@@ -15,7 +15,7 @@ module.exports = {
               style:  "normal",
               tilematrixSet: "PM",
               format: "image/jpeg",
-              attribution: "<a href='http://www.ign.fr'>IGN</a>" }),
+              attribution: "&copy; <a href='http://www.ign.fr'>IGN</a>" }),
         L.tileLayer.wmts(gpp_url,
             { key: 'carte-ign',
               title: 'Carte IGN',
@@ -23,8 +23,8 @@ module.exports = {
               style:  "normal",
               tilematrixSet: "PM",
               format: "image/jpeg",
-              attribution: "<a href='http://www.ign.fr'>IGN</a>" }),
-        L.tileLayer('//{s}.tile.osm.org/{z}/{x}/{y}.png', {
+              attribution: "&copy; <a href='http://www.ign.fr'>IGN</a>" }),
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
                     key: 'osm',
                     title: "Open Street Map",
                     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

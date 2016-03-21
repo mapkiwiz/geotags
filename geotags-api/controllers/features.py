@@ -42,7 +42,7 @@ def flatten(props, keys, tags):
 @app.route(API_PREFIX + '/export/points.geojson')
 def export_all_features():
     keys = [ 'name', 'version' ]
-    tags = [ 'insee', 'commune', 'pk', 'adresse', 'annotation' ]
+    tags = [ 'insee', 'commune', 'pk', 'adresse', 'comment', 'valid' ]
     query = Feature.query.all()
     features = []
     for f in query:
