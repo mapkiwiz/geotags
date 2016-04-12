@@ -1,3 +1,7 @@
+.side-panel h3 {
+  margin-top: 26px;
+}
+
 .list-header {
 
   color: gray;
@@ -131,3 +135,4 @@ label.label > a {
 .sub p {
   margin-bottom: 0px;
 }
+

@@ -1,57 +1,10 @@
-var gppApiKey = "{GPP_API_KEY}";
-var gpp_url = "https://wxs.ign.fr/" + gppApiKey + "/geoportail/wmts";
-var API_PREFIX = '/api/v1';
+var layer_config = require('./layers.js');
+var api_config = require('./api.js');
 
 module.exports = {
-    backend: 'off',
-    gpp: {
-        apiKey: gppApiKey
-    },
-    baseLayers: [
-        L.tileLayer.wmts(gpp_url,
-            { key: 'plan-ign',
-              title: 'Plan IGN',
-              layer: "GEOGRAPHICALGRIDSYSTEMS.PLANIGN",
-              style:  "normal",
-              tilematrixSet: "PM",
-              format: "image/jpeg",
-              attribution: "&copy; <a href='http://www.ign.fr'>IGN</a>" }),
-        L.tileLayer.wmts(gpp_url,
-            { key: 'carte-ign',
-              title: 'Carte IGN',
-              layer: "GEOGRAPHICALGRIDSYSTEMS.MAPS",
-              style:  "normal",
-              tilematrixSet: "PM",
-              format: "image/jpeg",
-              attribution: "&copy; <a href='http://www.ign.fr'>IGN</a>" }),
-        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-                    key: 'osm',
-                    title: "Open Street Map",
-                    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                }),
-        L.tileLayer('//stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png', {
-                    key: 'stamen-toner-lite',
-                    title: "Stamen Toner Lite",
-                    attribution: '&copy; Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
-                })
-    ],
-    services: {
-        ban: {
-            url: '//api-adresse.data.gouv.fr/search/?q={q}'
-        },
-        gazetteer: {
-            url: API_PREFIX + '/search/communes?q={q}'
-        },
-        export: {
-            url: API_PREFIX + '/export/points.geojson'
-        },
-        data: {
-            all: API_PREFIX + '/features.geojson', // dataset
-            get: API_PREFIX + '/feature/{id}.geojson', // fetchone
-            modify: API_PREFIX + '/feature/{id}.geojson',
-            create: API_PREFIX + '/features'
-        }
-    },
+    gpp: layer_config.gpp,
+    baseLayers: layer_config.baseLayers,
+    services: api_config.services,
     // TODO Remove from config
     data: {
         communes: 'data/communes-d033.json',

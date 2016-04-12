@@ -1,4 +1,5 @@
 var config = require('./config/login.js');
+
 var dispatcher = new Flux.Dispatcher();
 var  store = {
   username: undefined,
@@ -28,7 +29,10 @@ var LabelLink = React.createClass({
 
   click: function(e) {
     e.preventDefault();
-    // perform action
+    dispatcher.dispatch({
+      type: 'request-route',
+      route: this.props.to
+    });
   },
 
   render: function() {
@@ -92,11 +96,11 @@ var FormField = React.createClass({
         <label className="label">
           <span>{ this.props.label }</span>
         </label>
-        { this.props.children }
         <input className="form-control input-lg" name={ this.props.name }
           type={ this.props.type }
           placeholder={ this.props.placeholder }
           value={valueLink.value} onChange={handleChange} />
+        { this.props.children }
         { errors }
       </div>
     );
@@ -108,7 +112,7 @@ var SubmitButton = React.createClass({
 
   render: function() {
       return (
-        <div className="button-toolbar pull-right">
+        <div className="btn-toolbar pull-right">
           <button className="btn btn-lg btn-primary" type="submit" name={ this.props.name }>
             { this.props.label }
           </button>
@@ -189,12 +193,13 @@ var LoginForm = React.createClass({
         <FormField name="username" label="Identifiant" 
           placeholder="Nom d'utilisateur ou email"
           type="text">
-          <LabelLink text="Je n'ai pas de compte" />
+          <LabelLink text="Je n'ai pas de compte" to="register" />
         </FormField>
         <br/>
         <FormField name="password" label="Mot de passe" type="password">
-          <LabelLink text="J'ai oublié mon mot de passe" />
+          <LabelLink text="J'ai oublié mon mot de passe" to="reset-password" />
         </FormField>
+        <br/>
         <br/>
         <SubmitButton name="login" label="S'identifier" />
       </form>
@@ -208,16 +213,18 @@ RegisterForm = React.createClass({
   required: [ 'username', 'email', 'password', 'retype_password' ],
 
   validate: function(e) {
-    var errors = {};
+    var errors = {}, has_errors = false;
     this.required.forEach(function(field) {
       if (!store[field]) {
         errors[field] = [ "Champ obligatoire" ];
+        has_errors = true;
       }
     });
     if (store.password != store.retype_password) {
       errors['retype_password'] = [ 'Confirmation non concordante' ];
+      has_errors = true;
     }
-    if (errors) {
+    if (has_errors) {
       dispatcher.dispatch({
         type: 'errors',
         errors: errors
@@ -229,19 +236,29 @@ RegisterForm = React.createClass({
     }
   },
 
-  register: function(e) {
+  submit: function(e) {
     e.preventDefault();
-    this.validate();
+    if (this.validate()) {
+      this.register();
+    }
+  },
+
+  register: function() {
+    dispatcher.dispatch({
+      type: 'display-message',
+      title: this.props.title,
+      message: 'Un e-mail de confirmation vous a été envoyé.'
+    });
   },
 
   render: function() {
     return (
-      <form onSubmit={ this.register }>
+      <form onSubmit={ this.submit }>
         <h3>{ this.props.title }</h3>
         <FormField name="username" label="Identifiant"
           placeholder="Nom d'utilisateur"
           type="text">
-          <LabelLink text="J'ai déjà un compte" />
+          <LabelLink text="J'ai déjà un compte" to="login" />
         </FormField>
         <FormField name="email" label="Email"
           placeholder="user@example.com"
@@ -250,6 +267,7 @@ RegisterForm = React.createClass({
            type="password" />
         <FormField name="retype_password" label="Confirmation du mot de passe"
            type="password" />
+        <br/>
         <br/>
         <SubmitButton name="register" label="S'enregistrer" />
       </form>
@@ -263,13 +281,14 @@ ResetPasswordForm = React.createClass({
   required: [ 'username' ],
 
   validate: function() {
-    var errors = {};
+    var errors = {}, has_errors = false;
     this.required.forEach(function(field) {
       if (!store[field]) {
         errors[field] = [ "Champ obligatoire" ];
+        has_errors = true;
       }
     });
-    if (errors) {
+    if (has_errors) {
       dispatcher.dispatch({
         type: 'errors',
         errors: errors
@@ -281,21 +300,144 @@ ResetPasswordForm = React.createClass({
     }
   },
 
-  resetPassword: function(e) {
+  submit: function(e) {
     e.preventDefault();
-    this.validate();
+    if (this.validate()) {
+      this.resetPassword();
+    }
+  },
+
+  resetPassword: function() {
+    dispatcher.dispatch({
+      type: 'display-message',
+      title: this.props.title,
+      message: "Un e-mail vous a été envoyé pour réinitialiser votre mot de passe."
+    });
   },
 
   render: function() {
     return (
-      <form onSubmit={ this.resetPassword } >
+      <form onSubmit={ this.submit } >
         <h3>{ this.props.title }</h3>
-        <FormField name="username" label="Identifiant"
+        <FormField name="username" label="Identifiant ou e-mail"
           placeholder="Nom d'utilisateur ou email"
-          type="text" />
+          type="text">
+          <LabelLink text="J'ai retrouvé mon mot de passe" to="login" />
+        </FormField>
+        <br/>
         <br/>
         <SubmitButton name="reset_password" label="Réinitialiser" />
       </form>
+    );
+  }
+
+});
+
+var SimpleRouter = React.createClass({
+
+  getInitialState: function() {
+    return { route: 'login' };
+  },
+
+  componentDidMount: function() {
+    var self = this;
+    this.dispatchToken = dispatcher.register(function(e) {
+      if (e.type == 'request-route') {
+        self.setState({ route: e.route });
+      } else if (e.type == 'display-message') {
+        self.setState({
+          route: 'message',
+          title: e.title,
+          message: e.message
+        });
+      }
+    });
+  },
+
+  componentWillUnmount: function() {
+    dispatcher.unregister(this.dispatchToken);
+  },
+
+  render: function() {
+    switch (this.state.route) {
+      case 'message':
+        return (
+          <Message title={this.state.title} message={this.state.message} />
+        );
+      case 'register':
+        return (
+          <RegisterForm title="Créer un nouvel utilisateur" />
+        );
+      case 'reset-password':
+        return (
+          <ResetPasswordForm title="Réinitialiser mon mot de passe" />
+        );
+      case 'login':
+      default:
+        return (
+          <LoginForm title="Accéder à l'application" next={this.props.next} />
+        );
+    }
+  }
+
+});
+
+var Message = React.createClass({
+
+  click: function(e) {
+    e.preventDefault();
+    dispatcher.dispatch({
+      type: 'request-route',
+      route: 'login'
+    });
+  },
+
+  render: function() {
+    return (
+      <div>
+        <h3>{ this.props.title }</h3>
+        <br/>
+        <div className="alert alert-success" role="alert">
+          { this.props.message }
+        </div>
+        <div className="btn-toolbar pull-right">
+          <button className="btn btn-default" onClick={this.click}>Retour</button>
+        </div>
+      </div>
+    );
+  }
+
+});
+
+var LoggedInMessage = React.createClass({
+
+  login: function(e) {
+    e.preventDefault();
+    document.location = this.props.next;
+  },
+
+  logout: function(e) {
+    e.preventDefault();
+    document.location = config.services.auth.logout + '?next=' + document.location.href; 
+  },
+
+  render: function() {
+    return (
+      <div>
+        <h3>{ "Accéder à l'application" }</h3>
+        <br/>
+        <p>{ "Vous êtes connecté en tant que :" }</p>
+        <div className="well">
+          <span className="glyphicon glyphicon-user"></span>&nbsp;
+          <b>{ this.props.username }</b>
+        </div>
+        <div className="btn-toolbar">
+          <button className="btn btn-lg btn-default" onClick={this.logout} >{ "Changer d'utilisateur" }</button>
+          <div className="btn-toolbar pull-right">
+            <button className="btn btn-lg btn-primary" onClick={this.login} >{ "Ok" }</button>
+          </div>
+        </div>
+      </div>
     );
   }
 
@@ -305,7 +447,7 @@ ResetPasswordForm = React.createClass({
 var runLoginApp = function(next_url) {
 
   ReactDOM.render(
-      <LoginForm title="Accéder à l'application" next={next_url} />,
+      <SimpleRouter next={next_url} />,
       document.getElementById('login-form')
   );
 
@@ -327,10 +469,10 @@ var autologin = function(token) {
     method: 'GET',
     dataType: 'json',
   }).success(function(data) {
-    console.log("Logged in as " + data.username);
-    setTimeout(function() {
-      document.location = next;
-    }, 1500);
+    ReactDOM.render(
+      <LoggedInMessage username={data.username} next={next} />,
+      document.getElementById('login-form')
+    );
   }).error(function(xhr, a, msg) {
     if (xhr.status == 401) {
       runLoginApp(next);
@@ -340,18 +482,3 @@ var autologin = function(token) {
 };
 
 autologin('token');
-
-// module.exports = {
-//   runLoginApp: runLoginApp,
-//   autologin: autologin
-// };
-
-// ReactDOM.render(
-//     <RegisterForm title="Créer un nouvel utilisateur" />,
-//     document.getElementById('login-form')
-// );
-
-// ReactDOM.render(
-//     <ResetPasswordForm title="Réinitialiser mon mot de passe" />,
-//     document.getElementById('login-form')
-// );

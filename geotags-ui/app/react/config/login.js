@@ -1,4 +1,4 @@
-var API_PREFIX = '/api/v1';
+var API_PREFIX = require('./api.js').API_PREFIX;
 
 module.exports = {
     services: {

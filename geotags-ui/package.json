@@ -11,7 +11,7 @@
     "babel-cli": "^6.6.5",
     "babel-preset-react": "^6.5.0",
     "babelify": "^7.2.0",
-    "bower": "~1.7.7",
+    "bower": "^1.7.9",
     "browserify": "^13.0.0",
     "event-stream": "^3.3.2",
     "gulp": "~3.9.1",

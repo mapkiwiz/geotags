@@ -87,7 +87,7 @@ gulp.task('watch', function (cb) {
   gulp.src(paths.components)
   .pipe($.plumber())
   .pipe($.watch(paths.components))
-  .pipe($.if('config/geotags.js', $.replace(/{GPP_API_KEY}/, process.env.GPP_API_KEY || 'SECRET')))
+  .pipe($.if('config/layers.js', $.replace(/{GPP_API_KEY}/, process.env.GPP_API_KEY || 'SECRET')))
   .pipe(reactify());
 
   $.watch('./.tmp/react/**/*.js', function() {
@@ -120,7 +120,7 @@ gulp.task('clean:all', ['clean:dist', 'clean:tmp']);
 
 gulp.task('scripts:reactify', [ 'clean:tmp' ], function() {
   return gulp.src(paths.components)
-    .pipe($.if('config/geotags.js', $.replace(/{GPP_API_KEY}/, process.env.GPP_API_KEY || 'SECRET')))
+    .pipe($.if('config/layers.js', $.replace(/{GPP_API_KEY}/, process.env.GPP_API_KEY || 'SECRET')))
     .pipe(reactify());
 })
 
