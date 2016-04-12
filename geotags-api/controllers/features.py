@@ -3,10 +3,11 @@ from flask_cors import cross_origin
 from flask_user import current_user
 from functools import wraps
 from bootstrap import app, db
-from config import API_PREFIX
+from resolver import resolve_dbo
+from config import GEOTAGS_API_PREFIX
 from shapely.geometry import asShape
-from models import *
 import geojson
+
 
 def _call_or_get(function_or_property):
     return function_or_property() if callable(function_or_property) else function_or_property
@@ -39,11 +40,16 @@ def flatten(props, keys, tags):
     return flat_props
 
 
-@app.route(API_PREFIX + '/export/points.geojson')
-def export_all_features():
+@app.route(GEOTAGS_API_PREFIX + '/<key>/export/points.geojson')
+def export_all_features(key):
+
+    dbo = resolve_dbo(key)
+    if dbo is None:
+        return abort(404)
+
     keys = [ 'name', 'version' ]
     tags = [ 'insee', 'commune', 'pk', 'adresse', 'comment', 'valid' ]
-    query = Feature.query.all()
+    query = dbo.Feature.query.all()
     features = []
     for f in query:
         feature = {
@@ -59,9 +65,23 @@ def export_all_features():
         })
     return response
 
-@app.route(API_PREFIX + '/features.geojson')
-def features():
-    query = Feature.query.all()
+@app.route(GEOTAGS_API_PREFIX + '/<key>/features.geojson', methods = [ 'GET' ])
+@app.route(GEOTAGS_API_PREFIX + '/<key>/features', methods=[ 'GET', 'PUT' ])
+def features(key):
+
+    if request.method == 'GET':
+        return features_get(key)
+
+    elif request.method == 'PUT':
+        return feature_create(key)
+
+def features_get(key):
+
+    dbo = resolve_dbo(key)
+    if dbo is None:
+        return abort(404)
+
+    query = dbo.Feature.query.all()
     features = []
     for f in query:
         feature = {
@@ -77,12 +97,17 @@ def features():
         })
     return response
 
-@app.route(API_PREFIX + '/features', methods=[ 'PUT' ])
+
 @auth_required
-def feature_create():
+def feature_create(key):
+
+    dbo = resolve_dbo(key)
+    if dbo is None:
+        return abort(404)
+
     json = request.get_json()
     submitted = geojson.feature.Feature.to_instance(json)
-    new_feature = Feature()
+    new_feature = dbo.Feature()
     new_feature.name = submitted.properties.get('name')
     new_feature.shape = asShape(submitted.geometry)
     tags = submitted.properties.get('tags')
@@ -93,7 +118,7 @@ def feature_create():
     db.session.commit()
     return (feature_as_geojson(new_feature), 201)
 
-# @app.route(API_PREFIX + "/feature/<int:id>", methods=[ 'GET' ])
+# @app.route(GEOTAGS_API_PREFIX + "/feature/<int:id>", methods=[ 'GET' ])
 # def feature(id):
 #     f = Feature.query.get(id)
 #     if f is None:
@@ -106,10 +131,15 @@ def feature_create():
 # def feature_get(feature):
 #     return jsonify(feature.properties)
 
-@app.route(API_PREFIX + "/feature/<int:id>.geojson", methods=[ 'GET', 'POST' ])
+@app.route(GEOTAGS_API_PREFIX + "/<key>/feature/<int:id>.geojson", methods=[ 'GET', 'POST' ])
 # @cross_origin()
-def feature(id):
-    f = Feature.query.get(id)
+def feature(key, id):
+
+    dbo = resolve_dbo(key)
+    if dbo is None:
+        return abort(404)
+
+    f = dbo.Feature.query.get(id)
     if f is None:
         return abort(404)
     if request.method == 'GET':
@@ -146,7 +176,7 @@ def feature_update(feature):
 
 # TODO Not yet implemented methods
 
-# @app.route(API_PREFIX + "/feature/<int:id>/tag", methods=[ 'POST' ])
+# @app.route(GEOTAGS_API_PREFIX + "/feature/<int:id>/tag", methods=[ 'POST' ])
 # # @cross_origin()
 # @auth_required
 # def feature_tag(id):
@@ -157,7 +187,7 @@ def feature_update(feature):
 #     # otherwise, create tag
 #     data = request.get_json()
 
-# @app.route(API_PREFIX + "/feature/<int:id>/mark", methods=[ 'POST' ])
+# @app.route(GEOTAGS_API_PREFIX + "/feature/<int:id>/mark", methods=[ 'POST' ])
 # # @cross_origin()
 # @auth_required
 # def feature_mark(id):
@@ -167,7 +197,7 @@ def feature_update(feature):
 #     # TODO implement mark method
 #     return abort(201)
 
-# @app.route(API_PREFIX + "/feature/<int:id>/geometry", methods=[ 'GET', 'POST' ])
+# @app.route(GEOTAGS_API_PREFIX + "/feature/<int:id>/geometry", methods=[ 'GET', 'POST' ])
 # # @cross_origin()
 # @auth_required
 # def feature_update_geometry(id):

@@ -1,15 +1,15 @@
 from bootstrap import app, db
-from config import API_PREFIX, GAZETTEER_MAX_RESULTS
-from flask import request, stream_with_context, Response, jsonify
+from config import GEOTAGS_API_PREFIX, GEOTAGS_GAZETTEER_MAX_RESULTS
+from flask import request, stream_with_context, Response, jsonify, abort
 from shapely.geometry import box
 from geoalchemy2.functions import ST_Intersects, ST_Transform
 from geoalchemy2.shape import from_shape
 
-@app.route(API_PREFIX + '/search/communes', methods=[ 'GET' ])
+@app.route(GEOTAGS_API_PREFIX + '/search/communes', methods=[ 'GET' ])
 def search_communes():
     query = request.args.get('q')
     if not query:
-        return 'Bad Request', 401
+        return abort(401)
     query = query.upper()
     table = db.table('communes',
                 db.column('insee_com'),
@@ -25,7 +25,7 @@ def search_communes():
         .order_by(
             db.desc(db.column('nom_comm').startswith(query)),
             db.desc(db.column("population"))) \
-        .limit(GAZETTEER_MAX_RESULTS)
+        .limit(GEOTAGS_GAZETTEER_MAX_RESULTS)
     # Add BBOX support
     # http://localhost:5000/v1/search/communes?q=BO&bbox=-1.4845,44.5004,0.3021,45.1539
     bbox = request.args.get('bbox')
@@ -34,6 +34,7 @@ def search_communes():
         bbox_wkb = from_shape(box(*coords), 4326)
         base = base.where(ST_Intersects(db.column('geom'), ST_Transform(bbox_wkb, 2154)))
     features = []
+    # TODO Order by distance to query location
     for row in db.engine.execute(base):
         features.append({
                 "code": row['insee_com'],
@@ -48,31 +49,31 @@ def search_communes():
                     }
             })
     return jsonify({
-            "max_results": GAZETTEER_MAX_RESULTS,
+            "max_results": GEOTAGS_GAZETTEER_MAX_RESULTS,
             "results": features
         })
 
-def toto():
-    @stream_with_context
-    def generate():
-        query = request.args['q'].upper()
-        table = db.table('communes',
-                    db.column('insee_com'),
-                    db.column('nom_comm'),
-                    db.column('envelope_json'))
-        table.schema = 'geofla'
-        base = db.select(
-                [ table ]) \
-            .where(db.column('nom_comm').contains(query)) \
-            .order_by(db.desc(db.column('nom_comm').startswith(query)), db.column('nom_comm')) \
-            .limit(10)
-        yield '{ "type": "FeatureCollection", "features": [\n'
-        for result in db.engine.execute(base):
-            properties = '{ "text": ' + result[0] + ' ' + result[1] + '}'
-            data = {
-                "properties": properties,
-                "geometry": result[2]
-            }
-            yield '{"type": "Feature", "properties": %(properties)s, "geometry": %(geometry)s },\n' % data
-        yield ']}'
-    return Response(generate(), 200, { 'Content-Type': 'application/json' })
+# def toto():
+#     @stream_with_context
+#     def generate():
+#         query = request.args['q'].upper()
+#         table = db.table('communes',
+#                     db.column('insee_com'),
+#                     db.column('nom_comm'),
+#                     db.column('envelope_json'))
+#         table.schema = 'geofla'
+#         base = db.select(
+#                 [ table ]) \
+#             .where(db.column('nom_comm').contains(query)) \
+#             .order_by(db.desc(db.column('nom_comm').startswith(query)), db.column('nom_comm')) \
+#             .limit(10)
+#         yield '{ "type": "FeatureCollection", "features": [\n'
+#         for result in db.engine.execute(base):
+#             properties = '{ "text": ' + result[0] + ' ' + result[1] + '}'
+#             data = {
+#                 "properties": properties,
+#                 "geometry": result[2]
+#             }
+#             yield '{"type": "Feature", "properties": %(properties)s, "geometry": %(geometry)s },\n' % data
+#         yield ']}'
+#     return Response(generate(), 200, { 'Content-Type': 'application/json' })

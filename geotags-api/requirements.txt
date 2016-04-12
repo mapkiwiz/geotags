@@ -14,3 +14,4 @@ Shapely==1.5.13
 TileStache==1.50.1
 psycopg2==2.6.1
 Flask-Babel==0.9
+pylru==1.0.9
