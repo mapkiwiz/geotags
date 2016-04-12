@@ -40,11 +40,14 @@ var AnnotationForm = React.createClass({
 
 	markAndSave: function(tag, tag_value, feature_class) {
 
-		if (tag) {
-			this.state.feature.properties.tags[tag] = tag_value;
+		this.state.feature.properties.tags[tag] = tag_value;
+
+		if (feature_class) {
+			var el = $(this.state.marker._icon)[0];
+			el.className = el.className.replace(/feature-marker-.*?\b/g, '');
+			$(this.state.marker._icon).addClass(feature_class);
 		}
 
-		$(this.state.marker._icon).addClass(feature_class);
 		this.save();
 		this.emptySelection();
 
@@ -57,6 +60,7 @@ var AnnotationForm = React.createClass({
 
 	setGeometry: function(geometry) {
 		if (this.state.feature) {
+			this.state.feature.properties.tags['geometry_modified'] = 'yes';
 			this.state.feature.geometry = geometry;
 		}
 	},
@@ -97,7 +101,7 @@ var AnnotationForm = React.createClass({
 		var marker = this.state.marker;
 		this.stopEditing(marker);
 
-		this.dispatcher.trigger('featurechanged', undefined);
+		this.dispatcher.trigger('selectionchanged', undefined);
 		this.setState({ feature: null, marker: null, comment: '' });
 
 	},
@@ -115,7 +119,7 @@ var AnnotationForm = React.createClass({
         	comment: feature.properties.tags.comment || '' });
         $('#tab-annotate').tab('show');
 
-        this.dispatcher.trigger('featurechanged', feature);
+        this.dispatcher.trigger('selectionchanged', feature);
         this.startEditing(marker);
 
 	},
@@ -153,7 +157,7 @@ var AnnotationForm = React.createClass({
 				<div className="btn-toolbar">
 					
 					<buttons.MarkValidButton label="Valider" onClick={this.markAndSave} />
-					<buttons.AnnotateButton label="Annoter" onClick={this.markAndSave} />
+					<buttons.AnnotateButton label="À vérifier" onClick={this.markAndSave} />
 
 					<div className="btn-toolbar pull-right">
 						<buttons.CancelButton label="Annuler" onClick={this.cancelEditing} />

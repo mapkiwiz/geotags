@@ -1,3 +1,4 @@
+var config = require('./config/login.js');
 var dispatcher = new Flux.Dispatcher();
 var  store = {
   username: undefined,
@@ -150,7 +151,7 @@ var LoginForm = React.createClass({
   login: function() {
     var self = this;
     $.ajax({
-      url: this.props.service,
+      url: config.services.auth.login,
       method: 'POST',
       dataType: 'json',
       data: {
@@ -304,9 +305,7 @@ ResetPasswordForm = React.createClass({
 var runLoginApp = function(next_url) {
 
   ReactDOM.render(
-      <LoginForm title="Accéder à l'application"
-         service="/api/v1/auth/login"
-         next={next_url} />,
+      <LoginForm title="Accéder à l'application" next={next_url} />,
       document.getElementById('login-form')
   );
 
@@ -324,7 +323,7 @@ var autologin = function(token) {
   var next = '/' + token + '/tags';
 
   $.ajax({
-    url: '/api/v1/auth/user', // TODO use config
+    url: config.services.auth.user,
     method: 'GET',
     dataType: 'json',
   }).success(function(data) {

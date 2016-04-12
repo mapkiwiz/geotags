@@ -16,16 +16,16 @@ var CommentControl = React.createClass({
 	},
 
 	componentDidMount: function() {
-		this.props.listenTo.on('featurechanged', this.onFeatureChanged);
+		this.props.listenTo.on('selectionchanged', this.onSelectionChanged);
 		this.props.listenTo.on('beforesave', this.saveToFeature);
 	},
 
 	componentWillUnmount: function() {
-		this.props.listenTo.off('featurechanged', this.onFeatureChanged);
+		this.props.listenTo.off('selectionchanged', this.onSelectionChanged);
 		this.props.listenTo.off('beforesave', this.saveToFeature);
 	},
 
-	onFeatureChanged: function(e, feature) {
+	onSelectionChanged: function(e, feature) {
 		var comment = '';
 		if (feature) {
 			comment =

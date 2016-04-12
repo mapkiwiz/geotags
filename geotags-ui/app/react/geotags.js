@@ -1,4 +1,4 @@
-var config = require('./config.js');
+var config = require('./config/geotags.js');
 var GazetteerBAN = require('./gazetteer-ban.js');
 var LayerSwitcher = require('./layer-switcher.js');
 var AnnotationForm = require('./annotation.js');
