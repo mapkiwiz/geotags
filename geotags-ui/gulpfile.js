@@ -12,11 +12,12 @@ var runSequence = require('run-sequence');
 var paths = {
     app: 'app',
     styles: [ 'app/styles/**/*.css' ],
-    scripts: [ 'app/react/**/*.js' ],
+    components: [ 'app/react/**/*.js' ],
+    scripts: [ '.tmp/react/geotags.js', '.tmp/react/login.js' ],
     dist: 'dist',
     tmp: '.tmp',
-    main: 'app/main.html',
-    templates: [ 'app/index.html', 'app/login.html' ]
+    main: [ 'app/geotags.html', 'app/login.html'],
+    templates: [ ]
 };
 
 ////////////////////////
@@ -41,7 +42,7 @@ var reactify = lazypipe()
 
 var browserify = lazypipe()
   .pipe($.browserify)
-  .pipe($.rename, 'geotags.js')
+  // .pipe($.rename, 'geotags.js')
   .pipe(gulp.dest, './.tmp/js');
 
 ///////////
@@ -63,7 +64,7 @@ gulp.task('start:server', function() {
 });
 
 gulp.task('start:client', function () {
-  openURL('http://localhost:9000/index.html');
+  openURL('http://localhost:9000/login.html');
 });
 
 gulp.task('runserver', function(cb) {
@@ -83,14 +84,14 @@ gulp.task('watch', function (cb) {
   .pipe($.watch(paths.styles))
   .pipe($.connect.reload());
 
-  gulp.src(paths.scripts)
+  gulp.src(paths.components)
   .pipe($.plumber())
-  .pipe($.watch(paths.scripts))
+  .pipe($.watch(paths.components))
   .pipe($.if('config.js', $.replace(/{GPP_API_KEY}/, process.env.GPP_API_KEY || 'SECRET')))
   .pipe(reactify());
 
   $.watch('./.tmp/react/**/*.js', function() {
-    gulp.src('./.tmp/react/main.js')
+    gulp.src(paths.scripts)
     .pipe($.plumber())
     .pipe(browserify());
   });
@@ -118,13 +119,13 @@ gulp.task('clean:tmp', function (cb) {
 gulp.task('clean:all', ['clean:dist', 'clean:tmp']);
 
 gulp.task('scripts:reactify', [ 'clean:tmp' ], function() {
-  return gulp.src(paths.scripts)
+  return gulp.src(paths.components)
     .pipe($.if('config.js', $.replace(/{GPP_API_KEY}/, process.env.GPP_API_KEY || 'SECRET')))
     .pipe(reactify());
 })
 
 gulp.task('scripts', [ 'scripts:reactify' ], function() {
-  return gulp.src('./.tmp/react/main.js')
+  return gulp.src(paths.scripts)
     .pipe(browserify());
 });
 

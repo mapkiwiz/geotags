@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>GeoTags - Crèches de la Gironde</title>
+	<!--++ <base href="/ui/login" /> ++-->
 	<meta charset="utf-8">
 	<meta name="description" content="GeoTags Geotagging application">
     <meta name="viewport" content="width=device-width">
@@ -45,61 +46,7 @@
 					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 				</div>
 			</div>
-			<div class="col-md-3" style="padding-left: 20px; border-left: 1px dotted lightgray">
-				<h3>Accès à l'application</h3>
-				<!--++ {% block flash_messages %}
-			        {%- with messages = get_flashed_messages(with_categories=true) -%}
-			            {% if messages %}
-			                {% for category, message in messages %}
-			                    {% if category=='error' %}
-			                        {% set category='danger' %}
-			                    {% endif %}
-			                    <div class="alert alert-{{category}}">{{ message|safe }}</div>
-			                {% endfor %}
-			            {% endif %}
-			        {%- endwith -%}
-			    {% endblock %} ++-->
-				<form class="form" action="../user/login" method="POST">
-					<!--++ {{ form.hidden_tag() }} ++-->
-					<input type="hidden" name="next" value="/" />
-					<input type="hidden" name="reg_next" value="/" />
-					<div class="form-group">
-						<label class="label">
-							<span>Identifiant</span>
-						</label>
-						<input class="form-control input-lg" name="username" type="text" placeholder="Nom d'utilisateur ou email" />
-						<div class="pull-right" style="margin-top: 6px">
-							<a href="../user/register">Je n'ai pas de compte</a>
-						</div>
-						<!--++ {% set field = form.username %}
-						{% if field.errors %}
-				            {% for e in field.errors %}
-				                <p class="help-block">{{ e }}</p>
-				            {% endfor %}
-				        {% endif %} ++-->
-					</div>
-					<br/>
-					<div class="form-group">
-						<label class="label">
-							<span>Mot de passe</span>
-						</label>
-						<input class="form-control input-lg" name="password" type="password" />
-						<div class="pull-right" style="margin-top: 6px">
-							<a href="../user/forgot-password">J'ai oublié mon mot de passe</a>
-						</div>
-						<!--++ {% set field = form.password %}
-						{% if field.errors %}
-				            {% for e in field.errors %}
-				                <p class="help-block">{{ e }}</p>
-				            {% endfor %}
-				        {% endif %} ++-->
-					</div>
-					<br/>
-					<br/>
-					<div class="button-toolbar pull-right">
-						<button class="btn btn-lg btn-primary" type="submit" name="login">S'identifier</button>
-					</div>
-				</form>
+			<div id="login-form" class="col-md-3" style="padding-left: 20px; border-left: 1px dotted lightgray">
 			</div>
 		</div>
 		<hr/>
@@ -113,33 +60,14 @@
 	<!--++ <script type="text/javascript" src="scripts/vendor.js"></script> ++-->
 	<!-- remove -->
 	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="bower_components/react/react-with-addons.js"></script>
+	<script type="text/javascript" src="bower_components/flux/dist/Flux.js"></script>
+	<script type="text/javascript" src="bower_components/react/react-dom.js"></script>
 	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-
-    <script type="text/javascript">
-
-    	// Fake login for testing purpose
-    	$(document).ready(function() {
-
-    		var fakeLogin = function() {
-    			document.location = 'main.html';
-    		};
-
-    		$('form').on('submit', function(e) {
-
-    			e.preventDefault();
-    			fakeLogin();
-
-    		});
-    		$('form').find('a').click(function(e) {
-
-    			e.preventDefault();
-    			fakeLogin();
-
-    		})
-    	});
-
-    </script>
     <!-- endremove -->
+    <!-- build:js({.tmp,app}) scripts/login.js -->
+	<script type="text/javascript" src="js/login.js"></script>
+	<!-- endbuild -->
 
 </body>
 </html>

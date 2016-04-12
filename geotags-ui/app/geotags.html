@@ -48,7 +48,7 @@
 	    					<li><a id="tab-instructions" href="#instructions" data-toggle="tab">Instructions</a></li>
 	    					<li><a id="action-export" href="#export">Exporter le jeu de données</a></li>
 	    					<li><a id="tab-a-propos" href="#a-propos" data-toggle="tab">À propos</a></li>
-	    					<li><a id="action-logout" href="../user/logout">Se déconnecter</a></li>
+	    					<li><a id="action-logout" href="/api/v1/auth/logout?next=/token/login">Se déconnecter</a></li>
 	    				</ul>
 	    			</li>
 	    		</ul>
@@ -130,6 +130,7 @@
     <!-- bower:js -->
 	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="bower_components/react/react-with-addons.js"></script>
+	<script type="text/javascript" src="bower_components/flux/dist/Flux.js"></script>
 	<script type="text/javascript" src="bower_components/react/react-dom.js"></script>
 	<script type="text/javascript" src="bower_components/leaflet-dist/leaflet.js"></script>
 	<script type="text/javascript" src="bower_components/leaflet-draw/dist/leaflet.draw.js"></script>

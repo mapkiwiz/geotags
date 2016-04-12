@@ -46,12 +46,13 @@ module.exports = {
             url: API_PREFIX + '/export/points.geojson'
         },
         data: {
-            all: API_PREFIX + '/features.geojson',
-            get: API_PREFIX + '/feature/{id}.geojson',
+            all: API_PREFIX + '/features.geojson', // dataset
+            get: API_PREFIX + '/feature/{id}.geojson', // fetchone
             modify: API_PREFIX + '/feature/{id}.geojson',
             create: API_PREFIX + '/features'
         }
     },
+    // TODO Remove from config
     data: {
         communes: 'data/communes-d033.json',
         points: 'data/points-d033.geojson'
