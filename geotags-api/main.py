@@ -1,13 +1,12 @@
 from bootstrap import app, db
-from flask import redirect, url_for, abort
+from flask import redirect, url_for, abort, render_template
 from flask_user import UserManager, SQLAlchemyAdapter, current_user
 from flask_babel import Babel
+from models.meta import Campaign
 from models.users import User, UserInvitation
 from controllers import *
 from proxy import ReverseProxied
 from config import GEOTAGS_API_PREFIX
-from flask.helpers import safe_join, send_from_directory
-import os
 
 __all__ = [ 'app', 'db', 'user_manager' ]
 
@@ -20,37 +19,6 @@ app.wsgi_app = ReverseProxied(app.wsgi_app)
 app.register_blueprint(auth.auth_api, url_prefix="%s/auth" % GEOTAGS_API_PREFIX)
 
 babel = Babel(app, default_locale='fr')
-
-@app.route('/')
-def index():
-	if current_user.is_authenticated:
-		return redirect(url_for('static', filename='main.html'))
-	else:
-		return redirect(url_for('static', filename='index.html'))
-
-ui_webroot = [ 'ui/app', 'ui/.tmp', 'ui' ]
-# ui_webroot = [ 'ui/dist' ]
-
-@app.route('/ui/<path:filename>')
-def ui(filename):
-	for webroot in ui_webroot:
-		path = safe_join(webroot, filename)
-		if os.path.isfile(path):
-			return send_from_directory(webroot, filename)
-	return abort(404)
-
-@app.route('/<key>/<path:filename>')
-def assets(key, filename):
-	if filename == 'login':
-		return ui('login.html')
-	elif filename == 'tags':
-		return ui('geotags.html')
-	else:
-		components = filename.split('/')
-		prefix = components[0]
-		if prefix in [ 'scripts', 'images', 'styles', 'fonts', 'images', 'data', 'js', 'bower_components' ]:
-			return ui(filename)
-	return abort(404)
 
 
 # @app.route('/')

@@ -48,7 +48,7 @@ def export_all_features(key):
         return abort(404)
 
     keys = [ 'name', 'version' ]
-    tags = [ 'insee', 'commune', 'pk', 'adresse', 'comment', 'valid' ]
+    tags = [ 'insee', 'commune', 'pk', 'adresse', 'comment', 'valid', 'modified', 'geometry_modified' ]
     query = dbo.Feature.query.all()
     features = []
     for f in query:

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>GeoTags - <%= title %></title>
+	<title>GeoTags - {{ title }}</title>
 	<!--++ <base href="/ui/login" /> ++-->
 	<meta charset="utf-8">
 	<meta name="description" content="GeoTags Geotagging application">
@@ -32,13 +32,13 @@
 			</div>
 			<div class="col-md-4">
 				<div style="display: inline-block; vertical-align: top; text-align: justify">
-					<h2><%= title %></h2>
+					<h2>{{ title }}</h2>
 					<div class="sub">
-						<p>Collecte de données créée par <a href="#"><%= username %></a></p>
-						<p>Contributions ouvertes jusqu'au <%= closing_at %></p>
+						<p>Collecte de données créée par <a href="#">{{ username }}</a></p>
+						<p>Contributions ouvertes jusqu'au {{ closing_at }}</p>
 					</div>
 					<div class="description">
-						<%= description %>
+						{{ description }}
 					</div>
 				</div>
 			</div>
@@ -72,7 +72,7 @@
 	<script type="text/javascript" src="js/login.js"></script>
 	<!-- endbuild -->
 	<script type="text/javascript">
-		autologin('<%= token %>');
+		autologin('{{ token }}');
 	</script>
 
 </body>

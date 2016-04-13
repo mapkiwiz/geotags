@@ -1,5 +1,6 @@
 'use strict';
 
+var fs = require('fs');
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var openURL = require('open');
@@ -16,8 +17,11 @@ var paths = {
     scripts: [ '.tmp/react/geotags.js', '.tmp/react/login.js' ],
     dist: 'dist',
     tmp: '.tmp',
-    main: [ 'app/geotags.html', 'app/login.html'],
-    templates: [ ]
+    html: [ 'app/geotags.html', 'app/login.html'],
+    templates: {
+      dest: '../geotags-api/templates',
+      src: []
+    }
 };
 
 ////////////////////////
@@ -44,6 +48,32 @@ var browserify = lazypipe()
   .pipe($.browserify)
   // .pipe($.rename, 'geotags.js')
   .pipe(gulp.dest, './.tmp/js');
+
+var templatify = lazypipe()
+  .pipe($.replace,
+    /<%=(.*?)%>/g,
+    '{{$1}}')
+  .pipe(gulp.dest, paths.templates.dest);
+
+var injectdata = lazypipe()
+  .pipe($.data, function(file) {
+      if (fs.existsSync(file.path + '.json')) {
+        return require(file.path + '.json');
+      } else {
+        return {};
+      }
+    })
+  .pipe($.template);
+
+var removify = lazypipe()
+  .pipe($.replace,
+    /<\!-- remove -->(.|\s)*?<\!-- endremove -->/g,
+    '<!-- (snip) -->');
+
+var insertify = lazypipe()
+  .pipe($.replace,
+    /<\!--\+\+ ((.|\s)*?) \+\+-->/g,
+    '$1');
 
 ///////////
 // Tasks //
@@ -83,6 +113,8 @@ gulp.task('build:auto', function(cb) {
     'clean:tmp',
     'scripts',
     'styles',
+    'html:injectdata',
+    'html:templatify',
     'watch',
     cb);
 });
@@ -108,6 +140,17 @@ gulp.task('watch', function (cb) {
   gulp.src('./.tmp/js/**/*.js')
   .pipe($.watch('./.tmp/js/**/*.js'))
   .pipe($.connect.reload());
+
+  gulp.src(paths.html)
+  .pipe($.plumber())
+  .pipe($.watch(paths.html))
+  .pipe(injectdata())
+  .pipe(gulp.dest(paths.tmp));
+
+  gulp.src(paths.html)
+  .pipe($.plumber())
+  .pipe($.watch(paths.html))
+  .pipe(templatify());
 
   cb();
 
@@ -138,34 +181,79 @@ gulp.task('scripts', [ 'scripts:reactify' ], function() {
     .pipe(browserify());
 });
 
-gulp.task('client:build:main', [ 'scripts', 'styles' ], function () {
+gulp.task('html:injectdata', function() {
 
-  return gulp.src(paths.main)
+  return gulp.src(paths.html)
+    .pipe(injectdata())
+    .pipe(gulp.dest(paths.tmp));
+
+});
+
+gulp.task('html:templatify', function() {
+
+  return gulp.src(paths.html)
+    .pipe(templatify());
+
+});
+
+gulp.task('dist:build', [ 'scripts', 'styles' ], function () {
+
+  return gulp.src(paths.html)
   .pipe($.useref())
   .pipe($.if('*.js', $.uglify()))
   .pipe($.if('*.js', $.rev()))
   .pipe($.if('*.css', $.cleanCss()))
   .pipe($.if('*.css', $.rev()))
-  .pipe($.if('*.html', $.replace(/<\!-- remove -->(.|\s)*?<\!-- endremove -->/g, '<!-- (snip) -->')))
-  .pipe($.if('*.html', $.replace(/<\!--\+\+ ((.|\s)*?) \+\+-->/g, '$1')))
+  .pipe($.if('*.html', removify()))
+  .pipe($.if('*.html', insertify()))
+  // .pipe($.if('*.html', templatify()))
   .pipe($.revReplace())
-  .pipe(gulp.dest(paths.dist))
+  .pipe(gulp.dest(paths.tmp))
   .pipe($.rev.manifest())
   .pipe(gulp.dest(paths.dist));
 
 });
 
-gulp.task('client:build', [ 'client:build:main' ], function () {
+gulp.task('dist', [ 'dist:build', 'copy:htmldata' ], function() {
 
-  var manifest = gulp.src("./" + paths.dist + "/rev-manifest.json");
-  
-  return gulp.src(paths.templates)
-  .pipe($.replace(/<\!-- remove -->(.|\s)*?<\!-- endremove -->/g, '<!-- (snip) -->'))
-  .pipe($.replace(/<\!--\+\+ ((.|\s)*?) \+\+-->/g, '$1'))
-  .pipe($.revReplace({ manifest: manifest }))
+  return gulp.src(paths.html.map(
+    function(d) {
+      return d.replace('app', '.tmp');
+    }))
+  .pipe(injectdata())
   .pipe(gulp.dest(paths.dist));
 
-});
+})
+
+gulp.task('dist:templatify', function() {
+
+  return gulp.src(paths.html.map(
+    function(d) {
+      return d.replace('app', '.tmp');
+    }))
+  .pipe(templatify());
+
+})
+
+// gulp.task('client:build:templates', [ 'client:build' ], function() {
+  
+//   return gulp.src(paths.dist + '/login.html')
+//     .pipe($.replace(/<\!-- template: (.*?) -->(.|\s)*?<\!-- endtemplate -->/g, '$1'))
+//     .pipe(gulp.dest(paths.templates.dest));
+
+// });
+
+// gulp.task('client:build', [ 'client:build:main' ], function () {
+
+//   var manifest = gulp.src("./" + paths.dist + "/rev-manifest.json");
+  
+//   return gulp.src(paths.templates.src)
+//   .pipe($.replace(/<\!-- remove -->(.|\s)*?<\!-- endremove -->/g, '<!-- (snip) -->'))
+//   .pipe($.replace(/<\!--\+\+ ((.|\s)*?) \+\+-->/g, '$1'))
+//   .pipe($.revReplace({ manifest: manifest }))
+//   .pipe(gulp.dest(paths.dist));
+
+// });
 
 gulp.task('copy:extras', function () {
   return gulp.src(paths.app + '/*/.*', { dot: true })
@@ -197,6 +285,11 @@ gulp.task('copy:template', function() {
     .pipe(gulp.dest(paths.dist + '/template'));
 });
 
+gulp.task('copy:htmldata', function() {
+  return gulp.src(paths.app + '/**/*.html.json')
+    .pipe(gulp.dest(paths.tmp));
+});
+
 gulp.task('build', ['clean:tmp', 'clean:dist'], function (cb) {
   runSequence([
     'copy:leafletImages',
@@ -205,5 +298,12 @@ gulp.task('build', ['clean:tmp', 'clean:dist'], function (cb) {
     'copy:images',
     // 'copy:extras',
     'copy:fonts',
-    'client:build'], cb);
+    'dist:build'
+  ], cb);
+});
+
+gulp.task('install:templates', [ 'build' ], function(cb) {
+  runSequence([
+    'dist:templatify'
+  ], cb);
 });

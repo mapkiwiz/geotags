@@ -530,8 +530,7 @@ var runLoginApp = function(next_url) {
 
 };
 
-// window.
-var autologin = function(token) {
+window.autologin = function(token) {
 
   var next = '/' + token + '/tags';
 
@@ -561,5 +560,3 @@ var autologin = function(token) {
   });
 
 };
-
-autologin('token');

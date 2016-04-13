@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>GeoTags - <%= title %></title>
+	<title>GeoTags - {{ title }}</title>
 	<meta charset="utf-8">
 	<meta name="description" content="GeoTags : Geotagging application">
     <meta name="viewport" content="width=device-width">
@@ -49,7 +49,7 @@
 	    					<li><a id="tab-instructions" href="#instructions" data-toggle="tab">Instructions</a></li>
 	    					<li><a id="action-export" href="#export">Exporter le jeu de données</a></li>
 	    					<li><a id="tab-a-propos" href="#a-propos" data-toggle="tab">À propos</a></li>
-	    					<li><a id="action-logout" href="<%= api_prefix %>/auth/logout?next=/<%= token %>/login">Se déconnecter</a></li>
+	    					<li><a id="action-logout" href="{{ api_prefix }}/auth/logout?next=/{{ token }}/login">Se déconnecter</a></li>
 	    				</ul>
 	    			</li>
 	    		</ul>
