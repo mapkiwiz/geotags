@@ -38,6 +38,7 @@ class Campaign(db.Model):
     # QeBWZ8BZBozoT8y
     id = db.Column(db.String(length=8), primary_key=True)
     title = db.Column(db.String(length=100))
+    description = db.Column(db.Text)
     schema = db.Column(db.String(length=32))
     # feature_type_id = db.Column(db.Integer, db.ForeignKey('feature_type.id'))
     # feature_type = db.relationship('FeatureType')
@@ -45,5 +46,6 @@ class Campaign(db.Model):
     admin = db.relationship('User')
     admin_token = db.Column(db.String(length=16))
     created_at = db.Column(db.Date)
+    closing_at = db.Column(db.Date)
     closed = db.Column(db.Boolean)
 

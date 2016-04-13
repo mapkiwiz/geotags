@@ -28,8 +28,8 @@ def index():
 	else:
 		return redirect(url_for('static', filename='index.html'))
 
-# ui_webroot = [ 'ui/app', 'ui/.tmp', 'ui' ]
-ui_webroot = [ 'ui/dist' ]
+ui_webroot = [ 'ui/app', 'ui/.tmp', 'ui' ]
+# ui_webroot = [ 'ui/dist' ]
 
 @app.route('/ui/<path:filename>')
 def ui(filename):
@@ -48,7 +48,7 @@ def assets(key, filename):
 	else:
 		components = filename.split('/')
 		prefix = components[0]
-		if prefix in [ 'scripts', 'images', 'styles', 'fonts', 'images', 'data' ]:
+		if prefix in [ 'scripts', 'images', 'styles', 'fonts', 'images', 'data', 'js', 'bower_components' ]:
 			return ui(filename)
 	return abort(404)
 
