@@ -1,4 +1,5 @@
 var config = require('./config/login.js');
+var DEFAULT_ERROR_MESSAGE = "Oups... une erreur est survenue.";
 
 var dispatcher = new Flux.Dispatcher();
 var  store = {
@@ -221,7 +222,7 @@ RegisterForm = React.createClass({
       }
     });
     if (store.password != store.retype_password) {
-      errors['retype_password'] = [ 'Confirmation non concordante' ];
+      errors['retype_password'] = [ 'Le deux mot de passe ne sont pas identiques' ];
       has_errors = true;
     }
     if (has_errors) {
@@ -244,10 +245,43 @@ RegisterForm = React.createClass({
   },
 
   register: function() {
-    dispatcher.dispatch({
-      type: 'display-message',
-      title: this.props.title,
-      message: 'Un e-mail de confirmation vous a été envoyé.'
+    var self = this;
+    $.ajax({
+      url: config.services.auth.register,
+      method: 'POST',
+      dataType: 'json',
+      data: {
+        username: store.username,
+        email: store.email,
+        password: store.password,
+        retype_password: store.retype_password,
+        // token: undefined
+      }
+    }).success(function(data) {
+      if (config.autologin) {
+        document.location = self.props.next;
+      } else {
+        dispatcher.dispatch({
+          type: 'display-message',
+          title: self.props.title,
+          message: 'Un e-mail de confirmation vous a été envoyé.',
+          status: "success"
+        });
+      }
+    }).error(function(xhr, a, msg) {
+      if (xhr.status == 400 || xhr.status == 401 || xhr.status == 403) {
+        dispatcher.dispatch({
+          type: 'errors',
+          errors: xhr.responseJSON
+        });
+      } else {
+        dispatcher.dispatch({
+          type: 'display-message',
+          title: self.props.title,
+          message: DEFAULT_ERROR_MESSAGE,
+          status: "warning"
+        });
+      }
     });
   },
 
@@ -276,9 +310,9 @@ RegisterForm = React.createClass({
 
 });
 
-ResetPasswordForm = React.createClass({
+ForgotPasswordForm = React.createClass({
 
-  required: [ 'username' ],
+  required: [ 'email' ],
 
   validate: function() {
     var errors = {}, has_errors = false;
@@ -303,15 +337,41 @@ ResetPasswordForm = React.createClass({
   submit: function(e) {
     e.preventDefault();
     if (this.validate()) {
-      this.resetPassword();
+      this.sendResetPasswordMessage();
     }
   },
 
-  resetPassword: function() {
-    dispatcher.dispatch({
-      type: 'display-message',
-      title: this.props.title,
-      message: "Un e-mail vous a été envoyé pour réinitialiser votre mot de passe."
+  sendResetPasswordMessage: function() {
+    var self = this;
+    $.ajax({
+      url: config.services.auth.forgot_password,
+      method: 'POST',
+      data: {
+        email: store.email
+      },
+      dataType: 'json'
+    }).success(function(data) {
+      dispatcher.dispatch({
+        type: 'display-message',
+        title: this.props.title,
+        message: "Un e-mail vous a été envoyé pour réinitialiser votre mot de passe.",
+        status: "success"
+      });
+    }).error(function(xhr, a, msg) {
+      if (xhr.status == 404) {
+        dispatcher.dispatch({
+          type: 'errors',
+          errors: xhr.responseJSON
+        });
+      } else {
+        console.log(xhr.status + " -> " + msg);
+        dispatcher.dispatch({
+          type: 'display-message',
+          title: self.props.title,
+          message: DEFAULT_ERROR_MESSAGE,
+          status: "warning"
+        });
+      }
     });
   },
 
@@ -319,9 +379,9 @@ ResetPasswordForm = React.createClass({
     return (
       <form onSubmit={ this.submit } >
         <h3>{ this.props.title }</h3>
-        <FormField name="username" label="Identifiant ou e-mail"
-          placeholder="Nom d'utilisateur ou email"
-          type="text">
+        <FormField name="email" label="Email"
+          placeholder="user@example.com"
+          type="email">
           <LabelLink text="J'ai retrouvé mon mot de passe" to="login" />
         </FormField>
         <br/>
@@ -348,7 +408,8 @@ var SimpleRouter = React.createClass({
         self.setState({
           route: 'message',
           title: e.title,
-          message: e.message
+          message: e.message,
+          status: e.status
         });
       }
     });
@@ -362,15 +423,15 @@ var SimpleRouter = React.createClass({
     switch (this.state.route) {
       case 'message':
         return (
-          <Message title={this.state.title} message={this.state.message} />
+          <MessageBox title={this.state.title} message={this.state.message} status={this.state.status} />
         );
       case 'register':
         return (
-          <RegisterForm title="Créer un nouvel utilisateur" />
+          <RegisterForm title="Créer un nouvel utilisateur" next={this.props.next} />
         );
       case 'reset-password':
         return (
-          <ResetPasswordForm title="Réinitialiser mon mot de passe" />
+          <ForgotPasswordForm title="Réinitialiser mon mot de passe" />
         );
       case 'login':
       default:
@@ -383,6 +444,18 @@ var SimpleRouter = React.createClass({
 });
 
 var Message = React.createClass({
+
+  render: function() {
+    return (
+      <div className={ "alert alert-" + this.props.status } role="alert">
+        { this.props.message }
+      </div>
+    );
+  }
+
+});
+
+var MessageBox = React.createClass({
 
   click: function(e) {
     e.preventDefault();
@@ -397,9 +470,7 @@ var Message = React.createClass({
       <div>
         <h3>{ this.props.title }</h3>
         <br/>
-        <div className="alert alert-success" role="alert">
-          { this.props.message }
-        </div>
+        <Message message={this.props.message} status={this.props.status} />
         <div className="btn-toolbar pull-right">
           <button className="btn btn-default" onClick={this.click}>Retour</button>
         </div>
@@ -476,6 +547,16 @@ var autologin = function(token) {
   }).error(function(xhr, a, msg) {
     if (xhr.status == 401) {
       runLoginApp(next);
+    } else {
+      var title = "Accéder à l'application";
+      ReactDOM.render(
+        <div>
+          <h3>{title}</h3>
+          <br/>
+          <Message message={DEFAULT_ERROR_MESSAGE} status="warning" />
+        </div>,
+        document.getElementById('login-form')
+      );
     }
   });
 

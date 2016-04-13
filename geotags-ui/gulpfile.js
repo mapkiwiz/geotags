@@ -78,6 +78,15 @@ gulp.task('runserver', function(cb) {
     cb);
 });
 
+gulp.task('build:auto', function(cb) {
+  runSequence(
+    'clean:tmp',
+    'scripts',
+    'styles',
+    'watch',
+    cb);
+});
+
 gulp.task('watch', function (cb) {
 
   gulp.src(paths.styles)

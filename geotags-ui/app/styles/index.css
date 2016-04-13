@@ -136,3 +136,8 @@ label.label > a {
   margin-bottom: 0px;
 }
 
+.colophon {
+  color: gray;
+  font-size: 10pt;
+}
+

@@ -5,6 +5,7 @@ module.exports = {
     gpp: layer_config.gpp,
     baseLayers: layer_config.baseLayers,
     services: api_config.services,
+    backend: api_config.backend,
     // TODO Remove from config
     data: {
         communes: 'data/communes-d033.json',
