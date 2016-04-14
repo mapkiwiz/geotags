@@ -2,22 +2,28 @@ var ExportFeatureAction = require('../export.js');
 
 module.exports = function(config) {
 
-    this.createNew = function(feature) {
-        console.log(this);
-        var zoom = Math.max(15, this.map.getZoom());
+    this.createNew = function(feature, options) {
+        
+        options = options || {};
+
         var latLng = L.latLng(feature.geometry.coordinates[1], feature.geometry.coordinates[0]);
         var marker = this.dataLayer.options.pointToLayer(feature, latLng);
-        feature.properties.name = 'New Feature #1';
+        feature.properties.name = 'Nouvel objet #1';
         feature.properties.tags = {
             adresse: feature.properties.label,
             created: 'yes'
         };
-        // map.setZoomAround(
-        //     latLng,
-        //     zoom,
-        //     { animate: true }
-        // );
-        this.map.setView(latLng, zoom, { animate: true });
+
+        if (options.zoom) {
+            // map.setZoomAround(
+            //     latLng,
+            //     zoom,
+            //     { animate: true }
+            // );
+            var zoom = Math.max(15, this.map.getZoom());
+            this.map.setView(latLng, zoom, { animate: true });
+        }
+        
         marker.addTo(this.dataLayer);
         this.dataLayer.options.onEachFeature(feature, marker);
         this.editor.selectFeature(feature, marker);

@@ -60,6 +60,17 @@ var Gazetteer = React.createClass({
         }
     },
 
+    handleSearch: function(e) {
+    	var control = $('input[name="' + this.props.name + '"]');
+    	var val = control.val();
+    	if (val) {
+            var results = this.lookup(val);
+            this.setState({ selection: null, results: results })
+        } else {
+            this.setState({ selection: null, results: [] });
+        }
+    },
+
     handleSelect: function(d) {
     	this.props.map.fitBounds(
 			L.latLngBounds(
@@ -80,9 +91,16 @@ var Gazetteer = React.createClass({
         	<div>
 	        	<div className="form-group">
 					<label className="label">
-						<span>PAR COMMUNE</span>
+						<span>Par commune</span>
 					</label>
-	    			<input className="form-control" type="text" name={this.props.name} placeholder={this.props.placeholder} />
+					<div className="input-group">
+		    			<input className="form-control" type="text" name={this.props.name} placeholder={this.props.placeholder} />
+		    			<span className="input-group-btn">
+		    				<button onClick={this.handleSearch} className="btn btn-default">
+			    				<span className="glyphicon glyphicon-search"></span>
+			    			</button>
+			    		</span>
+		    		</div>
 	    		</div>
 	    		<ul className="list" id="search-results">
 					{items}

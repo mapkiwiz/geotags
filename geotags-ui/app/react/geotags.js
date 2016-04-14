@@ -45,9 +45,13 @@ var aForm = ReactDOM.render(
     document.getElementById('annotate')
 );
 
+var createNew = function(d) {
+    store.createNew(d, { zoom: true });
+};
+
 window.gazetteerBan = ReactDOM.render(
- <GazetteerBAN map={map} name="search-ban" service={config.services.ban.url} placeholder="Rechercher une adresse" select={store.createNew.bind(store)}  />,
- document.getElementById('create-new')
+ <GazetteerBAN map={map} name="search-ban" service={config.services.ban.url} placeholder="Rechercher une adresse" select={createNew}  />,
+ document.getElementById('create-new-by-address')
 );
 
 ReactDOM.render(
@@ -72,3 +76,29 @@ store.addTo(map, aForm);
 
 window.map = map;
 window.store = store;
+
+window.handler = new L.Draw.Marker(map, {
+    icon: L.divIcon({
+        className: 'feature-marker',
+        html: '<span class="glyphicon glyphicon-map-marker"></span>',
+        iconSize: L.point(30, 30),
+        iconAnchor: L.point(15, 30)
+    })
+});
+
+map.on('draw:created', function(e) {
+    var feature = e.layer.toGeoJSON();
+    store.createNew(feature);
+});
+
+$('#tab-create-new-by-point').on('show.bs.tab', function(e) {
+    window.handler.enable();
+});
+
+$('#tab-create-new-by-point').on('hidden.bs.tab', function(e) {
+    window.handler.disable();
+});
+
+$('#tab-create-new').on('hidden.bs.tab', function(e) {
+    window.handler.disable();
+});

@@ -15,3 +15,7 @@ L.drawLocal.edit.toolbar.buttons.remove = 'Supprimer';
 L.drawLocal.edit.handlers.remove.tooltip = {
     text: 'Cliquer sur un objet pour le supprimer'
 };
+
+L.drawLocal.draw.handlers.marker.tooltip = {
+    start: 'Cliquer sur la carte pour ajouter un objet',
+};

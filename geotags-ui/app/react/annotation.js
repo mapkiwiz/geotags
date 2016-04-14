@@ -4,7 +4,7 @@ var buttons = require('./annotation-buttons.js');
 
 var PlaceHolder = React.createClass({
 
-	onClick: function(e) {
+	showInstructions: function(e) {
 		e.preventDefault();
 		$('#tab-instructions').click();
 	},
@@ -12,18 +12,27 @@ var PlaceHolder = React.createClass({
 	render: function() {
 
 		return (
-			<div className="annotation">
-				<div style={{ width: '50%', display: 'inline-block' }}>
+			<div className="annotation" style={{ width: "100%" }}>
+				<div>
 					<label className="label">
-						<span>INSTRUCTIONS</span>
+						<span>Instructions</span>
 					</label>
-					<div>Sélectionner un objet.</div>
+					<div>Sélectionner un objet sur la carte.</div>
 				</div>
-				<a className="btn btn-default pull-right" href="#" onClick={this.onClick} style={{ color: 'gray', marginTop: '20px' }}>
-					<span className="glyphicon glyphicon-question-sign"></span>
-					&nbsp;
-					Afficher les instructions
-				</a>
+				<div>
+					<label className="label">
+						<span>Localisation</span>
+					</label>
+					<div>Pour modifier/préciser la localisation d'un objet,
+					déplacer le sur la carte après l'avoir sélectionné.</div>
+				</div>
+				<div className="btn-toolbar" style={{ marginTop: "20px" }}>
+					<a className="btn btn-default" href="#" onClick={this.showInstructions} style={{ color: 'gray' }}>
+						<span className="glyphicon glyphicon-question-sign"></span>
+						&nbsp;
+						Légende
+					</a>
+				</div>
 			</div>
 		);
 
@@ -56,6 +65,7 @@ var AnnotationForm = React.createClass({
 	save: function() {
 		this.dispatcher.trigger('beforesave', this.state.feature);
 		this.props.save(this.state.feature);
+		this.state.marker.updateLabelContent(this.state.feature.properties.name);
 	},
 
 	setGeometry: function(geometry) {
@@ -145,10 +155,13 @@ var AnnotationForm = React.createClass({
 
 				<controls.EditableProperty
 				    label="Nom" property="name"
-				    className="property property-bold" feature={this.state.feature}
+				    className="property" feature={this.state.feature}
 				    listenTo={this.dispatcher} />
 
-				<controls.Property label="Adresse" className="property" value={properties.tags.adresse} />
+				<controls.EditableProperty
+					label="Adresse" property="tags.adresse"
+					className="property" feature={this.state.feature}
+				    listenTo={this.dispatcher} />
 			
 				<CommentControl
 				    label="Commentaire" feature={this.state.feature}

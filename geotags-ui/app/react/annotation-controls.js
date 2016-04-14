@@ -26,7 +26,7 @@ module.exports.EditableProperty = React.createClass({
 
 	getInitialState: function() {
 		return {
-			value: this.props.feature.properties[this.props.property]
+			value: this.property(this.props.feature)
 		}
 	},
 
@@ -40,9 +40,33 @@ module.exports.EditableProperty = React.createClass({
 		this.props.listenTo.off('beforesave', this.saveToFeature);
 	},
 
+	property: function(obj) {
+		var value = obj.properties;
+		this.props.property.split('.').forEach(function(p) {
+			if (value != undefined) {
+				value = value[p];
+			}
+		});
+		return value;
+	},
+
+	setProperty: function(obj, value) {
+		var parent = obj;
+		var child = parent.properties;
+		var target = undefined;
+		this.props.property.split('.').forEach(function(p) {
+			if (child != undefined) {
+				parent = child;
+				child = child[p];
+				target = p;
+			}
+		});
+		parent[target] = value;
+	},
+
 	onSelectionChanged: function(e, feature) {
 		if (feature) {
-			this.state.value = feature.properties[this.props.property];
+			this.state.value = this.property(feature);
 			this.has_change = false;
 		} else {
 			this.state.value = undefined;
@@ -52,7 +76,7 @@ module.exports.EditableProperty = React.createClass({
 
 	saveToFeature: function(e, feature) {
 		if (this.has_change) {
-			feature.properties[this.props.property] = this.state.value;
+			this.setProperty(feature, this.state.value);
 			feature.properties.tags['modified'] = 'yes';
 		}
 	},

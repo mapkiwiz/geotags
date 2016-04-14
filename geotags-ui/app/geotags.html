@@ -35,18 +35,28 @@
 
 	    		<!-- <div style="float: right"><span class="glyphicon glyphicon-star"></span></div> -->
 	    		<ul class="nav nav-tabs">
-	    			<li><a id="tab-annotate" href="#annotate" data-toggle="tab">Annoter</a></li>
-	    			<li><a href="#create-new" data-toggle="tab">Ajouter un objet</a></li>
+	    			<li class="active"><a id="tab-annotate" href="#annotate" data-toggle="tab">Inspecter</a></li>
+	    			<li class="dropdown">
+	    				<a id="tab-create-new" data-toggle="dropdown">Ajouter un objet</a>
+	    				<ul class="dropdown-menu">
+		    				<li><a id="tab-create-new-by-address" href="#create-new-by-address" data-toggle="tab">
+		    					Par adresse
+		    				</a></li>
+		    				<li><a id="tab-create-new-by-point" href="#create-new-by-point" data-toggle="tab">
+		    					Par point
+		    				</a></li>
+		    			</ul>
+	    			</li>
 	    			<!-- <li><a href="#lookup" data-toggle="tab">Rechercher</a></li> -->
 	    			<li><a id="tab-locate" href="#locate" data-toggle="tab">Se localiser</a></li>
-	    			<li class="active dropdown pull-right">
+	    			<li class="dropdown pull-right">
 	    				<a class="dropdown-toggle" href="#" data-toggle="dropdown">
 	    					&nbsp;<span class="glyphicon glyphicon-menu-hamburger"></span>
 	    				</a>
 	    				<ul class="dropdown-menu pull-right">
 	    					<li><a id="tab-layer-control" href="#layer-control" data-toggle="tab">Fonds de plan</a></li>
 	    					<!-- <li><a href="#a2" data-toggle="tab">A2</a></li> -->
-	    					<li><a id="tab-instructions" href="#instructions" data-toggle="tab">Instructions</a></li>
+	    					<li><a id="tab-instructions" href="#instructions" data-toggle="tab">Légende</a></li>
 	    					<!-- <li><a id="action-export" href="#export">Exporter le jeu de données</a></li> -->
 	    					<li><a id="tab-a-propos" href="#a-propos" data-toggle="tab">À propos</a></li>
 	    					<li><a id="action-logout" href="<%= api_prefix %>/auth/logout?next=/<%= token %>/login">Quitter</a></li>
@@ -54,9 +64,9 @@
 	    			</li>
 	    		</ul>
 
-	    		<div  class="tab-content" style="padding-top: 20px">
+	    		<div  class="tab-content" style="padding-top: 20px; margin-left: 15px; margin-right: 10px">
 
-	    			<div id="annotate" class="tab-pane">
+	    			<div id="annotate" class="tab-pane active">
 		    			<p>Annoter ...</p>
 		    		</div>
 
@@ -64,8 +74,20 @@
 		    			<p>Rechercher dans la liste ...</p>
 		    		</div>
 
-		    		<div id="create-new" class="tab-pane">
-			    	</div>
+		    		<!-- <div id="create-new" class="tab-pane"> -->
+
+		    			<!-- <div  class="tab-content" style="margin-left: 15px; margin-right: 10px"> -->
+	    			<div id="create-new-by-address" class="tab-pane"></div>
+	    			<div id="create-new-by-point" class="tab-pane">
+		    				<label class="label">
+								<span>Instructions</span>
+							</label>
+							<p>Cliquer sur la carte à l'endroit où vous
+								voulez ajouter le nouvel objet.</p>
+	    			</div>
+			    		<!-- </div> -->
+
+			    	<!-- </div> -->
 
 	    			<div id="locate" class="tab-pane">
 			    	</div>
@@ -74,21 +96,9 @@
 			    		<p>Contrôle des couches ...</p>
 			    	</div>
 
-			    	<div id="instructions" class="tab-pane active">
+			    	<div id="instructions" class="tab-pane">
 
 			    		<div class="annotation details">
-
-							<label class="label">
-								<span>INSTRUCTIONS</span>
-							</label>
-			 
-							<div>Sélectionner un objet en cliquant sur la carte.</div>
-
-							<label class="label">
-								<span>Localisation</span>
-							</label>
-							<div>Pour modifier/préciser la localisation d'un objet,
-							déplacer le sur la carte après l'avoir sélectionné.</div>
 
 							<label class="label">
 								<span>Légende</span>
