@@ -2,6 +2,7 @@ var config = require('./config/geotags.js');
 var GazetteerBAN = require('./gazetteer-ban.js');
 var LayerSwitcher = require('./layer-switcher.js');
 var AnnotationForm = require('./annotation.js');
+var AppMessage = require('./message.js');
 var DataStore;
 var Gazetteer;
 
@@ -49,7 +50,7 @@ var createNew = function(d) {
     store.createNew(d, { zoom: true });
 };
 
-window.gazetteerBan = ReactDOM.render(
+ReactDOM.render(
  <GazetteerBAN map={map} name="search-ban" service={config.services.ban.url} placeholder="Rechercher une adresse" select={createNew}  />,
  document.getElementById('create-new-by-address')
 );
@@ -57,6 +58,11 @@ window.gazetteerBan = ReactDOM.render(
 ReactDOM.render(
     <LayerSwitcher map={map} title="Fonds de plan" layers={config.baseLayers} />,
     document.getElementById('layer-control')
+);
+
+window.appMessage = ReactDOM.render(
+    <AppMessage />,
+    document.getElementById('message-container')
 );
 
 // dataLayer = L.TileLayer.vectileLayer(

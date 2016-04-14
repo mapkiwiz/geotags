@@ -6,12 +6,12 @@ from models.meta import Campaign
 from models.users import User, UserInvitation
 from controllers import *
 from proxy import ReverseProxied
-from config import GEOTAGS_API_PREFIX
+from config import GEOTAGS_API_PREFIX, SECRET_KEY
 import filters
 
 __all__ = [ 'app', 'db', 'user_manager' ]
 
-app.secret_key = '\xf7_\x8b@+\x94=m\\\xb6\xa0X\xaa\xe7\xbcjH\x05W\x95\x8a\xf4\x8aa'
+app.secret_key = SECRET_KEY
 user_adapter = SQLAlchemyAdapter(db, User, UserInvitationClass=UserInvitation)
 user_manager = UserManager(user_adapter, app)
 

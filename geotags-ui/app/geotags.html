@@ -137,6 +137,13 @@
 	    </div>
 	</div>
 
+	<div class="container-fluid" style="position: absolute; z-index: 1000; top: 10px; left: 0; pointer-events: none; width: 100%;">
+		<div class="row" style="width: 100%">
+			<div id="message-container" class="col-xs-offset-3 col-xs-6 col-md-offset-0 col-md-6" style="pointer-events: all">
+			</div>
+		</div>
+	</div>
+
 	<!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
 	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -149,6 +156,10 @@
 	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 	<!-- endbower -->
     <!-- endbuild -->
+
+    <script type="text/javascript">
+    	TOKEN = "{{ token }}";
+    </script>
 
     <!-- build:js({.tmp,app}) scripts/geotags.js -->
     <script type="text/javascript" src="js/Leaflet.WMTS.js"></script>

@@ -20,3 +20,5 @@ WTF_CSRF_ENABLED = False
 MAIL_DEFAULT_SENDER = "no-reply@geotags.mapkiwiz.fr"
 
 # SERVER_NAME = 'localhost'
+
+SECRET_KEY = '\xf7_\x8b@+\x94=m\\\xb6\xa0X\xaa\xe7\xbcjH\x05W\x95\x8a\xf4\x8aa'

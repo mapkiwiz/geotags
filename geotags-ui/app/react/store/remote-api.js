@@ -38,9 +38,11 @@ module.exports = function(config) {
             dataType: 'json',
             contentType: "application/json; charset=utf-8"
         }).success(function(data) {
-            console.log('Ok/Created');
+            appMessage.display("Enregistré (Nouveau)", "success", 300);
             feature.id = data.id;
             feature.properties = data.properties;
+        }).error(function(xhr, a, msg) {
+            appMessage.display("Une erreur est survenue pendant l'enregistrement des données", "danger");
         });
 
     };
@@ -56,8 +58,10 @@ module.exports = function(config) {
             dataType: 'json',
             contentType: "application/json; charset=utf-8",
         }).success(function(data) {
-            console.log('Ok/Updated');
+            appMessage.display("Enregistré (Mise à jour)", "success", 300);
             feature.properties = data.properties;
+        }).error(function(xhr, a, msg) {
+            appMessage.display("Une erreur est survenue pendant l'enregistrement des données", "danger");
         });
 
     };

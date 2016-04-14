@@ -30,8 +30,7 @@ module.exports = function(config) {
     };
 
     this.saveToBackend = function(feature) {
-        console.log("Saving to backend ...");
-        console.log(feature);
+        appMessage.display("Enregistrement ...", "success", 500);
     };
 
     this.addTo = function(map, editor) {

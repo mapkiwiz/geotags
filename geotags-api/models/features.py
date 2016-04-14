@@ -25,11 +25,6 @@ def feature_model_factory(schema):
 
     class Feature(db.Model):
 
-        def __new__(cls):
-            s = super(Feature).__new__(cls)
-            s.__name__ = "Feature_%s" % schema
-            return s
-
         __table_args__ = {
             'schema': schema
         }
