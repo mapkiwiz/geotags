@@ -82,7 +82,7 @@ window.handler = new L.Draw.Marker(map, {
         className: 'feature-marker',
         html: '<span class="glyphicon glyphicon-map-marker"></span>',
         iconSize: L.point(30, 30),
-        iconAnchor: L.point(15, 30)
+        iconAnchor: L.point(16, 45)
     })
 });
 
@@ -102,3 +102,5 @@ $('#tab-create-new-by-point').on('hidden.bs.tab', function(e) {
 $('#tab-create-new').on('hidden.bs.tab', function(e) {
     window.handler.disable();
 });
+
+$('.leaflet-control-zoom').hide();

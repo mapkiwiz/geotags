@@ -71,6 +71,7 @@ def describe(key, token):
 
 @app.route('/<key>/')
 @app.route('/<key>/tags')
+# @login_required
 def tags(key):
 
 	c = Campaign.query.get(key)

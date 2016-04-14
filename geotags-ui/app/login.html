@@ -38,7 +38,7 @@
 						<p>Contributions ouvertes jusqu'au <%= closing_at %></p>
 					</div>
 					<div class="description">
-						<%= description %>
+						{{ description | markdown | safe }}
 					</div>
 				</div>
 			</div>

@@ -102,7 +102,7 @@ module.exports = function(config) {
                             className: getDisplayClass(feature),
                             html: '<span class="glyphicon glyphicon-map-marker"></span>',
                             iconSize: L.point(30, 30),
-                            iconAnchor: L.point(15, 30)
+                            iconAnchor: L.point(16, 30)
                         });
                     
                     return L.marker(latLng, {icon: icon});

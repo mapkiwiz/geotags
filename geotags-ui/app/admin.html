@@ -51,7 +51,7 @@
 								<p>Contributions ouvertes jusqu'au {{ campaign.closing_at | date }}</p>
 							</div>
 							<div>
-								{{ campaign.description }}
+								{{ campaign.description | markdown | safe }}
 							</div>
 							<br/>
 							<div class="btn-toolbar pull-right">

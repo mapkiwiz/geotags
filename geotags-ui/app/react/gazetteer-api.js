@@ -78,7 +78,7 @@ var Gazetteer = React.createClass({
 			    				<span className="glyphicon glyphicon-search"></span>
 			    			</button>
 			    		</span>
-		    		<div>
+		    		</div>
 	    		</div>
 	    		<ul className="list" id="search-results">
 					{items}

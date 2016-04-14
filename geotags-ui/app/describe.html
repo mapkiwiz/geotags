@@ -36,8 +36,22 @@
 
 						{{ render_field(form.title, tabindex=110) }}
 				        {{ render_field(form.description, tabindex=120) }}
+				        <span class="help-block">
+				        	Utiliser la
+				        	<a href="https://fr.wikipedia.org/wiki/Markdown" target="help">
+				        		syntaxe Markdown
+				        	</a>
+				        	pour mettre en forme la description
+				        </span>
 				        {{ render_field(form.closing_at, tabindex=130) }}
+				        <span class="help-block">
+				        	Exemple : 2016-01-10 pour 10 janvier 2016
+				        </span>
 				        {{ render_checkbox_field(form.closed, tabindex=140) }}
+				        <span class="help-block">
+				        	Cocher cette case pour indiquer que la collecte est terminée.
+				        </span>
+				        <br/>
 				        {{ render_submit_field(form.submit, tabindex=150) }}
 						
 					</form>
