@@ -7,6 +7,7 @@ from models.users import User, UserInvitation
 from controllers import *
 from proxy import ReverseProxied
 from config import GEOTAGS_API_PREFIX
+import filters
 
 __all__ = [ 'app', 'db', 'user_manager' ]
 

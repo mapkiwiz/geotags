@@ -1,3 +1,4 @@
 python
 *.pyc
 static/*
+templates/*.html

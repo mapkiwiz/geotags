@@ -17,7 +17,7 @@ var paths = {
     scripts: [ '.tmp/react/geotags.js', '.tmp/react/login.js' ],
     dist: 'dist',
     tmp: '.tmp',
-    html: [ 'app/geotags.html', 'app/login.html'],
+    html: [ 'app/*.html' ],
     templates: {
       dest: '../geotags-api/templates',
       src: []

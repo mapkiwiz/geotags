@@ -6,7 +6,7 @@ def resolve_schema(key):
 
 if app.config.get('GEOTAGS_SINGLE_DATASET', True):
 
-    dbo_key = app.config.setdefault('GEOTAGS_SINGLE_DATASET_KEY', 'd')
+    dbo_key = app.config.setdefault('GEOTAGS_SINGLE_DATASET_KEY', 'token')
     schema = app.config.setdefault('GEOTAGS_SINGLE_DATASET_SCHEMA', 'public')
     dbo = FeatureDBO(schema)
 

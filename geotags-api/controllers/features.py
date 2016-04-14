@@ -40,7 +40,8 @@ def flatten(props, keys, tags):
     return flat_props
 
 
-@app.route(GEOTAGS_API_PREFIX + '/<key>/export/points.geojson')
+@app.route(GEOTAGS_API_PREFIX + '/<key>/export/')
+@app.route(GEOTAGS_API_PREFIX + '/<key>/export/features.geojson')
 def export_all_features(key):
 
     dbo = resolve_dbo(key)
