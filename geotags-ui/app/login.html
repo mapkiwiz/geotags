@@ -68,11 +68,14 @@
 	<script type="text/javascript" src="bower_components/react/react-dom.js"></script>
 	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <!-- endremove -->
+    <script type="text/javascript">
+    	TOKEN = '<%= token %>';
+    </script>
     <!-- build:js({.tmp,app}) scripts/login.js -->
 	<script type="text/javascript" src="js/login.js"></script>
 	<!-- endbuild -->
 	<script type="text/javascript">
-		autologin('<%= token %>');
+		autologin(TOKEN);
 	</script>
 
 </body>

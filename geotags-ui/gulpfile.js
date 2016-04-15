@@ -208,7 +208,9 @@ gulp.task('dist:build', [ 'scripts', 'styles' ], function () {
   .pipe($.if('*.html', insertify()))
   // .pipe($.if('*.html', templatify()))
   .pipe($.revReplace())
-  .pipe(gulp.dest(paths.tmp))
+  .pipe($.if('*.html', gulp.dest(paths.tmp)))
+  .pipe($.if('*.js', gulp.dest(paths.dist)))
+  .pipe($.if('*.css', gulp.dest(paths.dist)))
   .pipe($.rev.manifest())
   .pipe(gulp.dest(paths.dist));
 

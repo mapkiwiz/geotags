@@ -229,7 +229,7 @@ def forgot_password():
 
         if user:
             user_manager.send_reset_password_email(email)
-            return 200
+            return ('', 204)
     else:
         errors = { "type": "errors" }
         for field, err in form.errors.items():
