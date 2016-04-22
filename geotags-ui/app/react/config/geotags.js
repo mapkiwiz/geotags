@@ -6,7 +6,7 @@ module.exports = {
     baseLayers: layer_config.baseLayers,
     overlays: layer_config.overlays,
     services: api_config.services,
-    backend: 'off',
+    backend: 'on',
     // TODO Remove from config
     data: {
         communes: 'data/communes-d033.json',

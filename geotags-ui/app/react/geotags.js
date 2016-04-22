@@ -46,8 +46,23 @@ var aForm = ReactDOM.render(
     document.getElementById('annotate')
 );
 
-var createNew = function(d) {
-    store.createNew(d, { zoom: true });
+var createNew = function(result) {
+    var feature = {
+        properties: {
+            name: 'Nouvel objet #1',
+            tags: {
+                adresse: result.properties.label,
+                insee: result.properties.citycode,
+                citycode: result.properties.citycode,
+                postcode: result.properties.postcode,
+                ban_score: result.properties.score,
+                created: 'yes',
+            }
+        },
+        geometry: result.geometry,
+        type: 'Feature'
+    };
+    store.createNew(feature, { zoom: true });
 };
 
 ReactDOM.render(
@@ -98,7 +113,12 @@ window.handler = new L.Draw.Marker(map, {
 });
 
 map.on('draw:created', function(e) {
+    // TODO Reverse geocode
     var feature = e.layer.toGeoJSON();
+    feature.properties.name = 'Nouvel objet #1';
+    feature.properties.tags = {
+        created: 'yes'
+    };
     store.createNew(feature);
 });
 

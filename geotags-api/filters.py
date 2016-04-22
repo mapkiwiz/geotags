@@ -8,4 +8,7 @@ def date_filter(date):
 
 @app.template_filter('markdown')
 def markdown_filter(text):
-	return markdown(text)
+	if text:
+		return markdown(text)
+	else:
+		return ''

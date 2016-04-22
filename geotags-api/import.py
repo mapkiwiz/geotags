@@ -1,8 +1,11 @@
-from models import *
+from main import app, db
+from controllers.resolver import resolve_dbo
 from shapely import wkb
 
+dbo = resolve_dbo('token')
+
 def to_tag(key, value, feature):                                       
-    tag = Tag()
+    tag = dbo.Tag()
     tag.feature = feature
     tag.name = key
     tag.value = unicode(value)
@@ -19,7 +22,7 @@ query = db.engine.execute(
 count = 0
 for row in query:
     data = dict(zip(cols, row))
-    f = Feature()
+    f = dbo.Feature()
     f.gid = data['gid']
     f.name = data['name']
     f.shape = wkb.loads(data['geom'], hex=True)

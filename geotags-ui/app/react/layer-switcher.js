@@ -78,7 +78,6 @@ var LayerSwitcher = React.createClass({
 	},
 
 	componentDidMount: function() {
-		// this.changeBaseLayerTo(this.props.layers[0]);
 		var self = this;
 		this.dispatchToken = this.dispatcher.register(
 			function(e) {
@@ -86,10 +85,12 @@ var LayerSwitcher = React.createClass({
 					self.changeActiveLayerTo(e.layer);
 				} else if (e.type == 'unselect-layer') {
 					self.state.baseLayer = undefined;
-					self.props.map.removeLayer(e.layer);
+					self.group.removeLayer(e.layer);
 				}
 			});
 		var baseLayer = this.props.layers[0];
+		// TODO add layerGroup
+		this.group = L.layerGroup().addTo(this.props.map);
 		this.dispatcher.dispatch({
 			type: 'select-layer',
 			key: baseLayer.options.key,
@@ -102,13 +103,12 @@ var LayerSwitcher = React.createClass({
 	},
 
 	changeActiveLayerTo: function(layer) {
-		var map = this.props.map;
 		if (this.state.baseLayer) {
-			map.removeLayer(this.state.baseLayer);
+			this.group.removeLayer(this.state.baseLayer);
 		}
 		this.state.baseLayer = layer;
-		layer.addTo(map);
-		layer.bringToBack(); // base layer
+		// layer.addTo(map);
+		this.group.addLayer(layer);
 	},
 
 	childContextTypes: {

@@ -8,11 +8,6 @@ module.exports = function(config) {
 
         var latLng = L.latLng(feature.geometry.coordinates[1], feature.geometry.coordinates[0]);
         var marker = this.dataLayer.options.pointToLayer(feature, latLng);
-        feature.properties.name = 'Nouvel objet #1';
-        feature.properties.tags = {
-            adresse: feature.properties.label,
-            created: 'yes'
-        };
 
         if (options.zoom) {
             // map.setZoomAround(
