@@ -48,8 +48,8 @@ def export_all_features(key):
     if dbo is None:
         return abort(404)
 
-    keys = [ 'name', 'version' ]
-    tags = [ 'insee', 'commune', 'pk', 'adresse', 'comment', 'valid', 'modified', 'geometry_modified' ]
+    keys = [ 'name', 'version', 'user_email' ]
+    tags = [ 'insee', 'commune', 'pk', 'adresse', 'comment', 'valid', 'modified', 'geometry_modified', 'created' ]
     query = dbo.Feature.query.all()
     features = []
     for f in query:
@@ -111,11 +111,13 @@ def feature_create(key):
     new_feature = dbo.Feature()
     new_feature.name = submitted.properties.get('name')
     new_feature.shape = asShape(submitted.geometry)
+    new_feature.last_contributor = current_user
     tags = submitted.properties.get('tags')
     if tags:
         for tag, tag_value in tags.items():
             new_feature.tag(tag, tag_value)
     db.session.add(new_feature)
+    make_changeset(new_feature, dbo)
     db.session.commit()
     return (feature_as_geojson(new_feature), 201)
 
@@ -146,7 +148,7 @@ def feature(key, id):
     if request.method == 'GET':
         return feature_as_geojson(f)
     elif request.method == 'POST':
-        return feature_update(f)
+        return feature_update(f, dbo)
 
 def feature_as_geojson(feature):
     if feature is not None:
@@ -163,7 +165,7 @@ def feature_as_geojson(feature):
 # UPDATE name, label, geom
 # DELETE feature()
 @auth_required
-def feature_update(feature):
+def feature_update(feature, dbo):
     json = request.get_json()
     submitted = geojson.feature.Feature.to_instance(json)
     feature.name = submitted.properties.get('name', feature.name)
@@ -172,8 +174,19 @@ def feature_update(feature):
     if tags:
         for tag, tag_value in tags.items():
             feature.tag(tag, tag_value)
+    feature.last_contributor = current_user
+    make_changeset(feature, dbo)
     db.session.commit()
     return feature_as_geojson(feature)
+
+def make_changeset(feature, dbo):
+    feature.stamp()
+    cs = dbo.ChangeSet()
+    cs.feature = feature
+    cs.contributor = current_user
+    cs.timestamp = feature.timestamp
+    cs.values = feature.properties
+    db.session.add(cs)
 
 # TODO Not yet implemented methods
 
