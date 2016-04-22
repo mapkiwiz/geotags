@@ -109,6 +109,9 @@ var LayerSwitcher = React.createClass({
 		this.state.baseLayer = layer;
 		// layer.addTo(map);
 		this.group.addLayer(layer);
+		if (this.props.base) {
+			this.group.bringToBack();
+		}
 	},
 
 	childContextTypes: {

@@ -71,12 +71,12 @@ ReactDOM.render(
 );
 
 ReactDOM.render(
-    <LayerSwitcher map={map} title="Fonds de plan" layers={config.baseLayers} />,
+    <LayerSwitcher map={map} title="Fonds de plan" layers={config.baseLayers} base={true} />,
     document.getElementById('layer-control-baselayer')
 );
 
 ReactDOM.render(
-    <LayerSwitcher map={map} title="Autres couches de données" layers={config.overlays} />,
+    <LayerSwitcher map={map} title="Couches de données" layers={config.overlays} base={false} />,
     document.getElementById('layer-control-overlays')
 );
 
