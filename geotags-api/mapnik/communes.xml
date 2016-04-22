@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Map srs="+init=epsg:3857" background-color="rgba(255,255,255,0)">
+  <Style name="communes">
+    <Rule>
+      <LineSymbolizer stroke="rgba(51,102,255,0.4)" stroke-width="2.3"/>
+      <!-- <TextSymbolizer name="[nom_comm]" face-name="DejaVu Sans Book" size="8" fill="#36F" halo-radius="1" /> -->
+    </Rule>
+  </Style>
+  <Layer name="communes" srs="+init=epsg:2154">
+    <StyleName>communes</StyleName>
+    <Datasource>
+      <Parameter name="dbname">geotags</Parameter>
+      <Parameter name="host">localhost</Parameter>
+      <Parameter name="password">geotags</Parameter>
+      <Parameter name="table">geofla.communes</Parameter>
+      <Parameter name="type">postgis</Parameter>
+      <Parameter name="user">geotags</Parameter>
+    </Datasource>
+  </Layer>
+</Map>

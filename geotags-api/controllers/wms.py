@@ -11,7 +11,7 @@ GEOREF_WMS_TEMPLATE = GEOREF_BASE_URL + "service=WMS&version=1.3.0&request=GetMa
 config = {
     "cache": {
         "name": "Disk",
-        "path": "/tmp/stache",
+        "path": "/tmp/stache/wms",
         "umask": "0000",
         "dirs": "safe",
         "gzip": [ "xml", "json" ],

@@ -110,7 +110,7 @@ var LayerSwitcher = React.createClass({
 		// layer.addTo(map);
 		this.group.addLayer(layer);
 		if (this.props.base) {
-			this.group.bringToBack();
+			layer.bringToBack();
 		}
 	},
 
