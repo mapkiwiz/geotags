@@ -54,7 +54,7 @@ var AnnotationForm = React.createClass({
 		if (feature_class) {
 			var el = $(this.state.marker._icon)[0];
 			el.className = el.className.replace(/feature-marker-.*?\b/g, '');
-			$(this.state.marker._icon).addClass(feature_class);
+			$(this.state.marker._icon).addClass(this.getDisplayClass(this.state.feature));
 		}
 
 		this.save();
@@ -134,6 +134,25 @@ var AnnotationForm = React.createClass({
 
 	},
 
+	getDisplayClass: function(feature) {
+        var classes = [ 'feature-marker' ];
+        var tags = feature.properties.tags || {};
+        if (tags.valid == '') {
+            classes.push('feature-marker-for-validation');
+        } else if (tags.valid == 'no') {
+            classes.push('feature-marker-deleted');
+        } else if (tags.valid == 'yes') {
+            if (tags.created == 'yes') {
+                classes.push('feature-marker-created');
+            } else if (tags.geometry_modified == 'yes') {
+                classes.push('feature-marker-modified');
+            } else {
+                classes.push('feature-marker-valid');
+            }
+        }
+        return classes.join(' ');
+    },
+
 	render: function() {
 
 		if (this.state.feature) {
@@ -145,6 +164,25 @@ var AnnotationForm = React.createClass({
 		}
 
 	},
+
+	// checkAddress: function(e) {
+	// 	e.preventDefault();
+	// 	var coords = this.state.feature.geometry.coordinates;
+	// 	$.ajax({
+	// 		url: '//api-adresse.data.gouv.fr/reverse/?lon={lon}&lat={lat}'
+	// 			.replace(/{lon}/, coords[0])
+	// 			.replace(/{lat}/, coords[1]),
+	// 		method: 'GET',
+	// 		dataType: 'json'
+	// 	}).success(function(data) {
+	// 		appMessage.display(data.features[0].properties.label, 'success');
+	// 	});
+	// },
+	//     <button className="btn btn-default" onClick={this.checkAddress}>
+ //    	<span className="glyphicon glyphicon-envelope"></span>
+ //    </button>
+
+ // </controls.EditableProperty>
 
 	renderForm: function() {
 

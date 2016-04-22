@@ -51,13 +51,18 @@ var createNew = function(d) {
 };
 
 ReactDOM.render(
- <GazetteerBAN map={map} name="search-ban" service={config.services.ban.url} placeholder="Rechercher une adresse" select={createNew}  />,
- document.getElementById('create-new-by-address')
+    <GazetteerBAN map={map} name="search-ban" service={config.services.ban.url} placeholder="Rechercher une adresse" select={createNew}  />,
+    document.getElementById('create-new-by-address')
 );
 
 ReactDOM.render(
     <LayerSwitcher map={map} title="Fonds de plan" layers={config.baseLayers} />,
-    document.getElementById('layer-control')
+    document.getElementById('layer-control-baselayer')
+);
+
+ReactDOM.render(
+    <LayerSwitcher map={map} title="Autres couches de données" layers={config.overlays} />,
+    document.getElementById('layer-control-overlays')
 );
 
 window.appMessage = ReactDOM.render(

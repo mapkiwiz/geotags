@@ -91,15 +91,29 @@ module.exports.EditableProperty = React.createClass({
 			self.has_change = true;
 		};
 
+		var children = undefined, className = "";
+
+		if (this.props.children) {
+			children = (
+				<span className="input-group-btn">
+			   		{this.props.children}
+			   	</span>
+			);
+			className = "input-group";
+		}
+
 		return (
-			<div>
+			<div className="form-group">
 				<label className="label">
 					<span>
 						{this.props.label}
 					</span>
 				</label>
-				<input type="text" className={"form-control " + this.props.className}
-			    	   value={valueLink.value} onChange={handleChange} />
+				<div className={className}>
+					<input type="text" className={"form-control " + this.props.className}
+				    	   value={valueLink.value} onChange={handleChange} />
+				   	{children}
+				</div>
 			</div>
 		);
 	}

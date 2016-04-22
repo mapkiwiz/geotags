@@ -2,14 +2,55 @@
 
 var LayerEntry = React.createClass({
 
-	select: function() {
-		this.props.onSelect(this.props.value);
+	contextTypes: {
+		dispatcher: React.PropTypes.object
+	},
+
+	getInitialState: function() {
+		return { selected: false };
+	},
+
+	componentDidMount: function() {
+		var self = this;
+		this.dispatchToken = this.context.dispatcher.register(function(e) {
+			if (e.type == 'select-layer') {
+				if (e.key == self.props.value.options.key) {
+					self.setState({ selected: true });
+				} else {
+					self.setState({ selected: false });
+				}
+			}
+		});
+	},
+
+	componentWillUnmount: function() {
+		this.context.dispatcher.unregister(this.dispatchToken);
+	},
+
+	select: function(e) {
+		e.preventDefault();
+		// this.props.onSelect(this.props.value);
+		this.context.dispatcher.dispatch({
+			type: 'select-layer',
+			key: this.props.value.options.key,
+			layer: this.props.value
+		});
+	},
+
+	unselect: function(e) {
+		e.preventDefault();
+		this.context.dispatcher.dispatch({
+			type: 'unselect-layer',
+			key: this.props.value.options.key,
+			layer: this.props.value
+		})
+		this.setState({ selected: false });
 	},
 
 	render: function() {
-		if (this.props.value.selected) {
+		if (this.state.selected) {
 			return (
-				<li className='selected' >
+				<li className='selected' onClick={this.unselect} >
 					{this.props.value.options.title}
 					&nbsp;
 					<span className="glyphicon glyphicon-ok"></span>
@@ -29,29 +70,63 @@ var LayerEntry = React.createClass({
 var LayerSwitcher = React.createClass({
 
 	getInitialState: function() {
-		return { baseLayer: null };
+		return { baseLayer: undefined };
+	},
+
+	componentWillMount: function() {
+		this.dispatcher = new Flux.Dispatcher();
 	},
 
 	componentDidMount: function() {
-		this.changeBaseLayerTo(this.props.layers[0]);
+		// this.changeBaseLayerTo(this.props.layers[0]);
+		var self = this;
+		this.dispatchToken = this.dispatcher.register(
+			function(e) {
+				if (e.type == 'select-layer') {
+					self.changeActiveLayerTo(e.layer);
+				} else if (e.type == 'unselect-layer') {
+					self.state.baseLayer = undefined;
+					self.props.map.removeLayer(e.layer);
+				}
+			});
+		var baseLayer = this.props.layers[0];
+		this.dispatcher.dispatch({
+			type: 'select-layer',
+			key: baseLayer.options.key,
+			layer: baseLayer
+		});
 	},
 
-	changeBaseLayerTo: function(layer) {
+	componentWillUnmount: function() {
+		this.dispatcher.unregister(this.dispatchToken);
+	},
+
+	changeActiveLayerTo: function(layer) {
 		var map = this.props.map;
 		if (this.state.baseLayer) {
-			this.state.baseLayer.selected = false;
 			map.removeLayer(this.state.baseLayer);
 		}
+		this.state.baseLayer = layer;
 		layer.addTo(map);
-		layer.selected = true;
-		this.setState({ baseLayer: layer });
+		layer.bringToBack(); // base layer
+	},
+
+	childContextTypes: {
+		dispatcher: React.PropTypes.object
+	},
+
+	getChildContext: function() {
+		return {
+			dispatcher: this.dispatcher,
+		}
 	},
 
 	render: function() {
-		var self = this, items = this.props.layers.map(
+		var self = this;
+		var items = this.props.layers.map(
 			function(layer) {
 				return (
-					<LayerEntry key={layer.options.key} value={layer} onSelect={self.changeBaseLayerTo} />
+					<LayerEntry key={layer.options.key} value={layer} />
 				);
 			});
 		return (

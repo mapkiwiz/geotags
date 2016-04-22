@@ -101,7 +101,7 @@ label.label > a {
     1px 1px 0 #fff; 
 }
 
-.feature-marker-commented {
+.feature-marker-for-validation {
   color: silver;
 }
 
@@ -109,8 +109,16 @@ label.label > a {
   color: limegreen;
 }
 
-.feature-marker-for-deletion {
+.feature-marker-deleted {
   color: firebrick;
+}
+
+.feature-marker-created {
+  color: #006600;
+}
+
+.feature-marker-modified {
+  color: #CF0;
 }
 
 .feature-marker-selected {

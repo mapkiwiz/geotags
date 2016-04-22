@@ -41,10 +41,30 @@ module.exports = function(config) {
         this.dataLayer = undefined;
 
         $.getJSON(config.data.points, function(data) {
+
+            var getDisplayClass = function(feature) {
+                var classes = [ 'feature-marker' ];
+                var tags = feature.properties.tags || {};
+                if (tags.valid == '') {
+                    classes.push('feature-marker-for-validation');
+                } else if (tags.valid == 'no') {
+                    classes.push('feature-marker-deleted');
+                } else if (tags.valid == 'yes') {
+                    if (tags.created == 'yes') {
+                        classes.push('feature-marker-created');
+                    } else if (tags.geometry_modified == 'yes') {
+                        classes.push('feature-marker-modified');
+                    } else {
+                        classes.push('feature-marker-valid');
+                    }
+                }
+                return classes.join(' ');
+            };
+
             self.dataLayer = L.geoJson(data, {      
                 pointToLayer: function(feature, latLng) {
                     var icon = L.divIcon({
-                            className: 'feature-marker',
+                            className: getDisplayClass(feature),
                             html: '<span class="glyphicon glyphicon-map-marker"></span>',
                             iconSize: L.point(30, 30),
                             iconAnchor: L.point(16, 30)

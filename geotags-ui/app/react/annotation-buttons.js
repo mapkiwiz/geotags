@@ -20,7 +20,7 @@ module.exports.MarkValidButton = React.createClass({
 module.exports.AnnotateButton = React.createClass({
 
 	handleClick: function(e) {
-		this.props.onClick('valid', '', 'feature-marker-commented');
+		this.props.onClick('valid', '', 'feature-marker-for-validation');
 	},
 
 	render: function() {
@@ -37,7 +37,7 @@ module.exports.AnnotateButton = React.createClass({
 module.exports.MarkForDeletionButton = React.createClass({
 
 	handleClick: function(e) {
-		this.props.onClick('valid', 'no', 'feature-marker-for-deletion');
+		this.props.onClick('valid', 'no', 'feature-marker-deleted');
 	},
 
 	render: function() {

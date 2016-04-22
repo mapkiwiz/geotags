@@ -2,10 +2,10 @@ var API_PREFIX = '/api/v1';
 
 module.exports = {
     API_PREFIX: API_PREFIX,
-    backend: 'on',
     services: {
         ban: {
-            url: '//api-adresse.data.gouv.fr/search/?q={q}'
+            url: '//api-adresse.data.gouv.fr/search/?q={q}',
+            reverse: '//api-adresse.data.gouv.fr/reverse/?lon={lon}&lat={lat}'
         },
         gazetteer: {
             url: API_PREFIX + '/search/communes?q={q}'

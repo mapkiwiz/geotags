@@ -89,11 +89,17 @@ module.exports = function(config) {
                 var classes = [ 'feature-marker' ];
                 var tags = feature.properties.tags || {};
                 if (tags.valid == '') {
-                    classes.push('feature-marker-commented');
+                    classes.push('feature-marker-for-validation');
                 } else if (tags.valid == 'no') {
-                    classes.push('feature-marker-for-deletion');
+                    classes.push('feature-marker-deleted');
                 } else if (tags.valid == 'yes') {
-                     classes.push('feature-marker-valid');
+                    if (tags.created == 'yes') {
+                        classes.push('feature-marker-created');
+                    } else if (tags.geometry_modified == 'yes') {
+                        classes.push('feature-marker-modified');
+                    } else {
+                        classes.push('feature-marker-valid');
+                    }
                 }
                 return classes.join(' ');
             };

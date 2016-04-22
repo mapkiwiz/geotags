@@ -353,7 +353,7 @@ ForgotPasswordForm = React.createClass({
     }).success(function(data) {
       dispatcher.dispatch({
         type: 'display-message',
-        title: this.props.title,
+        title: self.props.title,
         message: "Un e-mail vous a été envoyé pour réinitialiser votre mot de passe.",
         status: "success"
       });
